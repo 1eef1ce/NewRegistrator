@@ -1,0 +1,130 @@
+//= templates/header.html
+<div class="container">
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">Главная</a></li>
+			<li class="breadcrumb-item"><a href="#">Эмитентам</a></li>
+			<li class="breadcrumb-item"><a href="#">Услуги</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Мастер-классы</li>
+		</ol>
+	</nav>
+</div>
+<section>
+	<div class="container">
+		<h3>Мастер-классы</h3>
+		<div class="row">
+			<div class="col-12 col-xl-8">
+				<div class="section">
+					<div class="section-title">
+						Правильная подготовка и проведение собрания акционеров – одно из сложных мероприятий в деятельности акционерного общества.
+					</div>
+					<div class="text-regular">
+						<p>
+							Несоблюдение требований законодательства при проведении собраний акционеров может привести
+							к проблемам вплоть до недружественных поглощений и захватов предприятий.
+						</p>
+						<p>
+							Общество обязано ежегодно проводить годовое общее собрание акционеров, в сроки, установленные уставом
+							общества, но не ранее чем через два месяца и не позднее чем через шесть месяцев после окончания отчетного года.
+						</p>
+						<p>
+							АО «Новый регистратор» осуществляет подготовку и проведение собраний акционеров с соблюдением
+							всех правовых норм и с использованием специального программного продукта.
+						</p>
+					</div>
+				</div>
+				<div class="section">
+					<div class="section-title-wrapper">
+						<div class="section-title">Филиал и тема</div>
+						<a href="#" class="feedback-map-link"><img src="../assets/images/icon-filials.svg">Москва</a>
+					</div>
+					//= templates/event.html
+				</div>
+				<div class="section">
+					<div class="section-title">Дата и время</div>
+					<div class="text-regular">Выберите удобную дату и время</div>
+					<form>
+						<div class="form-row">
+							<div class="col-12 col-xl-4">
+								<div class="form-group">
+									<label for="eventDate">Дата</label>
+									<input type="text" id="eventDate" class="form-control" placeholder="дд/мм/гггг">
+								</div>
+							</div>
+							<div class="col-12 col-xl-4">
+								<div class="form-group">
+									<label for="eventTime">Время</label>
+									<select class="form-control" id="eventTime">
+										<option>10:00 — 12:00</option>
+										<option>12:00 — 14:00</option>
+										<option>14:00 — 16:00</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-12 col-xl-8">
+								<div class="form-group form-text">
+									Выберите дату и отметьте нужное время. Обращаем Ваше внимание на то, что
+									консультация начинается в начале часа выбранного периода.
+								</div>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="col-12 col-xl-8">
+								<div class="form-group">
+									<input type="text" id="signInName" class="form-control" placeholder="ФИО">
+								</div>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="col-12 col-xl-4">
+								<div class="form-group">
+									<input type="email" id="signInEmail" class="form-control" placeholder="E-mail">
+								</div>
+							</div>
+							<div class="col-12 col-xl-4">
+								<div class="form-group">
+									<input type="tel" id="signInPhone" class="form-control" placeholder="Телефон">
+								</div>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="col-12 col-xl-8">
+								<div class="form-bottom">
+									<div class="text-regular">
+										Стоимость (с НДС): <div class="price">10 000 руб.</div>
+									</div>
+									<button class="btn btn-filled btn-inline" type="submit">записаться</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="attention">
+					<div class="attention-wrapper">
+						<img class="attention-img" src="assets/images/alert-circle-white.svg">
+						<div class="title-regular attention-title">ВНИМАНИЕ!</div>
+					</div>
+					<div class="text-regular attention-text">
+						<p>
+							Несоблюдение требований законодательства при проведении собраний акционеров может
+							привести к проблемам вплоть до недружественных поглощений и захватов предприятий.
+						</p>
+						<p>
+							Общество обязано ежегодно проводить годовое общее собрание акционеров, в сроки, установленные уставом
+							общества, но не ранее чем через два месяца и не позднее чем через шесть месяцев после окончания отчетного года.
+						</p>
+						<p>
+							АО «Новый регистратор» осуществляет подготовку и проведение собраний акционеров
+							с соблюдением всех правовых норм и с использованием специального программного продукта.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-xl-4">
+				//= templates/feedback-service.html
+			</div>
+		</div>
+	</div>
+
+
+//= templates/footer.html

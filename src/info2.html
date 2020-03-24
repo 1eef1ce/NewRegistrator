@@ -1,0 +1,65 @@
+//= templates/header.html
+<div class="container">
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">Главная</a></li>
+			<li class="breadcrumb-item"><a href="#">Акционерам</a></li>
+			<li class="breadcrumb-item"><a href="#">Информация</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Раскрытие информации</li>
+		</ol>
+	</nav>
+</div>
+<section>
+	<div class="container">
+		<h3>Раскрытие информации</h3>
+		<div class="row">
+			<div class="col-12 col-xl-8">
+				<div class="section">
+					<div class="document">
+						<img class="document-img" src="assets/images/doc.svg">
+						<div>
+							<div class="document-name">Положение о раскрытии информации</div>
+							<div>
+								<div class="document-date">25.04.2019</div>
+								<div class="document-size">290 кб</div>
+							</div>
+						</div>
+					</div>
+					<form>
+						<div class="form-row">
+							<div class="col-12 col-xl-6">
+								<div class="form-group">
+									<label for="issuer">Эмитент:</label>
+									<select class="form-control" id="issuer">
+										<option>АВТОДОРРЕМСТРОЙ ОАО</option>
+										<option>2</option>
+										<option>3</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-12 col-xl-6">
+								<div class="form-group">
+									<label for="section">Раздел:</label>
+									<select class="form-control" id="section">
+										<option>Учредительные документы</option>
+										<option>2</option>
+										<option>3</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<button type="submit" class="btn btn-filled btn-inline">показать</button>
+					</form>
+				</div>
+				<div class="section">
+					//= templates/questions.html
+				</div>
+			</div>
+			<div class="col-12 col-xl-4">
+				//= templates/feedback-service.html
+			</div>
+		</div>
+	</div>
+</section>
+
+//= templates/footer.html

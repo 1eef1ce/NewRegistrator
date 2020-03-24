@@ -1,0 +1,283 @@
+//= templates/header.html
+<div class="container">
+	<nav class="breadcrumb-wrapper" aria-label="breadcrumb">
+		<div class="breadcrumb-opacity"></div>
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">Главная</a></li>
+			<li class="breadcrumb-item"><a href="#">О компании</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Клиенты</li>
+		</ol>
+	</nav>
+</div>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-xl-3">
+				<h3>Клиенты</h3>
+			</div>
+			<div class="col-12 col-xl-9">
+				<div class="text-large">
+					<p>
+						Мы ведем реестры нескольких тысяч акционерных обществ. Чтобы найти нужную информацию, введите
+						в поле поиска минимум 4 буквы из названия акционерного общества без учета организационно-правовой
+						формы (АО, ПАО, ОАО) и получите, если его реестр находится у нас на обслуживании.
+					</p>
+					<p>
+						Для просмотра реестров, переданных другому реестродержателю или находящихся на хранении выберите
+						соответствующий статус обслуживания реестра.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="row clients-search">
+			<div class="col-12 col-xl-5 mr-auto">
+				<form class="search-form">
+					<input type="text" class="form-control search-input search-input-alt" placeholder="Поиск по названию, ИНН или ОГРН">
+					<button type="submit" class="btn-search d-none d-xl-block"></button>
+				</form>
+			</div>
+			<div class="col-6 d-block d-xl-none">
+				<button type="submit" class="btn-search btn-search-alt"><span>Поиск</span></button>
+			</div>
+			<div class="col-6 col-xl-2">
+				<a href="#" class="feedback-map-link" type="button" data-toggle="modal" data-target="#filials"><img src="../assets/images/icon-filials.svg">Все филиалы</a>
+			</div>
+			<div class="col-12 col-xl-3 pl-xl-0">
+				<form>
+					<div class="form-group">
+						<select class="form-control" id="accounts">
+							<option>Реестры на обслуживании</option>
+							<option>2</option>
+							<option>3</option>
+						</select>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="container">
+		<div class="row row-cols-1 row-cols-xl-3">
+			<div class="col">
+				<div class="tile client">
+					<div class="title-xlarge client-title">АО «АВТОТЕХСНАБ»</div>
+					<a href="#" class="link">www.website.ru</a>
+					<div class="client-wrapper">
+						<div class="tag">Амурский филиал</div>
+						<div class="status">Ведется</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="tile client">
+					<div class="title-xlarge client-title">АО «АВТОТЕХСНАБ»</div>
+					<a href="#" class="link">www.website.ru</a>
+					<div class="client-wrapper">
+						<div class="tag">Амурский филиал</div>
+						<div class="status">Ведется</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="tile client">
+					<div class="title-xlarge client-title">АО «АВТОТЕХСНАБ»</div>
+					<a href="#" class="link">www.website.ru</a>
+					<div class="client-wrapper">
+						<div class="tag">Амурский филиал</div>
+						<div class="status">Ведется</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--Modal-->
+<div class="modal fade" id="filials" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog form-modal-dialog">
+		<div class="modal-content modal-form">
+			<div class="modal-form-header">
+				<div class="container">
+					<button type="button" class="close close-white" data-dismiss="modal" aria-label="Close"></button>
+				</div>
+			</div>
+			<div class="modal-form-body">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-xl-5 mr-auto">
+							<div class="filials-row">
+								<div class="filials-title">Подразделения</div>
+								<div class="filials-title">Реестры</div>
+							</div>
+						</div>
+						<div class="col-12 col-xl-5 d-none d-xl-block">
+							<div class="filials-row">
+								<div class="filials-title">Подразделения</div>
+								<div class="filials-title">Реестры</div>
+							</div>
+						</div>
+					</div>
+					<form>
+						<div class="form-row align-items-start">
+							<div class="col-12 col-xl-5 mr-auto">
+								<div class="filials">
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-all">
+										<label class="custom-radio-label filial-label" for="filial-all">Все филиалы</label>
+									</div>
+									<div class="filial-number">1534</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-1">
+										<label class="custom-radio-label filial-label" for="filial-1">Башкирский филиал</label>
+									</div>
+									<div class="filial-number">54</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-2">
+										<label class="custom-radio-label filial-label" for="filial-2">Волгоградский филиал</label>
+									</div>
+									<div class="filial-number">27</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-3">
+										<label class="custom-radio-label filial-label" for="filial-3">Воронежский филиал</label>
+									</div>
+									<div class="filial-number">54</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-4">
+										<label class="custom-radio-label filial-label" for="filial-4">Головной офис</label>
+									</div>
+									<div class="filial-number">27</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-5">
+										<label class="custom-radio-label filial-label" for="filial-5">Дальневосточный филиал</label>
+									</div>
+									<div class="filial-number">54</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-6">
+										<label class="custom-radio-label filial-label" for="filial-6">Кемеровский филиал</label>
+									</div>
+									<div class="filial-number">27</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-7">
+										<label class="custom-radio-label filial-label" for="filial-7">Краснодарский филиал</label>
+									</div>
+									<div class="filial-number">54</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-8">
+										<label class="custom-radio-label filial-label" for="filial-8">Курский филиал</label>
+									</div>
+									<div class="filial-number">27</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-9">
+										<label class="custom-radio-label filial-label" for="filial-9">Мурманский филиал</label>
+									</div>
+									<div class="filial-number">54</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-10">
+										<label class="custom-radio-label filial-label" for="filial-10">Нижегородский филиал</label>
+									</div>
+									<div class="filial-number">27</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-11">
+										<label class="custom-radio-label filial-label" for="filial-11">Новосибирский филиал</label>
+									</div>
+									<div class="filial-number">54</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-12">
+										<label class="custom-radio-label filial-label" for="filial-12">Омский филиал</label>
+									</div>
+									<div class="filial-number">27</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-13">
+										<label class="custom-radio-label filial-label" for="filial-13">Пензенский филиал</label>
+									</div>
+									<div class="filial-number">54</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-14">
+										<label class="custom-radio-label filial-label" for="filial-14">Приуральский филиал</label>
+									</div>
+									<div class="filial-number">27</div>
+								</div>
+							</div>
+							<div class="col-12 col-xl-5">
+								<div class="filials">
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-15">
+										<label class="custom-radio-label filial-label" for="filial-15">Ростовский филиал</label>
+									</div>
+									<div class="filial-number">1534</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-16">
+										<label class="custom-radio-label filial-label" for="filial-16">Рязанский филиал</label>
+									</div>
+									<div class="filial-number">54</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-17">
+										<label class="custom-radio-label filial-label" for="filial-17">Самарский филиал</label>
+									</div>
+									<div class="filial-number">27</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-18">
+										<label class="custom-radio-label filial-label" for="filial-18">Санкт-Петербургский филиал</label>
+									</div>
+									<div class="filial-number">54</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-19">
+										<label class="custom-radio-label filial-label" for="filial-19">Северо-Западный филиал</label>
+									</div>
+									<div class="filial-number">27</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-20">
+										<label class="custom-radio-label filial-label" for="filial-20">Северо-Осетинский филиал</label>
+									</div>
+									<div class="filial-number">54</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-21">
+										<label class="custom-radio-label filial-label" for="filial-21">Сочинский филиал</label>
+									</div>
+									<div class="filial-number">27</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-22">
+										<label class="custom-radio-label filial-label" for="filial-22">Тамбовский филиал</label>
+									</div>
+									<div class="filial-number">54</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-23">
+										<label class="custom-radio-label filial-label" for="filial-23">Тульский филиал</label>
+									</div>
+									<div class="filial-number">27</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-24">
+										<label class="custom-radio-label filial-label" for="filial-24">Тюменский филиал</label>
+									</div>
+									<div class="filial-number">54</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-25">
+										<label class="custom-radio-label filial-label" for="filial-25">Центральный филиал</label>
+									</div>
+									<div class="filial-number">27</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-26">
+										<label class="custom-radio-label filial-label" for="filial-26">Чебоксарский филиал</label>
+									</div>
+									<div class="filial-number">54</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-27">
+										<label class="custom-radio-label filial-label" for="filial-27">Чувашский филиал</label>
+									</div>
+									<div class="filial-number">27</div>
+									<div class="filial-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="filial-28">
+										<label class="custom-radio-label filial-label" for="filial-28">Якутский филиал</label>
+									</div>
+									<div class="filial-number">54</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+//= templates/footer.html

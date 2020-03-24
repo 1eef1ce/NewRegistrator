@@ -1,0 +1,170 @@
+//= templates/header.html
+<div class="container">
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">Главная</a></li>
+			<li class="breadcrumb-item"><a href="#">Эмитентам</a></li>
+			<li class="breadcrumb-item"><a href="#">Услуги</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Ведение реестра акционеров</li>
+		</ol>
+	</nav>
+</div>
+<section>
+	<div class="container">
+		<h3>Ведение реестра акционеров</h3>
+		<div class="row">
+			<div class="col-12 col-xl-8">
+				<div class="section">
+					<div class="section-title">
+						Правильная подготовка и проведение собрания акционеров – одно из сложных мероприятий в деятельности акционерного общества.
+					</div>
+					<div class="text-regular">
+						<p>
+							Несоблюдение требований законодательства при проведении собраний акционеров может привести
+							к проблемам вплоть до недружественных поглощений и захватов предприятий.
+						</p>
+						<p>
+							Общество обязано ежегодно проводить годовое общее собрание акционеров, в сроки, установленные уставом
+							общества, но не ранее чем через два месяца и не позднее чем через шесть месяцев после окончания отчетного года.
+						</p>
+						<p>
+							АО «Новый регистратор» осуществляет подготовку и проведение собраний акционеров с соблюдением
+							всех правовых норм и с использованием специального программного продукта.
+						</p>
+					</div>
+					<a href="#" class="btn btn-bordered btn-inline" type="button" data-toggle="modal" data-target="#request"><span class="d-none d-xl-block">Запросить&nbsp;</span>коммерческое предложение</a>
+				</div>
+				<div class="section">
+					<div class="section-title">В рамках услуги «Название услуги» мы:</div>
+					<div class="row row-cols-1 row-cols-xl-2">
+						//= templates/services.html
+					</div>
+				</div>
+				<div class="section">
+					<div class="section-title">Как провести собрание:</div>
+					//= templates/stages.html
+				</div>
+				<div class="section">
+					<div class="section-title">Необходимые документы</div>
+					<div class="text-regular">Узнайте, какие документы нужны для передачи реестра</div>
+					<form>
+						<div class="form-row">
+							<div class="col-12 col-xl-4">
+								<div class="form-group">
+									<label for="creationDate">Дата создания</label>
+									<input type="text" id="creationDate" class="form-control" placeholder="дд/мм/гггг">
+								</div>
+							</div>
+							<div class="col-12 col-xl-4">
+								<div class="form-group">
+									<label for="creationPath">Путь создания</label>
+									<select class="form-control" id="creationPath">
+										<option>Учреждение</option>
+										<option>2</option>
+										<option>3</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="form-group form-row">
+							<div class="col-12">
+								<div class="filter-group form-check">
+									<input type="checkbox" class="custom-check" id="check1">
+									<label class="custom-check-label" for="check1">Была дополнительная эмиссия</label>
+								</div>
+								<div class="filter-group form-check">
+									<input type="checkbox" class="custom-check" id="check2">
+									<label class="custom-check-label" for="check2">Были сделки/наследства/решение суда</label>
+								</div>
+								<div class="filter-group form-check">
+									<input type="checkbox" class="custom-check" id="check3">
+									<label class="custom-check-label" for="check3">Реестр ведется специализированным регистратором</label>
+								</div>
+							</div>
+						</div>
+						<button class="btn btn-filled" type="submit">Показать список</button>
+					</form>
+				</div>
+				<div class="section">
+					<div class="section-title">Бланки документов «Название услуги»</div>
+					//= templates/documents.html
+				</div>
+				<div class="section">
+					<div class="section-title">Популярные вопросы:</div>
+					//= templates/questions.html
+				</div>
+				<div class="section">
+					<div class="heading-wrapper">
+						<div class="section-title">Другие услуги для эмитентов</div>
+					</div>
+					<div class="row row-cols-1 row-cols-xl-2">
+						//= templates/services-other.html
+					</div>
+					<a href="#" class="btn btn-filled link-transform">все услуги</a>
+				</div>
+			</div>
+			<div class="col-12 col-xl-4">
+				//= templates/feedback-service.html
+			</div>
+		</div>
+	</div>
+</section>
+<!--Modal-->
+<div class="modal fade" id="request" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered custom-modal-dialog">
+		<div class="modal-content custom-modal-content">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="modal-title">Запрос коммерческого предложения</div>
+						<form>
+							<div class="form-row">
+								<div class="col-12">
+									<div class="form-group">
+										<input type="text" id="regDate" class="form-control" placeholder="Дата государственной регистрации">
+									</div>
+									<div class="form-group form-check">
+										<input type="checkbox" class="custom-check" id="regCheck">
+										<label class="custom-check-label" for="regCheck">Выпуск ценных бумаг зарегистрирован</label>
+									</div>
+									<div class="form-group">
+										<input type="text" id="INN" class="form-control" placeholder="ИНН">
+									</div>
+									<div class="form-group">
+										<select class="form-control" id="status">
+											<option>Статус ведения реестра</option>
+											<option>2</option>
+											<option>3</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-12 col-xl-6">
+									<div class="form-group">
+										<input type="text" id="shareholders" class="form-control" placeholder="Количество акционеров">
+									</div>
+									<div class="form-group">
+										<input type="text" id="contact" class="form-control" placeholder="Контактное лицо">
+									</div>
+								</div>
+								<div class="col-12 col-xl-6">
+									<div class="form-group">
+										<input type="email" id="contactEmail" class="form-control" placeholder="Email">
+									</div>
+									<div class="form-group">
+										<input type="tel" id="contactPhone" class="form-control" placeholder="Телефон">
+									</div>
+								</div>
+								<div class="col-12">
+									<button class="btn btn-filled" type="submit">Отправить запрос</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+//= templates/footer.html

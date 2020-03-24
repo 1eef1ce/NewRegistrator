@@ -1,0 +1,114 @@
+//= templates/header.html
+
+<section>
+	<div class="container">
+		<h3>Счета</h3>
+		<div class="row">
+			<div class="col">
+				<div class="section">
+					<div class="row">
+						<div class="col-12 col-xl-5 mr-auto">
+							<form class="search-form">
+								<input type="text" class="form-control search-input" placeholder="Поиск счетов по номеру">
+								<button type="submit" class="btn-search"></button>
+							</form>
+						</div>
+						<div class="col-12 col-xl-3">
+							<form>
+								<div class="form-group">
+									<select class="form-control" id="accounts">
+										<option>Собственные счета (3)</option>
+										<option>2</option>
+										<option>3</option>
+									</select>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="accordion">
+						<div class="accordion-item">
+							<div class="accordion-header" id="account1">
+								<div class="accordion-title" data-toggle="collapse" data-target="#collapse-account1" aria-expanded="false" aria-controls="collapse-account1">
+									АО «ЛИДЕР»
+								</div>
+							</div>
+							<div class="accordion-body collapse" id="collapse-account1" aria-labelledby="account1">
+								<table class="rtable table-custom accounts-table js-rtableAccordions">
+									<tr>
+										<th>Категория ЦБ</th>
+										<th>Номер ЛС</th>
+										<th>Рег.номер</th>
+										<th>Дата выпуска</th>
+										<th>Кол-во</th>
+										<th>Блок./в залоге</th>
+										<th>Действия</th>
+									</tr>
+									<tr class="info">
+										<td class="info-title accordion-btn" role="tab" aria-expanded="false">Обыкновенные бездокументарные акции</td>
+										<td class="rtable-cell info-wrapper"><div class="info-text">15789</div></td>
+										<td class="rtable-cell info-wrapper"><div class="info-text">1-01-42430</div></td>
+										<td class="rtable-cell info-wrapper"><div class="info-text">22.03.2003</div></td>
+										<td class="rtable-cell info-wrapper"><div class="info-text">184 шт.</div></td>
+										<td class="rtable-cell info-wrapper"><div class="info-text">184 шт.</div></td>
+										<td class="rtable-cell info-wrapper"><div class="info-text">
+											<a href="#" class="account-action"><img src="assets/images/file-text.svg"></a>
+											<a href="#" class="account-action"><img src="assets/images/user.svg"></a>
+										</div></td>
+									</tr>
+									<tr class="info">
+										<td class="info-title accordion-btn" role="tab" aria-expanded="false">Обыкновенные бездокументарные акции</td>
+										<td class="rtable-cell info-wrapper"><div class="info-text">15789</div></td>
+										<td class="rtable-cell info-wrapper"><div class="info-text">1-01-42430</div></td>
+										<td class="rtable-cell info-wrapper"><div class="info-text">22.03.2003</div></td>
+										<td class="rtable-cell info-wrapper"><div class="info-text">184 шт.</div></td>
+										<td class="rtable-cell info-wrapper"><div class="info-text">184 шт.</div></td>
+										<td class="rtable-cell info-wrapper"><div class="info-text">
+											<a href="#" class="account-action"><img src="assets/images/file-text.svg"></a>
+											<a href="#" class="account-action"><img src="assets/images/user.svg"></a>
+										</div></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<div class="accordion-header" id="account2">
+								<div class="accordion-title" data-toggle="collapse" data-target="#collapse-account2" aria-expanded="false" aria-controls="collapse-account2">
+									АО «Агрохимия»
+								</div>
+							</div>
+							<div class="accordion-body collapse" id="collapse-account2" aria-labelledby="account2">
+								<table class="rtable table-custom accounts-table js-rtableAccordions">
+									<tr>
+										<th>Категория ЦБ</th>
+										<th>Номер ЛС</th>
+										<th>Рег.номер</th>
+										<th>Дата выпуска</th>
+										<th>Кол-во</th>
+										<th>Блок./в залоге</th>
+										<th>Действия</th>
+									</tr>
+									<tr class="info">
+										<td class="info-title accordion-btn" role="tab" aria-expanded="false">Обыкновенные бездокументарные акции</td>
+										<td class="rtable-cell info-wrapper"><div class="info-text">15789</div></td>
+										<td class="rtable-cell info-wrapper"><div class="info-text">1-01-42430</div></td>
+										<td class="rtable-cell info-wrapper"><div class="info-text">22.03.2003</div></td>
+										<td class="rtable-cell info-wrapper"><div class="info-text">184 шт.</div></td>
+										<td class="rtable-cell info-wrapper"><div class="info-text">184 шт.</div></td>
+										<td class="rtable-cell info-wrapper"><div class="info-text">
+											<a href="#" class="account-action"><img src="assets/images/file-text.svg"></a>
+											<a href="#" class="account-action"><img src="assets/images/user.svg"></a>
+										</div></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+//= templates/footer-client.html

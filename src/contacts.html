@@ -1,0 +1,103 @@
+//= templates/header.html
+<div class="container">
+	<nav class="breadcrumb-wrapper" aria-label="breadcrumb">
+		<div class="breadcrumb-opacity"></div>
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">Главная</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Контакты</li>
+		</ol>
+	</nav>
+</div>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="tabs-container">
+					<nav class="nav tabs contacts-tabs" role="tablist">
+						<a class="tab contacts-tab active" id="tab-contact1" data-toggle="pill" href="#contact1" role="tab" aria-controls="contact1" aria-selected="true">Головной офис</a>
+						<a class="tab contacts-tab" id="tab-contact2" data-toggle="pill" href="#contact2" role="tab" aria-controls="contact2" aria-selected="false">Филиалы</a>
+						<a class="tab contacts-tab" id="tab-contact3" data-toggle="pill" href="#contact3" role="tab" aria-controls="contact3" aria-selected="false">Трансфер-агенты</a>
+					</nav>
+				</div>
+			</div>
+			<div class="col-12 tab-content">
+				<div class="tab-pane active" id="contact1" role="tabpanel" aria-labelledby="tab-contact1">
+					<h3 class="contacts-heading">Головной офис, Москва</h3>
+					<div class="section-title">Контакты для акционеров</div>
+					<div class="row">
+						<div class="col-12 col-xl-8">
+							<div class="section">
+								//= templates/contacts-shareholder.html
+							</div>
+							<div class="section">
+								<div class="section-title">Контакты для эмитентов</div>
+								//= templates/contacts-issuer.html
+							</div>
+						</div>
+						<div class="col-12 col-xl-4">
+							//= templates/contacts-top.html
+							//= templates/contacts-bottom.html
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="contact2" role="tabpanel" aria-labelledby="tab-contact2">
+					<a href="#" class="feedback-map-link float-right d-none d-xl-flex"><img src="../assets/images/icon-filials.svg">Москва, центральный филиал</a>
+					<h3 class="contacts-heading">Москва, центральный филиал</h3>
+					<div class="section-title">Контакты для акционеров</div>
+					<div class="row">
+						<div class="col-12 col-xl-8">
+							<div class="section">
+								//= templates/contacts-shareholder.html
+							</div>
+							<div class="section">
+								<div class="section-title">Контакты для эмитентов</div>
+								//= templates/contacts-issuer.html
+							</div>
+						</div>
+						<div class="col-12 col-xl-4">
+							//= templates/contacts-top.html
+							//= templates/contacts-bottom.html
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="contact3" role="tabpanel" aria-labelledby="tab-contact3">
+					<div class="section-title-wrapper">
+						<div class="section-title contacts-title">Филиал «Орел-Реестр» АО «Реестр»</div>
+						<a href="#" class="feedback-map-link d-none d-xl-flex"><img src="../assets/images/icon-filials.svg">Орел</a>
+					</div>
+					<div class="row">
+						<div class="col-12 col-xl-8">
+							<div class="section">
+								//= templates/contacts-shareholder.html
+							</div>
+							<div class="section">
+								<div class="accordion">
+									<div class="accordion-item">
+										<div class="accordion-header" id="issuer1">
+											<div class="accordion-title" data-toggle="collapse" data-target="#collapse-issuer1" aria-expanded="false" aria-controls="collapse-issuer1">
+												Обслуживаемые эмитенты
+											</div>
+										</div>
+										<div class="accordion-body collapse" id="collapse-issuer1" aria-labelledby="issuer1">
+											<div class="text-regular">
+												<p>
+													Несоблюдение требований законодательства при проведении собраний акционеров может привести
+													к проблемам вплоть до недружественных поглощений и захватов предприятий.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-xl-4">
+							//= templates/contacts-top.html
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+//= templates/footer.html

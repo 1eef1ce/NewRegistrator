@@ -1,0 +1,3563 @@
+fontRegular = Roboto
+fontBold = RobotoBold
+fontBold-v1 = OctavaCBold
+fontBold-v2 = MontserratBold
+fontSemiBold = MontserratSemiBold
+
+colorWhite = #ffffff
+colorBlack = #000000
+colorGrey = #706c71
+colorLightGrey = #bdbdbd
+colorDarkGrey = #333333
+colorWhiteTransparent = rgba(255, 255, 255, 0.12)
+colorGreyTransparent = rgba(96, 114, 134, 0.3)
+colorGreyTransparent-v1 = rgba(168, 176, 221, 0.1)
+colorGreyTransparent-v2 = rgba(96, 114, 134, 0.5)
+colorBlueTransparent = rgba(198, 227, 246, 0.12)
+colorLightBlue = #a8c8dd
+colorLighterBlue = #c6e3f6
+colorDarkBlue = #00558c
+colorBlue = #0090d2
+colorRed= #eb5757
+colorGreen = #28b440
+
+shadow()
+  box-shadow 0 5px 24px rgba(175, 196, 208, 0.4)
+
+shadow-v1()
+  box-shadow 0 10px 24px rgba(175, 196, 208, 0.5)
+
+shadow-v2()
+  box-shadow 0 10px 34px rgba(175, 196, 208, 0.5)
+
+shadow-v3()
+  box-shadow 5px 5px 15px rgba(0, 0, 0, 0.15)
+
+shadow-v4()
+  box-shadow 0 4px 4px rgba(0, 0, 0, 0.25)
+
+@font-face
+  font-family Roboto
+  src url(../assets/fonts/Roboto.woff2) format('woff2'),
+  url(../assets/fonts/Roboto.woff) format('woff')
+
+@font-face
+  font-family RobotoBold
+  src url(../assets/fonts/Robotobold.woff2) format('woff2'),
+  url(../assets/fonts/Robotobold.woff) format('woff')
+
+@font-face
+  font-family OctavaCBold
+  src url(../assets/fonts/OctavaC-Bold.woff2) format('woff2'),
+  url(../assets/fonts/OctavaC-Bold.woff) format('woff')
+
+@font-face
+  font-family MontserratBold
+  src url(../assets/fonts/Montserrat-Bold.woff2) format('woff2'),
+  url(../assets/fonts/Montserrat-Bold.woff) format('woff')
+
+@font-face
+  font-family MontserratSemiBold
+  src url(../assets/fonts/Montserrat-SemiBold.woff2) format('woff2'),
+  url(../assets/fonts/Montserrat-SemiBold.woff) format('woff')
+
+//outline fix
+input
+textarea
+  resize none
+  &:focus
+    outline none!important
+    box-shadow none!important
+
+button
+a
+  display inline-block
+  color inherit
+  text-decoration none
+  &:hover
+  &:focus
+    outline none
+    color inherit
+    text-decoration none
+
+button
+  padding 0
+  border 0
+
+ul
+  padding 0
+  margin 0
+  list-style none
+
+//bootstrap macOs fix
+.row
+  &:before
+  &:after
+    display inline-block !important
+    content normal
+
+//styles
+body
+  font-family fontRegular, Arial, sans-serif
+  font-size 14px
+  color colorGrey
+  line-height 1
+  background-color colorWhite
+
+img
+  display block
+  margin auto
+  max-width 100%
+  max-height 100%
+
+.container
+  position relative
+
+  @media (min-width 1440px)
+    max-width 1140px
+
+section
+.section
+  position relative
+  margin-bottom 80px
+
+  @media (min-width 1440px)
+    margin-bottom 100px
+
+.text-regular
+  font-family fontRegular
+  font-size 14px
+  line-height 1.7
+  color colorGrey
+
+  @media (min-width 1440px)
+    font-size 16px
+    line-height 1.4
+
+.text-large
+  font-family fontRegular
+  font-size 14px
+  line-height 1.7
+  color colorGrey
+
+  @media (min-width 1440px)
+    font-size 18px
+    line-height 1.56
+
+.list
+  li
+    list-style-type none
+    &:before
+      display inline-block
+      content ""
+      background colorBlue
+      width 4px
+      height 4px
+      margin 0 0.5em 0.25em 0
+    &+li
+      margin-top 1em
+
+.tile
+  display flex
+  flex-direction column
+  justify-content space-between
+  background colorWhite
+  shadow()
+  border-radius 2px
+  padding 20px
+  margin-bottom 20px
+
+  @media (min-width 1440px)
+    shadow-v2()
+    padding 30px
+    margin-bottom 30px
+
+//** Titles **//
+.title-small
+  font-family fontBold
+  font-size 16px
+  line-height 1.62
+  color colorDarkBlue
+
+  @media (min-width 1440px)
+    font-size 18px
+    line-height 1.56
+
+.title-regular
+  font-family fontBold
+  font-size 18px
+  line-height 1.56
+  color colorDarkBlue
+
+.title-large
+  font-family fontBold
+  font-size 20px
+  line-height 1.5
+  color colorDarkBlue
+
+  @media (min-width 1440px)
+    font-size 22px
+    line-height 1.45
+
+.title-xlarge
+  font-family fontBold
+  font-size 22px
+  line-height 1.36
+  color colorDarkBlue
+
+  @media (min-width 1440px)
+    font-size 24px
+    line-height 1.33
+
+.section-title
+  font-family fontBold
+  font-size 18px
+  line-height 1.56
+  color colorDarkBlue
+  margin-bottom 10px
+
+  @media (min-width 1440px)
+    font-size 24px
+    line-height 1.33
+    margin-bottom 20px
+
+.section-title-wrapper
+  display flex
+  align-items center
+  justify-content space-between
+  margin-bottom 15px
+  .section-title
+    margin-bottom 0
+
+  @media (min-width 1440px)
+    justify-content flex-start
+    margin-bottom 20px
+    .section-title
+      margin-right 30px
+
+.heading-wrapper
+  display flex
+  align-items center
+  justify-content space-between
+  margin-bottom 15px
+  .section-title
+  h2
+  .h2
+    margin-bottom 0
+
+  @media (min-width 1440px)
+    margin-bottom 20px
+
+//** Breadcrumbs **//
+.breadcrumb-wrapper
+  position relative
+
+.breadcrumb-opacity
+  position absolute
+  top 0
+  right 0
+  width 105px
+  height 1em
+  background linear-gradient(268.09deg, #FFFFFF 0.25%, rgba(255, 255, 255, 0) 117.82%)
+
+  @media (min-width 1440px)
+    display none
+
+.breadcrumb
+  height 1.25em
+  overflow hidden
+  padding 0
+  margin-bottom 20px
+  background-color colorWhite
+  border-radius 0
+  font-family fontRegular
+  font-size 12px
+  line-height 1.167
+  color colorGrey
+
+  @media (min-width 1440px)
+    height auto
+    font-size 14px
+    line-height 1.7
+    margin-bottom 40px
+
+.breadcrumb-item
+  &.active
+    color #bebebe
+
+//** Headings **//
+h2
+.h2
+  font-family fontBold-v1
+  font-size 32px
+  line-height 1.1875
+  color colorGreyTransparent
+  margin-bottom 15px
+
+  @media (min-width 1440px)
+    font-size 48px
+    margin-bottom 20px
+
+h3
+.h3
+  font-family fontBold-v1
+  font-size 23px
+  line-height 1.43
+  color colorGreyTransparent
+  margin-bottom 15px
+
+  @media (min-width 1440px)
+    font-size 38px
+    margin-bottom 20px
+
+//** Links and buttons **//
+.link
+  font-family fontRegular
+  font-size 16px
+  line-height 1.5
+  color colorBlue
+  &:hover
+  &:focus
+    color colorBlue
+
+  @media (min-width 1440px)
+    font-size 18px
+
+.link-underline
+  text-decoration underline
+  &:hover
+  &:focus
+    text-decoration underline
+
+.link-more
+  display flex
+  align-items center
+  font-family fontBold-v2
+  font-size 14px
+  line-height 1.5
+  color colorBlue
+  text-transform uppercase
+  &:before
+    content ""
+    width 30px
+    height 1px
+    background colorBlue
+    margin-right 10px
+  &:after
+    content url("../assets/images/quote-single-right.svg")
+    margin-left 10px
+  &:hover
+  &:focus
+    color colorBlue
+
+.link-more-large
+
+  @media (min-width 1440px)
+    font-size 18px
+    &:before
+      width 40px
+
+.link-more-white
+  color colorWhite
+  &:before
+    background colorWhite
+  &:after
+    content url("../assets/images/quote-single-right-white.svg")
+  &:hover
+  &:focus
+    color colorWhite
+
+.link-read
+  font-family fontRegular
+  font-size 14px
+  line-height 1.5
+  color colorLightGrey
+
+  @media (min-width 1440px)
+    display none
+
+.btn
+  display flex
+  align-items center
+  justify-content center
+  width 100%
+  height 40px
+  padding 10px 20px
+  border-radius 2px
+  font-family fontBold-v2
+  font-size 13px
+  text-transform uppercase
+  color colorWhite
+  &:hover
+  &:focus
+    color colorWhite
+    text-decoration none
+    box-shadow none
+
+.btn-inline
+
+  @media (min-width 1440px)
+    display inline-flex
+    width auto
+    min-width 190px
+
+.btn-filled
+  background colorBlue
+  shadow-v2()
+
+.btn-bordered
+  color colorBlue
+  background colorBlueTransparent
+  border 1px solid colorLighterBlue
+  &:hover
+  &:focus
+    color colorBlue
+
+.btn-feedback
+  width 100%
+  border 1px solid rgba(255, 255, 255, 0.5)
+
+.btn-filter
+  margin-bottom 30px
+
+  @media (min-width: 1440px)
+    display none
+
+.btn-filter-submit
+  margin-top 30px
+
+  @media (min-width: 1440px)
+    display none
+
+.btn-search
+  position absolute
+  top 0
+  right 0
+  background colorBlue url("../assets/images/search.svg") no-repeat center
+  background-size 18px
+  width 44px
+  height 44px
+  border-radius 0 2px 2px 0
+
+  @media (min-width: 1440px)
+    background-size 20px
+    width 48px
+    height 48px
+
+.btn-search-alt
+  position relative
+  display flex
+  align-items center
+  justify-content center
+  background colorBlue
+  width 100%
+  height 40px
+  border-radius 2px
+  shadow-v2()
+  span
+    display flex
+    font-family fontBold-v2
+    font-size 13px
+    text-transform uppercase
+    color colorWhite
+    &:after
+      content ""
+      background url("../assets/images/search.svg")
+      background-size 14px
+      width 14px
+      height 14px
+      margin-left 6px
+
+//** Header **//
+header
+.header
+  background colorWhite
+
+.header-hint
+  display flex
+  align-items center
+  justify-content center
+  padding 6px 15px
+  background colorBlue
+
+.hint-text
+  font-family fontRegular
+  font-size 18px
+  line-height 1.33
+  color colorWhite
+  margin-right 20px
+
+.btn-hint
+  display flex
+  font-size 11px
+  width auto
+  height 28px
+  padding 5px 15px
+  border 1px solid rgba(255, 255, 255, 0.5)
+  &:after
+    content url("../assets/images/quote-single-right-white.svg")
+    margin 2px 0 0 5px
+
+.navbar
+  padding 0
+
+.navbar-toggler
+  padding 0
+  border 0
+
+.navbar-toggler .icon-bar
+  display block
+  width 20px
+  height 2px
+  background colorDarkBlue
+  position relative
+  transition all 0.15s ease
+
+.navbar-toggler .icon-bar+.icon-bar
+  margin-top 4px
+
+.nav
+  display flex
+  align-items center
+  justify-content space-between
+
+.nav-left
+  padding-left 30px
+
+.nav-right
+  display flex
+  align-items center
+  text-align right
+
+.header-main
+  padding 12px 30px
+  background colorWhite
+
+.header-sub
+  padding 16px 30px
+  background colorDarkBlue
+
+.header-logo
+  width 140px
+
+.logo-left
+  position absolute
+  top 14px
+  left 25px
+
+.main-item
+  &.active
+    .main-link
+      color colorBlue
+
+  @media (min-width: 1440px)
+    &+.main-item
+      margin-left 40px
+
+.main-link
+  font-family fontRegular
+  font-size 16px
+  line-height 1.5
+  color colorGrey
+  &:hover
+  &:focus
+    color colorBlue
+
+.sub-item
+  &+.sub-item
+    margin-left 40px
+
+.sub-link
+  font-family fontBold
+  font-size 16px
+  line-height 1.5
+  color colorWhite
+  text-transform uppercase
+  &:hover
+  &:focus
+    color colorWhite
+
+.btn-sub
+  width auto
+  border 1px solid rgba(255, 255, 255, 0.5)
+  padding 5px 15px
+  margin-left 15px
+
+.nav-filial
+  margin-right 30px
+
+.filial-office
+  font-family fontRegular
+  font-size 14px
+  line-height 1.7
+  color colorGrey
+
+.filial-address
+  font-family fontRegular
+  font-size 14px
+  line-height 1.7
+  color colorDarkBlue
+
+.header-phone
+  font-family fontBold
+  font-size 18px
+  line-height 1.56
+  color colorDarkBlue
+  &:hover
+  &:focus
+    color colorDarkBlue
+
+.phone-text
+  font-family fontRegular
+  font-size 14px
+  line-height 1.7
+  color colorDarkBlue
+
+//** Header - Mobile **//
+.header-container-mobile
+  display flex
+  align-items center
+  justify-content space-between
+  background colorWhite
+  height 54px
+  padding 14px 15px
+  box-shadow 0px 0px 10px rgba(0, 0, 0, 0.1)
+
+.header-top-mobile
+  display flex
+  align-items center
+  background colorBlue
+  border-bottom 2px solid colorWhite
+  .search-form
+    flex-grow 1
+    margin-bottom 0
+    .search-input
+      background transparent
+      color colorWhite
+      &::placeholder
+        color colorWhite
+
+.close-mobile
+  width 54px
+  height 54px
+  border-right 2px solid colorWhite
+  .close
+    top 14px
+    left 14px
+    right auto
+    background url("../assets/images/close-mobile.svg")
+    width 24px
+    height 24px
+
+.header-logo-mobile
+  position absolute
+  left 0
+  right 0
+  margin auto
+  width 105px
+
+.header-icon-mobile
+  &+.header-icon-mobile
+    margin-left 12px
+  img
+    width 24px
+    height 24px
+
+.nav-mobile
+  display flex
+  flex-direction column
+
+.nav-client-mobile
+  margin 15px 0
+  .mobile-link
+    font-family fontBold
+    border 0
+
+.header-btn-container
+  padding 0 15px
+  margin 40px 0 30px
+  .btn
+    &+.btn
+      margin-top 10px
+  &.bottom
+    position absolute
+    bottom 0
+    left 0
+    right 0
+
+.header-contacts-mobile
+  display flex
+  align-items center
+  justify-content space-between
+  padding 0 15px 15px
+
+.mobile-link
+  display block
+  font-family fontRegular
+  font-size 16px
+  line-height 1.43
+  color colorDarkBlue
+  padding 15px
+  border-bottom 1px solid rgba(96, 114, 134, 0.12)
+  &:hover
+  &:focus
+    color colorDarkBlue
+
+ul ul ul .mobile-link
+  font-size 14px
+  color colorGrey
+  background rgba(0, 101, 242, 0.036)
+
+.link-featured
+  font-family fontBold
+  font-size 14px
+  text-transform uppercase
+  background rgba(0, 101, 242, 0.036)
+  border-bottom 0
+  margin-bottom 2px
+
+.item-featured ul li .mobile-link
+  color colorGrey
+  background rgba(0, 101, 242, 0.036)
+
+.title-mobile
+  font-family fontBold
+  font-size 16px
+  line-height 1.25
+  color colorWhite
+  padding 0 15px
+
+//** Header - Client **//
+.header-client
+  box-shadow 0 5px 10px rgba(0, 0, 0, 0.05)
+  padding 15px 0
+  .form-control
+    width 285px
+    height 40px
+    padding 8px 20px
+    margin 0 10px
+    font-size 14px
+
+.notification
+  position relative
+  display flex
+  width 22px
+  height 22px
+  margin-right 19px
+
+  @media (min-width: 1440px)
+    margin-right 37px
+
+.notification-number
+  position absolute
+  top -4px
+  right -4px
+  display flex
+  align-items center
+  justify-content center
+  width 12px
+  height 12px
+  background colorBlue
+  border-radius 100%
+  border 1px solid colorWhite
+  font-family fontRegular
+  font-size 8px
+  color colorWhite
+
+.shareholder-img
+  width 24px
+  height 24px
+  border-radius 100%
+  margin 0
+
+  @media (min-width: 1440px)
+    width 42px
+    height 42px
+    margin 0 20px 0 0
+
+.shareholder-name
+  font-family fontBold
+  font-size 16px
+  line-height 1.4
+  color colorDarkBlue
+
+.client-item
+  &+.client-item
+    margin-left 40px
+
+.client-link
+  font-family fontRegular
+  font-size 16px
+  line-height 1.25
+  color colorGrey
+  &.active
+    color colorDarkBlue
+
+.issuer-profile
+.issuer-info
+  display inline-flex
+  width 24px
+  height 24px
+  margin-left 15px
+
+  @media (min-width 1440px)
+    width 40px
+    height 40px
+    background #f7f8f9
+    border-radius 2px
+    margin-left 0
+
+.client-select-mobile
+  display flex
+  justify-content space-between
+  padding 15px 15px 0
+
+.issuer-info-mobile
+  display inline-flex
+  width 40px
+  height 40px
+  background #f7f8f9
+  border-radius 2px
+  margin-left 10px
+
+//** Dropdowns **//
+.dropdown-menu
+  position absolute
+  top 49px
+  left 0
+  width 300px
+  padding 0
+  margin 0
+  font-size 16px
+  color colorGrey
+  background-color colorWhite
+  border 0
+  border-radius 0
+  box-shadow 0 0 30px rgba(0, 0, 0, 0.2)
+
+.dropdown-item
+  padding 18px 20px
+  line-height 1.4
+  color colorGrey
+  border-bottom 1px solid rgba(96, 114, 134, 0.15)
+  white-space normal
+  &:last-of-type
+    border-bottom 0
+  &:hover
+  &:focus
+    color colorWhite
+    background-color colorBlue
+
+.dropdown-submenu
+  position relative
+  top 100%
+  box-shadow none
+  background rgba(0, 101, 242, 0.036)
+  .dropdown-item
+    font-size 14px
+    border-bottom 0
+    &:hover
+    &:focus
+      color colorBlue
+      background transparent
+
+//** About - Directors **//
+.director
+  padding 0
+  &:hover
+  &:focus
+    .director-position
+      color colorWhite
+      background colorLightBlue
+
+  @media (min-width 1440px)
+    padding 0
+
+.director-wrapper
+  display flex
+  flex-direction column
+
+  @media (min-width 1440px)
+    flex-direction row
+    align-items center
+
+.director-img
+  width 100%
+  border-radius 2px 2px 0 0
+
+  @media (min-width 1440px)
+    width 121px
+    border-radius 2px 0 0 0
+
+.director-name
+  font-family fontBold
+  font-size 20px
+  line-height 1.5
+  color colorDarkBlue
+  text-align center
+  padding 12px 20px 6px
+
+  @media (min-width 1440px)
+    font-size 22px
+    line-height 1.36
+    text-align left
+    padding 0 20px
+
+.director-position
+  font-family fontRegular
+  font-size 14px
+  line-height 1.2
+  color colorGrey
+  text-align center
+  padding 15px
+  background rgba(96, 114, 134, 0.06)
+  border-radius 0 0 2px 2px
+
+  @media (min-width 1440px)
+    font-size 16px
+    line-height 1.5
+
+//** About - Managers **//
+.manager
+  display flex
+  background colorWhite
+  margin-bottom 40px
+
+  @media (min-width 1440px)
+    flex-direction column
+    margin-bottom 50px
+
+.manager-wrapper
+  display flex
+  flex-direction column
+  justify-content space-between
+
+  @media (min-width 1440px)
+    align-items center
+
+.manager-img
+  width 105px
+  shadow-v3()
+
+  @media (min-width 1440px)
+    width 160px
+
+.manager-name
+  font-family fontBold
+  font-size 18px
+  line-height 1.44
+  color colorDarkBlue
+  padding 0 15px
+
+  @media (min-width 1440px)
+    font-size 16px
+    line-height 1.4
+    text-align center
+    padding 20px 0 9px
+
+.manager-position
+  font-family fontRegular
+  font-size 14px
+  line-height 1.43
+  color colorGrey
+  padding 0 15px
+
+  @media (min-width 1440px)
+    text-align center
+    padding 6px 10px
+    background rgba(0, 101, 242, 0.036)
+
+//** News **//
+.tabs-container
+  margin 0 -15px
+
+.tabs
+  display flex
+  flex-wrap nowrap
+  overflow scroll
+  justify-content space-between
+  margin-bottom 20px
+
+  @media (min-width 1440px)
+    flex-wrap wrap
+    overflow auto
+    margin-bottom 30px
+
+.tab
+  display flex
+  flex-shrink 0
+  align-items center
+  justify-content center
+  height 30px
+  font-family fontSemiBold
+  font-size 13px
+  color rgba(0, 144, 210, 0.5)
+  background #f4f8fa
+  border-radius 2px
+  padding 5px 15px
+  &:hover
+  &:focus
+    color rgba(0, 144, 210, 0.5)
+  &.active
+    color colorWhite
+    background colorBlue
+  &+.news-tab
+    margin-left 10px
+  &:first-of-type
+    margin-left 15px
+  &:last-of-type
+    margin-right 15px
+
+  @media (min-width 1440px)
+    padding 5px 20px
+    &+.news-tab
+      margin-left 0
+
+.news
+  height 287px
+
+  @media (min-width 1440px)
+    height 315px
+    .main-news &
+      height 270px
+
+.news-title
+
+  @media (min-width 1440px)
+    .main-news &
+      font-size 20px
+
+.tag
+  align-self flex-start
+  font-family fontRegular
+  font-size 14px
+  line-height 1.2
+  color colorLightBlue
+  padding 6px 10px
+  border 1px solid colorLighterBlue
+  background colorBlueTransparent
+  border-radius 2px
+
+  @media (min-width 1440px)
+    font-size 16px
+
+.date
+  font-family fontRegular
+  font-size 14px
+  line-height 1.7
+  color colorGreyTransparent-v2
+
+  @media (min-width 1440px)
+    font-size 16px
+
+.news-featured
+  background colorBlue
+
+.tag-featured
+  align-self flex-start
+  font-family fontRegular
+  font-size 16px
+  line-height 1.4
+  color colorWhite
+  padding 4px 23px
+  border 1px solid colorWhite
+  background colorWhiteTransparent
+  border-radius 2px
+
+.title-featured
+  color colorWhite
+
+.date-featured
+  font-family fontRegular
+  font-size 14px
+  line-height 1.7
+  color colorWhite
+  opacity 0.5
+
+  @media (min-width 1440px)
+    font-size 16px
+
+//** Subscribe **//
+.subscribe
+  height 290px
+  background colorDarkBlue
+  padding 20px 15px 20px 20px
+
+  @media (min-width 1440px)
+    height 315px
+    padding 30px
+
+.subscribe-wrapper
+  display flex
+  margin-bottom 20px
+
+.subscribe-img
+  width 58px
+  margin-right 20px
+
+.subscribe-title
+  color colorWhite
+
+.subscribe-text
+  font-family fontRegular
+  font-size 14px
+  line-height 1.71
+  color colorWhite
+  margin-bottom 25px
+
+  @media (min-width 1440px)
+    margin-bottom 18px
+
+//** Help - Ref **//
+.section-ref
+  padding 40px 0 20px
+  &:first-of-type
+    padding-top 0
+
+  @media (min-width 1440px)
+    padding 60px 0 30px
+
+.section-ref
+  &:nth-of-type(even)
+    background rgba(96, 114, 134, 0.06)
+
+.ref
+
+  @media (min-width 1440px)
+    height 234px
+    padding 30px 45px 20px 30px
+
+.ref-title
+  max-height 7.65em
+  overflow hidden
+  margin-bottom 15px
+
+  @media (min-width 1440px)
+    margin-bottom 0
+
+//** Services **//
+.example-img
+  width 100%
+
+.tile-hidden
+  display none
+
+  @media (min-width 1440px)
+    display block
+
+.service-large
+  height 295px
+
+  @media (min-width 1440px)
+    height 430px
+
+.service-horizontal
+
+  @media (min-width 1440px)
+    flex-direction row
+    height 200px
+    .service-img
+      align-self center
+      margin-right 40px
+
+.service-container
+  .service-img
+    margin-bottom 15px
+  .service-title
+    margin-bottom 10px
+
+  @media (min-width 1440px)
+    .service-img
+      margin-bottom 40px
+    .service-title
+      margin-bottom 20px
+    .text-regular
+      margin-bottom 18px
+
+.service-featured
+  background colorBlue
+
+.service-img
+  height 60px
+  margin 0
+  align-self flex-start
+
+  @media (min-width 1440px)
+    height auto
+
+.service-short
+  height 158px
+
+  @media (min-width 1440px)
+    height 200px
+
+.service
+  min-height 130px
+
+  @media (min-width 1440px)
+    height 151px
+
+.stage
+  position relative
+  background rgba(0, 101, 242, 0.036)
+  height 235px
+  padding 15px
+  box-shadow none
+  border-radius 0
+
+  @media (min-width 1440px)
+    height 171px
+    padding 20px 20px 20px 83px
+
+.stage-title
+  max-width 200px
+
+  @media (min-width 1440px)
+    max-width none
+    font-size 18px
+    line-height 1.67
+
+.stage-number
+  position absolute
+  top 15px
+  right 15px
+  font-family fontBold-v1
+  font-size 40px
+  color colorGreyTransparent
+
+  @media (min-width 1440px)
+    top 20px
+    right auto
+    left 20px
+    font-size 35px
+
+.attention
+  background colorBlue
+  shadow()
+  padding 15px
+
+  @media (min-width 1440px)
+    shadow-v2()
+    padding 20px 30px
+
+.attention-dark
+  background colorDarkBlue
+
+.attention-wrapper
+  display flex
+  align-items center
+  margin-bottom 10px
+
+.attention-img
+  margin 0 10px 0 0
+
+.attention-title
+  text-transform uppercase
+  color colorWhite
+
+  @media (min-width 1440px)
+    font-size 18px
+    line-height 1.67
+
+.attention-text
+  color colorWhite
+
+.price
+  display inline-block
+  font-family fontBold
+  font-size 18px
+  color colorBlue
+
+//** Accordions **//
+.accordion-item
+  border-bottom 2px solid rgba(96, 114, 134, 0.12)
+  &:first-of-type
+    border-top 2px solid rgba(96, 114, 134, 0.12)
+
+.accordion-header
+  padding 20px 0
+
+.accordion-title
+  position relative
+  display flex
+  align-items center
+  font-family fontBold
+  font-size 16px
+  line-height 1.37
+  color colorDarkGrey
+  padding-right 18px
+  &:after
+    position absolute
+    right 0
+    content url("../assets/images/arrow-down-light.svg")
+  &[aria-expanded="true"]
+    &:after
+      content url("../assets/images/arrow-up-light.svg")
+
+.documents-title
+
+  @media (min-width 1440px)
+    font-size 18px
+    line-height 1.56
+
+.question-title
+  color colorDarkBlue
+  padding-right 40px
+
+  @media (min-width 1440px)
+    font-size 18px
+
+.event-title
+  &:before
+    content ""
+    width 18px
+    height 18px
+    border-radius 100%
+    background #f1f2f4
+    margin-right 10px
+  &[aria-expanded="true"]
+    &:before
+      border 6px solid colorBlue
+
+  @media (min-width 1440px)
+    font-size 18px
+    line-height 1.56
+    &:before
+      width 20px
+      height 20px
+      margin-right 16px
+
+.meeting
+  padding-bottom 20px
+
+.meeting-wrapper
+  flex-direction column
+
+.meeting-title
+  margin-bottom 10px
+
+  @media (min-width 1440px)
+    font-size 18px
+    margin-bottom 4px
+
+.meeting-tag
+  display inline-block
+  font-family fontBold-v2
+  font-size 10px
+  color colorWhite
+  padding 4px 8px
+  background colorDarkBlue
+  border-radius 2px
+
+  @media (min-width 1440px)
+    font-size 11px
+
+.meeting-text
+  font-family fontBold
+  font-size 14px
+  line-height 1.43
+  color colorDarkBlue
+
+.meeting
+  .document-text-wrapper
+    display inline-block
+    &:first-of-type
+      margin-right 36px
+
+    @media (min-width 1440px)
+      &:first-of-type
+        margin-right 68px
+
+.document
+  display flex
+  align-items flex-start
+  margin-bottom 30px
+
+.document-img
+  margin 0 12px 0 0
+
+  @media (min-width 1440px)
+    margin 0 15px 0 0
+
+.document-name
+  font-family fontBold
+  font-size 14px
+  line-height 1.43
+  color colorDarkBlue
+  margin-bottom 10px
+
+  @media (min-width 1440px)
+    font-size 18px
+
+.document-date
+.document-size
+.meeting-date
+  display inline-block
+  font-family fontRegular
+  font-size 12px
+  color colorGrey
+  margin-right 15px
+
+  @media (min-width 1440px)
+    font-size 14px
+    margin-right 20px
+
+.question
+  padding 15px
+
+  @media (min-width 1440px)
+    padding 20px 30px
+    margin-bottom 10px
+
+.question-body
+  .text-regular
+    margin-top 10px
+
+//** Clients **//
+.clients-search
+  .search-form
+    margin-bottom 15px
+  .btn-search-alt
+    margin-bottom 15px
+
+  @media (min-width 1440px)
+    align-items center
+    margin-bottom 50px
+    .search-form
+    .form-group
+      margin-bottom 0
+
+.client
+  height 165px
+
+  @media (min-width 1440px)
+    height 220px
+
+.client-title
+  margin-bottom 10px
+
+.client-wrapper
+  display flex
+  align-items center
+  justify-content space-between
+  margin-top 30px
+
+  @media (min-width 1440px)
+    margin-top 60px
+
+.status
+  font-family fontSemiBold
+  font-size 12px
+  text-transform uppercase
+  color colorBlue
+
+  @media (min-width 1440px)
+    font-size 13px
+
+//** Licences **//
+.licence
+  height 568px
+  padding 15px
+
+  @media (min-width 1440px)
+    flex-direction row
+    height 330px
+    padding 30px
+
+.licence-img
+  width 100%
+  margin 0 0 15px
+
+  @media (min-width 1440px)
+    width 195px
+    margin 0 30px 0 0
+
+.licence-title
+  margin-bottom 10px
+
+  @media (min-width 1440px)
+    font-size 22px
+    line-height 1.45
+
+.licence-text
+  max-height 6.75em
+  overflow hidden
+  margin-bottom 10px
+
+  @media (min-width 1440px)
+    max-height none
+    margin-bottom 0
+
+.licence-number
+  display flex
+  align-items center
+  font-family fontBold-v1
+  font-size 50px
+  color colorGreyTransparent
+  opacity 0.4
+  &:before
+    content ""
+    width 65px
+    height 2px
+    background colorGreyTransparent
+    margin-right 30px
+
+//** About **//
+.about
+
+  @media (min-width 1440px)
+    background rgba(0, 101, 242, 0.036)
+    padding 30px 130px 40px 30px
+    margin-bottom 100px
+
+.branches-container
+
+  @media (min-width 1440px)
+    position absolute
+    top 50px
+    right 0
+
+.branches
+  background colorBlue
+  padding 20px 30px 20px 20px
+
+  @media (min-width 1440px)
+    padding 40px
+
+.branch
+  &+.branch
+    margin-top 40px
+
+.branch-wrapper
+  display flex
+  align-items center
+  margin-bottom 12px
+
+.branch-number
+  font-family fontBold-v1
+  font-size 45px
+  color colorWhite
+
+  @media (min-width 1440px)
+    font-size 50px
+
+.branch-text
+  font-family fontBold-v2
+  font-size 16px
+  line-height 1.37
+  text-transform uppercase
+  color colorWhite
+
+  @media (min-width 1440px)
+    font-size 18px
+    line-height 1.22
+
+.divider-vertical
+  height 34px
+  border-right 1px solid colorWhite
+  opacity 0.3
+  margin 0 13px
+
+  @media (min-width 1440px)
+    height 36px
+    margin 0 20px
+
+.achievement
+  padding 15px 0 20px
+
+  @media (min-width 1440px)
+    padding 20px 0 50px
+
+.achievement-nav
+  padding 0 15px 15px
+  border-bottom 1px solid rgba(0, 101, 242, 0.12)
+
+  @media (min-width 1440px)
+    padding 0 30px 15px
+
+.achievement-year
+  font-family fontBold
+  font-size 28px
+  color colorBlue
+  span
+    font-size 22px
+
+  @media (min-width 1440px)
+    font-size 32px
+    span
+      font-size 24px
+
+.achievement-text
+  padding 15px 15px 0
+
+  @media (min-width 1440px)
+    padding 20px 30px 0
+
+.years
+  display none
+
+  @media (min-width 1440px)
+    position relative
+    display flex
+    flex-direction column
+    margin-left 58px
+
+.years-line
+
+  @media (min-width 1440px)
+    position absolute
+    width 2px
+    height 95%
+    margin-top 4%
+    background colorGreyTransparent
+    top 0
+    left 6px
+    z-index 10
+
+.year
+
+  @media (min-width 1440px)
+    position relative
+    z-index 100
+    display flex
+    align-items center
+    font-family fontBold
+    font-size 28px
+    color colorGreyTransparent
+    &+.year
+      margin-top 47px
+    &:before
+      content ""
+      width 14px
+      height 14px
+      background colorWhite
+      border-radius 100%
+      border 4px solid
+      border-color colorGreyTransparent
+      margin-right 30px
+    &.active
+      color colorBlue
+      &:before
+        border-color colorBlue
+
+
+.principle
+  height 227px
+  padding 20px 14px 20px 20px
+  &:hover
+    background colorBlue
+    .principle-title
+    .principle-text
+      color colorWhite
+
+  @media (min-width 1440px)
+    flex-direction row
+    align-items center
+    height 150px
+    padding 30px 65px 30px 30px
+
+.principle-img
+  height 60px
+  margin 0
+  align-self flex-start
+
+  @media (min-width 1440px)
+    height 80px
+    margin-right 30px
+
+.principle-title
+  margin-bottom 10px
+
+  @media (min-width 1440px)
+    font-size 20px
+    line-height 1.5
+
+.principle-text
+
+  @media (min-width 1440px)
+    font-size 14px
+    line-height 1.7
+
+//** Feedback **//
+.feedback
+  background colorDarkBlue
+  padding 20px 15px 15px
+
+  @media (min-width 1440px)
+    padding 30px
+
+.feedback-container
+  margin 20px 0
+  padding 20px 0
+  border-top 1px solid #96B1CC
+  border-bottom 1px solid #96B1CC
+
+  @media (min-width 1440px)
+    margin 15px 0 25px
+    padding 20px 0 15px
+
+.feedback-short
+  margin-bottom 0
+  padding-bottom 0
+  border-bottom 0
+
+.feedback-wrapper
+  &+.feedback-wrapper
+    margin-top 1em
+
+.feedback-title-wrapper
+  display flex
+  img
+    margin 0 20px 0 0
+
+.feedback-divider
+  position relative
+  display flex
+  align-items center
+  justify-content center
+  width 100%
+  height 1px
+  background #96B1CC
+  margin 30px 0
+  span
+    position absolute
+    margin auto
+    padding 0 10px
+    background colorDarkBlue
+    font-family fontBold
+    font-size 9px
+    line-height 2.22
+    text-transform uppercase
+    color #96B1CC
+
+.feedback-title
+  color colorWhite
+
+  @media (min-width 1440px)
+    font-size 22px
+    line-height 1.45
+
+.feedback-text
+  font-family fontRegular
+  font-size 14px
+  line-height 1.4
+  color colorWhite
+  margin-bottom 8px
+  &.text-regular
+    line-height 1.7
+    margin-bottom 20px
+
+  @media (min-width 1440px)
+    font-size 16px
+
+.feedback-link
+  font-family fontBold
+  font-size 22px
+  line-height 1.4
+  color colorWhite
+  &:hover
+  &:focus
+    color colorWhite
+
+  @media (min-width 1440px)
+    font-size 24px
+
+.feedback-map-link
+  display inline-flex
+  align-items center
+  font-family fontRegular
+  font-size 16px
+  line-height 1.75
+  color colorBlue
+  &:hover
+  &:focus
+    color colorBlue
+  img
+    margin -4px 8px 0 0
+
+  @media (min-width 1440px)
+    font-size 18px
+
+//** Issuer - Profile **//
+.issuer-tabs
+  display flex
+  flex-wrap nowrap
+  overflow scroll
+  justify-content space-between
+  padding 20px 0
+  box-shadow inset 0 0 20px rgba(75, 75, 75, 0.1)
+  margin-bottom 40px
+
+  @media (min-width 1440px)
+    flex-wrap wrap
+    overflow auto
+    padding 0
+    box-shadow none
+    margin-bottom 0
+
+.issuer-tab
+  flex-shrink 0
+  width 242px
+  padding 15px 15px 20px
+  background #f9fbff
+  border 1px solid rgba(0, 101, 242, 0.12)
+  &+.issuer-tab
+    margin-left 15px
+  &:first-of-type
+    margin-left 15px
+  &:last-of-type
+    margin-right 15px
+  &.active
+    background colorBlue
+    .issuer-tab-title
+    .issuer-tab-text
+      color colorWhite
+
+  @media (min-width 1440px)
+    width calc(100% - 30px)
+    padding 30px 18px 30px 30px
+    border 0
+    border-radius 2px
+    margin 0 15px
+    &+.issuer-tab
+      margin-top 20px
+
+.issuer-tab-title
+  font-family fontBold
+  font-size 16px
+  color colorDarkBlue
+  margin-bottom 15px
+
+  @media (min-width 1440px)
+    font-size 20px
+    margin-bottom 20px
+
+.issuer-tab-text
+  font-family fontRegular
+  font-size 14px
+  line-height 1.57
+  color colorDarkBlue
+
+  @media (min-width 1440px)
+    font-size 16px
+    color colorGrey
+
+.issuer-wrapper
+  display flex
+  align-items center
+  margin-bottom 40px
+
+.issuer-img
+  width 60px
+  height 60px
+  border-radius 100%
+  margin-right 15px
+
+  @media (min-width 1440px)
+    width 80px
+    height 80px
+    margin-right 30px
+
+.issuer-name
+  font-family fontBold
+  font-size 16px
+  line-height 1.62
+  color colorDarkBlue
+
+  @media (min-width 1440px)
+    font-size 18px
+
+//** Issuer - Cabinet **//
+.cabinet-tabs
+  margin-bottom 20px
+
+  @media (min-width 1440px)
+    margin-bottom 30px
+
+.cabinet-tab
+  position relative
+  display flex
+  width 100%
+  font-family fontRegular
+  font-size 14px
+  color colorGrey
+  padding 15px 20px
+  background colorGreyTransparent-v1
+  &+.cabinet-tab
+    border-top 1px solid colorGreyTransparent
+  &.active
+    font-family fontBold
+    color colorWhite
+    background colorBlue
+    border-radius 2px
+    shadow()
+
+  @media (min-width 1440px)
+    width 25%
+    justify-content center
+    font-size 16px
+    color rgba(112, 108, 113, 0.7)
+    background #f4f8fa
+    &+.cabinet-tab
+      border-top 0
+      &:before
+        position absolute
+        top 10px
+        left 0
+        content ""
+        width 1px
+        height 26px
+        background colorGreyTransparent
+    &.active
+      box-shadow 0 0 20px rgba(0, 0, 0, 0.2)
+      +.cabinet-tab
+        &:before
+          content none
+
+.files-tabs
+  margin-bottom 20px
+
+  @media (min-width 1440px)
+    margin-bottom 30px
+
+.files-tab
+  display flex
+  align-items center
+  justify-content center
+  width 50%
+  height 30px
+  background #f4f8fa
+  font-family fontSemiBold
+  font-size 13px
+  color rgba(0, 144, 210, 0.5)
+  &:first-of-type
+    border-radius 2px 0 0 2px
+  &:last-of-type
+    border-radius 0 2px 2px 0
+  &.active
+    font-family fontBold-v2
+    color colorWhite
+    background colorBlue
+
+  @media (min-width 1440px)
+    width 138px
+
+.document-container
+  position relative
+  display flex
+  padding 0
+
+  @media (min-width 1440px)
+    padding 20px
+
+.document-container-row
+
+  @media (min-width 1440px)
+    flex-direction row
+    justify-content space-between
+    padding 15px 25px 15px 20px
+    margin-bottom 20px
+
+.document-main
+  display flex
+  padding 15px
+
+  @media (min-width 1440px)
+    padding 0
+
+.document-sub
+  position relative
+  display flex
+  align-items center
+  justify-content center
+  padding 10px 15px
+  border-top 1px solid rgba(96, 114, 134, 0.15)
+
+  @media (min-width 1440px)
+    border-top 0
+    padding 0
+
+.document-status-wrapper
+  display flex
+
+  @media (min-width 1440px)
+    flex-direction column
+
+.document-attachments
+  display inline-flex
+  font-family fontRegular
+  font-size 12px
+  color colorGrey
+  img
+    margin-right 4px
+
+  @media (min-width 1440px)
+    font-size 14px
+
+.document-price
+  font-family fontBold
+  font-size 16px
+  line-height 1.12
+  color colorDarkBlue
+  margin-right 15px
+
+  @media (min-width 1440px)
+    font-size 18px
+    margin-right 0
+    margin-bottom 6px
+
+.document-status
+  display flex
+  align-items center
+  justify-content center
+  font-family fontRegular
+  font-size 10px
+  line-height 1.2
+  padding 4px 12px
+  border-radius 2px
+
+.status-red
+  color colorRed
+  background rgba(235, 87, 87, 0.1)
+
+.status-green
+  color colorGreen
+  background rgba(40, 180, 64, 0.1)
+
+.document-download-wrapper
+  display flex
+  height 100%
+  #files &
+    display none
+
+    @media (min-width 1440px)
+      display flex
+      height auto
+
+.document-divider
+  display none
+
+  @media (min-width 1440px)
+    display block
+    width 1px
+    height 100%
+    background rgba(0, 85, 140, 0.3)
+    margin 0 25px 0 40px
+
+.document-download
+  position absolute
+  bottom 10px
+  right 15px
+  margin 0
+  width 24px
+
+  @media (min-width 1440px)
+    position unset
+    width 30px
+
+.document-action
+  display flex
+  align-items center
+  justify-content center
+  background colorBlueTransparent
+  padding 11px
+  border-radius 2px
+  font-family fontBold-v2
+  font-size 11px
+  text-transform uppercase
+  color colorBlue
+  img
+    margin 0 8px 0 0
+
+  @media (min-width 1440px)
+    #files &
+      display none
+
+.document-name-wrapper
+  display flex
+  flex-direction column
+
+  @media (min-width 1440px)
+    flex-direction row
+    justify-content space-between
+    flex-grow 1
+    .document-name
+      max-width 260px
+      margin 0
+    .document-date
+      align-self flex-end
+      margin 0
+
+.document-info
+  position relative
+  display flex
+  flex-direction column
+  align-items flex-start
+  padding 15px
+  border-top 1px solid rgba(96, 114, 134, 0.15)
+
+  @media (min-width 1440px)
+    flex-direction row
+    padding 20px 0 0
+    margin-top 15px
+
+.document-info-row
+  flex-direction row
+  padding-bottom 55px
+  .document-text-wrapper
+    margin-right 30px
+    &:last-of-type
+      margin-right 0
+
+  @media (min-width 1440px)
+    padding-bottom 0
+    .document-text-wrapper
+      margin-right 48px
+
+.document-text-wrapper
+  margin-bottom 15px
+  &:last-of-type
+    margin-bottom 0
+
+  @media (min-width 1440px)
+    margin-bottom 0
+    margin-right 68px
+    &:last-of-type
+      margin-right 0
+
+.help-text
+  font-family fontRegular
+  font-size 12px
+  line-height 1.4
+  color colorLightGrey
+  margin-bottom 5px
+
+  @media (min-width 1440px)
+    font-size 14px
+
+.document-text
+  font-family fontRegular
+  font-size 14px
+  line-height 1.4
+  color colorGrey
+
+  @media (min-width 1440px)
+    font-size 16px
+
+.document-status-position
+  position absolute
+  bottom 15px
+  left 15px
+
+  @media (min-width 1440px)
+    bottom auto
+    top 25px
+    left auto
+    right 20px
+
+.document-manage
+  position absolute
+  bottom 15px
+  right 15px
+  display flex
+  img
+    width 18px
+    &+img
+      margin-left 15px
+
+  @media (min-width 1440px)
+    bottom 20px
+    right 20px
+
+.document-source,
+.document-author
+  display inline-block
+  font-family fontRegular
+  font-size 12px
+  color colorGrey
+  opacity 0.5
+  margin-right 15px
+
+  @media (min-width 1440px)
+    font-size 14px
+    margin-right 20px
+
+.document-author
+  line-height 1.5
+  margin-top 4px
+
+  @media (min-width 1440px)
+    margin-top 0
+
+.request-text
+  font-family fontRegular
+  font-size 12px
+  line-height 1.67
+  color colorGrey
+  opacity 0.5
+  margin-bottom 15px
+
+  @media (min-width 1440px)
+    font-size 14px
+    margin-bottom 20px
+
+.btn-request
+  margin-bottom 30px
+  &:before
+    content ""
+    background url("../assets/images/plus.svg")
+    background-size 12px
+    width 12px
+    height 12px
+    margin-right 10px
+
+  @media (min-width 1440px)
+    height 80px
+    border-width 2px
+    font-size 16px
+    margin-bottom 40px
+    &:before
+      background-size 16px
+      width 16px
+      height 16px
+
+//** Shareholder - Cabinet **//
+.shareholder-wrapper
+  margin-bottom 30px
+
+.shareholder-text
+  color colorDarkGrey
+
+.operations-form
+
+  @media (min-width 1440px)
+    .form-row
+      align-items flex-end
+      .form-group
+        margin-bottom 0
+      .btn
+        height 48px
+
+.table-custom
+  .info
+    display block
+  .info-wrapper
+    display inline-block
+    width 49%
+
+  @media (min-width 1440px)
+    .info
+      display table-row
+    .info-wrapper
+      display table-cell
+      width auto
+      padding 15px 20px
+    .info-title
+      padding 15px 20px
+
+.operations-table tr th
+.operations-table tr td
+
+  @media (min-width 1440px)
+    &:nth-of-type(1)
+      width 10%
+    &:nth-of-type(2)
+      width 50%
+    &:nth-of-type(4)
+      width 14.5%
+      .info-text
+        font-family fontBold
+        color colorBlue
+
+.accounts-table tr td
+.desktop-table tr td
+
+  @media (min-width 1440px)
+    &:nth-of-type(1)
+      .info-text
+        font-family fontBold
+
+.account-action
+  display flex
+  img
+    width 28px
+    height 28px
+  &+.account-action
+    margin-left 15px
+
+  @media (min-width 1440px)
+    img
+      width 24px
+      height 24px
+    &+.account-action
+      margin-left 20px
+
+.recent-table tr td
+
+  @media (min-width 1440px)
+    &:nth-of-type(3)
+      width 30%
+
+.diagram
+  position relative
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  background url("../assets/images/diagram.png") no-repeat center
+  background-size contain
+  width 100%
+  height 290px
+  font-family fontRegular
+  font-size 22px
+  line-height 1.2
+  color colorDarkBlue
+
+  @media (min-width 1440px)
+    height 255px
+    font-size 18px
+
+.diagram-number
+  font-family fontBold
+  font-size 32px
+
+  @media (min-width 1440px)
+    font-size 30px
+
+//** Slider **//
+.slider
+  position relative
+  max-width 1440px
+  height 360px
+  margin 0 auto
+
+  @media (min-width 1440px)
+    height 600px
+
+.slider-img
+  position absolute
+  z-index 97
+  width 100%
+  height 100%
+  background-repeat no-repeat
+  background-position center
+  background-size cover
+
+  @media (min-width 1440px)
+    background-position right
+    background-size contain
+
+.slider-img-fill
+  position absolute
+  z-index 98
+  width 100%
+  height 100%
+  background colorBlue
+  opacity 0.7
+
+  @media (min-width 1440px)
+    display none
+
+.slider-text-wrapper
+  position relative
+  z-index 99
+  padding 80px 15px 0
+
+  @media (min-width 1440px)
+    top 70px
+    width 705px
+    padding 30px 80px 30px 165px
+    background colorBlue
+    border-radius 2px
+    shadow-v2()
+
+.slider-title
+  font-family fontBold
+  font-size 28px
+  line-height 1.36
+  color colorWhite
+  margin-bottom 15px
+
+  @media (min-width 1440px)
+    font-size 40px
+
+.slider-text
+  font-family fontRegular
+  font-size 16px
+  line-height 1.5
+  color colorWhite
+
+  @media (min-width 1440px)
+    font-size 18px
+    margin-bottom 20px
+
+.slider-link
+  display none
+
+  @media (min-width 1440px)
+    display flex
+
+.scroll-down
+  display none
+
+  @media (min-width 1440px)
+    position absolute
+    bottom 12px
+    left 165px
+    z-index 100
+    display flex
+    align-items center
+    font-family fontBold
+    font-size 9px
+    text-transform uppercase
+    color #96B1CC
+    img
+      margin-right 5px
+
+//** About - Info **//
+table
+  width 100%
+
+.rtable
+  th
+    display none
+    &:first-of-type
+      display table-cell
+
+  @media (min-width: 1440px)
+    th
+      display table-cell
+    tr
+      background rgba(96, 114, 134, 0.045)
+      th
+      td
+        border-right 2px solid colorWhite
+        border-bottom 2px solid colorWhite
+        &:last-of-type
+          border-right 0
+
+.table-striped
+  tbody
+    tr
+      &:nth-of-type(odd)
+        background-color unset
+
+  @media (min-width: 1440px)
+    tbody
+      tr
+        &:nth-of-type(odd)
+          background rgba(0, 101, 242, 0.036)
+        &:nth-of-type(even)
+          background unset
+
+.rtable td
+  display flex
+  flex-direction column
+
+  @media (min-width: 1440px)
+    display table-cell
+
+.rtable th
+  font-family fontRegular
+  font-size 14px
+  line-height 1.4
+  color colorWhite
+  background colorBlue
+  padding 12px 15px
+
+  @media (min-width: 1440px)
+    padding 20px
+
+.rtable .help-text
+  display flex
+
+  @media (min-width: 1440px)
+    display none
+
+.hiddenSmall
+  display none!important
+
+  @media (min-width: 1440px)
+    display table-cell!important
+
+.info-table tr th
+.info-table tr td
+
+  @media (min-width: 1440px)
+    &:nth-of-type(1),
+    &:nth-of-type(2)
+      width 33.334%
+
+.info
+  display flex
+  flex-direction column
+  transition 0.5s
+  &.expanded
+    box-shadow 0px 0px 5px rgba(0, 0, 0, 0.1)
+
+  @media (min-width: 1440px)
+    display table-row
+
+.info-body
+  padding 15px
+
+.info-wrapper
+  padding 10px 15px
+
+.info-title
+  display flex
+  flex-direction row!important
+  align-items center
+  justify-content space-between
+  font-family fontRegular
+  font-size 14px
+  line-height 1.4
+  color colorGrey
+  padding 15px 10px 15px 15px
+  border-bottom 1px solid rgba(96, 114, 134, 0.15)
+  background rgba(0, 101, 242, 0.036)
+  &:after
+    content url("../assets/images/arrow-down-light.svg")
+    margin-left 1em
+  &[aria-expanded="true"]
+    background transparent
+    &:after
+      content url("../assets/images/arrow-up-light.svg")
+
+  @media (min-width: 1440px)
+    line-height 1.7
+    background none
+    padding 20px
+    border-bottom 0
+    &:after
+      content none
+
+.info-text
+  display flex
+  font-family fontRegular
+  font-size 14px
+  line-height 1.4
+  color colorGrey
+
+  @media (min-width: 1440px)
+    line-height 1.7
+
+.info-img
+  height 65px
+  margin 0 10px 0 0
+
+  @media (min-width: 1440px)
+    height 92px
+    margin 0 14px 0 0
+
+.info-link
+  font-family fontRegular
+  font-size 12px
+  line-height 1.5
+  text-decoration underline
+  color colorBlue
+  &:hover
+  &:focus
+    color colorBlue
+    text-decoration underline
+
+  @media (min-width: 1440px)
+    font-size 14px
+    line-height 1.7
+
+.nav-info
+  display flex
+  width 100%
+  font-family fontRegular
+  font-size 14px
+  line-height 1.43
+  color colorGrey
+  background colorGreyTransparent-v1
+  padding 15px 20px
+  &:first-of-type
+    border-radius 2px 2px 0 0
+  &:last-of-type
+    border-radius 0 0 2px 2px
+  &+.nav-info
+    border-top 1px solid colorGreyTransparent
+  &.active
+    font-family fontBold
+    color colorWhite
+    background colorBlue
+
+  @media (min-width: 1440px)
+    &+.nav-info
+      border-color colorWhite
+    &.active
+      box-shadow 0 0 20px rgba(0, 0, 0, 0.2)
+
+//** Contacts **//
+.contacts-heading
+  display flex
+  &:before
+    content ""
+    background url("../assets/images/map-marker.svg") no-repeat center
+    width 14px
+    height 18px
+    background-size 14px
+    margin 0.25em 6px 0 0
+
+  @media (min-width: 1440px)
+    &:before
+      width 25px
+      height 33px
+      background-size 25px
+      margin 0.25em 15px 0 0
+
+.contacts-tabs
+  justify-content flex-start
+
+.contacts-tab
+  &+.contacts-tab
+    margin-left 15px
+
+.contacts-map
+  margin-bottom 40px
+
+  @media (min-width: 1440px)
+    margin-bottom 30px
+
+.chart-title
+  display flex
+  font-family fontBold
+  font-size 18px
+  line-height 1.67
+  color colorDarkBlue
+  margin-bottom 20px
+
+  @media (min-width: 1440px)
+    margin-bottom 30px
+
+.chart-img
+  margin 0 10px 0 0
+
+.contacts-chart
+  margin-bottom 20px
+
+  @media (min-width: 1440px)
+    margin-bottom 30px
+
+.schedule
+  background colorDarkBlue
+  shadow-v2()
+  margin-bottom 40px
+
+  @media (min-width: 1440px)
+    padding 20px 30px
+    margin-bottom 30px
+
+.schedule-top
+  position relative
+  .schedule-time
+    position absolute
+    right 0
+
+.schedule-title
+  display flex
+  align-items center
+  font-family fontRegular
+  font-size 14px
+  line-height 1.4
+  color rgba(255, 255, 255, 0.6)
+  margin-bottom 15px
+  img
+    margin -2px 6px 0 0
+
+.schedule-container
+  border-top 1px solid rgba(255, 255, 255, 0.2)
+  border-bottom 1px solid rgba(255, 255, 255, 0.2)
+  padding 15px 0
+  margin-bottom 15px
+
+  @media (min-width: 1440px)
+    padding 20px 0
+
+.schedule-wrapper
+  display table-row
+
+.schedule-day
+  display table-cell
+  width 40%
+  padding 4px 0
+  font-family fontRegular
+  font-size 14px
+  color colorWhite
+
+.schedule-time
+  display table-cell
+  font-family fontBold
+  font-size 16px
+  color colorWhite
+
+.schedule-text
+  font-family fontRegular
+  font-size 12px
+  line-height 1.5
+  color colorWhite
+
+.contacts-table
+  position relative
+  display flex
+  flex-wrap wrap
+
+  @media (max-width: 768px)
+    display block
+
+.table-cell
+  display flex
+  flex-direction column
+  justify-content center
+  width 100%
+  font-family fontRegular
+  line-height 1.7
+  background rgba(96, 114, 134, 0.03)
+  &:nth-of-type(odd)
+    font-size 12px
+    color colorLightGrey
+    padding 15px 15px 2px
+  &:nth-of-type(even)
+    font-size 14px
+    color colorDarkGrey
+    padding 0 15px 15px
+    border-bottom 2px solid colorWhite
+
+  @media (min-width: 1440px)
+    border 1px solid colorWhite
+    &:nth-of-type(odd)
+      width 35%
+      padding 16px 20px
+      font-size 14px
+      color colorGrey
+    &:nth-of-type(even)
+      width 65%
+      padding 16px 20px
+      border-bottom 1px solid colorWhite
+
+.table-link
+  font-family fontRegular
+  font-size 14px
+  color colorBlue
+  &:hover
+  &:focus
+    color colorBlue
+
+.cell-title
+  margin-bottom 1em
+  span
+    font-family fontBold
+
+.contacts-title
+  display flex
+  &:before
+    content url("../assets/images/map-marker-blue.svg")
+    margin-right 8px
+    margin-top 2px
+
+  @media (min-width: 1440px)
+    &:before
+      margin-top 0
+
+.cities
+.cities-featured
+  margin-bottom 40px
+
+.cities-featured
+  li
+    margin-bottom 1em
+    a
+      font-family fontBold
+      font-size 16px
+      line-height 1.25
+      color colorWhite
+
+.cities
+  li
+    margin-bottom 1em
+    &+.cities-letter
+      margin-top 40px
+    a
+      font-family fontRegular
+      font-size 18px
+      line-height 1.25
+      color colorWhite
+
+.cities-cols-3
+
+  @media (min-width: 1440px)
+    columns 3
+
+.cities-cols-4
+
+  @media (min-width: 1440px)
+    columns 4
+
+.cities-letter
+  font-family fontBold
+  font-size 24px
+  color colorWhite
+  margin-bottom 20px
+
+.cities-title
+  font-family fontBold
+  font-size 18px
+  line-height 1.67
+  color colorWhite
+  margin-bottom 20px
+
+  @media (min-width: 1440px)
+    font-size 24px
+    margin-bottom 40px
+
+.cities-group
+  display flex
+  flex-wrap wrap
+
+.city
+  display flex
+  width 75%
+  font-family fontRegular
+  font-size 18px
+  line-height 1.25
+  color colorWhite
+  margin-bottom 1em
+
+.city-number
+  display flex
+  justify-content flex-end
+  width 25%
+  font-family fontBold
+  font-size 18px
+  line-height 1.5
+  color colorWhite
+
+//** Filters **//
+.publications-filter
+  padding 20px 20px 30px
+  background rgba(0, 101, 242, 0.024)
+
+.documents-filter
+  padding 15px
+  background #f6f7fc
+  border-radius 2px
+
+  @media (min-width: 1440px)
+    padding 20px
+    background rgba(0, 101, 242, 0.024)
+
+.publications-filter-title
+  font-family fontBold
+  font-size 14px
+  line-height 1.7
+  color colorDarkBlue
+  margin-bottom 15px
+
+.documents-filter-title
+  font-family fontBold
+  font-size 16px
+  line-height 1.4
+  color colorDarkBlue
+  margin-bottom 15px
+
+.filter-container
+  margin-bottom 40px
+  &:last-of-type
+    margin-bottom 0
+
+.filter-group
+  margin-bottom 12px
+  &:last-of-type
+    margin-bottom 0
+
+.form-check
+  padding-left 0
+
+.custom-check
+.custom-radio
+  position absolute
+  left 0
+  z-index -1
+  width 1.25rem
+  height 1.25rem
+  opacity 0
+
+.custom-check-label
+  font-family fontRegular
+  font-size 14px
+  line-height 1.7
+  color colorGrey
+  padding-left 33px
+  margin 0
+  &:before
+  &:after
+    position absolute
+    content ""
+    width 18px
+    height 18px
+    border-radius 2px
+    background rgba(96, 114, 134, 0.09)
+    top 2px
+    left 0
+    margin 0
+
+.custom-radio-label
+  font-family fontRegular
+  font-size 14px
+  line-height 1.7
+  color colorGrey
+  padding-left 33px
+  margin 0
+  &:before
+  &:after
+    position absolute
+    content ""
+    width 18px
+    height 18px
+    border-radius 100%
+    background #ebeff4
+    top 2px
+    left 0
+    margin 0
+
+  @media (min-width: 1440px)
+    padding-left 35px
+    &:before
+    &:after
+      width 20px
+      height 20px
+      top 0
+
+.custom-check
+  &:checked
+    &~.custom-check-label
+      &:before
+        background colorBlue
+      &:after
+        left 6px
+        top 5px
+        width 6px
+        height 10px
+        border solid colorWhite
+        border-width 0 3px 3px 0
+        transform rotate(45deg)
+
+.custom-check:not(:disabled):active~.custom-check-label::before
+  background colorBlue
+
+.custom-check:focus ~ .custom-check-label::before
+  box-shadow: none
+
+.custom-radio
+  &:checked
+    &~.custom-radio-label
+      &:before
+        background colorBlue
+      &:after
+        border 5px solid colorBlue
+
+        @media (min-width: 1440px)
+          border 6px solid colorBlue
+
+.custom-radio:not(:disabled):active~.custom-radio-label::before
+  background colorBlue
+
+.custom-radio:focus ~ .custom-radio-label::before
+  box-shadow: none
+
+.form-file
+  position relative
+  margin 20px 0 40px
+
+  @media (min-width: 1440px)
+    margin 0
+
+.custom-file
+  position relative
+  opacity 0
+  height 40px
+
+.custom-file-label
+  border-radius 2px
+  &:after
+    content none
+  &:before
+    content ""
+    width 12px
+    height 17px
+    background url("../assets/images/paperclip-blue.svg")
+    margin-right 8px
+
+  @media (min-width: 1440px)
+    &:before
+      background url("../assets/images/paperclip-white.svg")
+
+//** Forms **//
+.form-row
+  align-items center
+  margin-right -15px
+  margin-left -15px
+
+.form-row>.col,
+.form-row>[class*=col-]
+  padding-right 15px
+  padding-left 15px
+
+.form-group
+  margin-bottom 15px
+
+.form-group-margin
+  margin-bottom 30px
+
+label
+  font-family fontRegular
+  font-size 14px
+  line-height 1.7
+  color colorGrey
+  margin-bottom 10px
+
+  @media (min-width: 1440px)
+    font-size 16px
+
+.form-text
+  font-family fontRegular
+  font-size 12px
+  line-height 1.67
+  color colorGrey
+  opacity 0.5
+  margin-top 10px
+
+  @media (min-width: 1440px)
+    margin-top 0
+
+.form-check-text
+  opacity 1
+
+  @media (min-width: 1440px)
+    font-size 14px
+    margin-top 8px
+
+.form-control-plaintext
+  width auto
+  font-family fontBold
+  font-size 18px
+  line-height 1.11
+  color colorDarkBlue
+  padding 0
+  border 0
+
+.form-control
+  font-family fontRegular
+  font-size 14px
+  color colorGrey
+  height 44px
+  padding 10px 15px
+  background rgba(96, 114, 134, 0.05)
+  border none
+  border-radius 2px
+  &::placeholder
+    color rgba(0, 0, 0, 0.4)
+  &:focus
+    color colorGrey
+    background rgba(96, 114, 134, 0.05)
+  &+.form-control
+    margin-top 15px
+  &.form-control-mobile
+    width 240px
+    height 40px
+
+  @media (min-width 1440px)
+    font-size 16px
+    height 48px
+    padding 12px 20px
+
+.form-period
+  display inline-flex
+  align-items center
+  justify-content space-between
+  margin-bottom 10px
+  label
+    margin 0 20px 0 0
+
+  @media (min-width 1440px)
+    justify-content flex-start
+    margin 0 30px 30px 0
+
+.period
+  display inline-block
+  width 93px
+  height 36px
+
+  @media (min-width 1440px)
+    width 130px
+    height 40px
+
+.dash
+  margin 0 10px
+
+  @media (min-width 1440px)
+    margin 0 15px
+
+.btn-period
+
+  @media (min-width 1440px)
+    display inline-flex
+    width 190px
+    color colorBlue
+    background #f8fcfe
+    border 1px solid colorLighterBlue
+    box-shadow none
+    margin-top -4px
+
+.search-form
+  position relative
+  margin-bottom 20px
+
+  @media (min-width: 1440px)
+    margin-bottom 25px
+
+.search-input
+  background #f7f8f9
+  padding-right 59px
+  border-radius 2px
+  &:focus
+    background #f7f8f9
+
+  @media (min-width: 1440px)
+    padding-right 68px
+
+.search-input-alt
+  padding-right 15px
+
+  @media (min-width: 1440px)
+    padding-right 68px
+
+.city-search-form
+  margin-bottom 30px
+
+  @media (min-width: 1440px)
+    margin-bottom 40px
+
+.city-search-input
+
+  @media (min-width: 1440px)
+    background transparent
+    padding 15px 40px 15px 0
+    border-bottom 2px solid colorWhite
+    border-radius 0
+    &:focus
+      background transparent
+      border-color colorWhite
+      color colorWhite
+    &::placeholder
+      color colorWhite
+
+.city-btn-search
+
+  @media (min-width: 1440px)
+    background url("../assets/images/search.svg") no-repeat center
+    background-size 24px
+    width 24px
+
+.search-text
+  font-family fontRegular
+  font-size 14px
+  line-height 1.7
+  color colorWhite
+  margin-bottom 10px
+
+  @media (min-width: 1440px)
+    display none
+
+.subscribe-input
+  background colorWhite
+  margin-bottom 15px
+  &:focus
+    background colorWhite
+
+  @media (min-width: 1440px)
+    margin-bottom 20px
+
+.form-edit
+  display flex
+
+.edit-img
+  margin 0
+
+.form-bottom
+  display flex
+  flex-direction column
+  align-items flex-start
+
+  @media (min-width: 1440px)
+    flex-direction row
+    align-items center
+    justify-content space-between
+
+//** Modals **//
+.modal-content
+  min-height 100vh
+  border 0
+  border-radius 0
+
+.close
+  position absolute
+  top 15px
+  right 15px
+  z-index 100
+  background url("../assets/images/close-grey.svg")
+  width 15px
+  height 15px
+  opacity 1
+
+  @media (min-width 1440px)
+    top 30px
+    right 30px
+    background url("../assets/images/close-blue.svg")
+    width 20px
+    height 20px
+
+.close-white
+  position relative
+  top auto
+  right auto
+  background url("../assets/images/close-white.svg")
+  background-size 15px
+
+  @media (min-width 1440px)
+    background-size 20px
+
+.close:not(:disabled):not(.disabled):focus
+.close:not(:disabled):not(.disabled):hover
+  opacity 1
+
+.custom-modal-dialog
+  margin 0
+
+  @media (min-width 576px)
+    margin auto
+
+  @media (min-width 1440px)
+    max-width 730px
+
+.custom-modal-content
+  padding 40px 0 20px
+
+  @media (min-width 1440px)
+    padding 60px 95px
+
+.personality-content
+  padding 50px 0 30px
+
+  @media (min-width 1440px)
+    padding 30px 66px 72px 30px
+
+.modal-title
+  font-family fontBold
+  font-size 20px
+  line-height 1.5
+  color colorDarkBlue
+  margin-bottom 20px
+
+  @media (min-width 1440px)
+    font-size 24px
+
+.personality-container
+  display flex
+  flex-direction column
+
+  @media (min-width 1440px)
+    flex-direction row
+
+.personality-img
+  shadow-v3()
+  margin-bottom 20px
+
+  @media (min-width 1440px)
+    shadow-v4()
+    height 180px
+    margin 0 30px 0 0
+
+.personality-name
+  font-family fontBold
+  font-size 24px
+  line-height 1.42
+  color colorDarkBlue
+  margin-bottom 10px
+
+  @media (min-width 1440px)
+    margin-bottom 15px
+
+.form-modal-dialog
+  margin 0
+
+  @media (min-width 576px)
+    margin auto
+
+  @media (min-width 1440px)
+    max-width 100%
+
+.modal-form
+  display flex
+  min-height 100vh
+  background colorDarkBlue
+
+  @media (min-width 1440px)
+    justify-content center
+
+.modal-form-header
+.modal-form-body
+  padding 15px 0
+
+  @media (min-width 1440px)
+    padding 35px 0
+
+.search-header
+  padding 15px 0 10px
+
+  @media (min-width 1440px)
+    padding 60px 0 0
+
+.search-body
+  padding 0 0 20px
+
+  @media (min-width 1440px)
+    margin-top -10px
+
+.filial-group
+  display flex
+  width 85%
+  margin-bottom 20px
+
+.filial-label
+  font-family fontRegular
+  font-size 14px
+  line-height 1.25
+  color colorWhite
+  padding-left 26px
+  margin 0
+  &:before
+  &:after
+    position absolute
+    content ""
+    width 16px
+    height 16px
+    border-radius 100%
+    background colorDarkBlue
+    border 2px solid colorWhite
+    top 0
+    left 0
+    margin 0
+
+  @media (min-width: 1440px)
+    font-size 16px
+    padding-left 35px
+    &:before
+    &:after
+      width 20px
+      height 20px
+      top 0
+
+.custom-radio
+  &:checked
+    &~.filial-label
+      font-family fontBold
+      &:before
+        background colorDarkBlue
+      &:after
+        width 8px
+        height 8px
+        background colorWhite
+        top 4px
+        left 4px
+        border 0
+
+  @media (min-width: 1440px)
+    &:checked
+      &~.filial-label
+        &:after
+          width 10px
+          height 10px
+          top 5px
+          left 5px
+
+.custom-radio:not(:disabled):active~.filial-label::before
+  background colorDarkBlue
+
+.filials
+  display flex
+  flex-wrap wrap
+
+.filials-row
+  display flex
+  justify-content space-between
+  margin-bottom 30px
+
+  @media (min-width: 1440px)
+    margin-bottom 58px
+
+.filials-title
+  font-family fontBold
+  font-size 16px
+  line-height 1.25
+  color colorWhite
+
+  @media (min-width: 1440px)
+    font-size 24px
+
+.filial-number
+  display flex
+  justify-content flex-end
+  width 15%
+  font-family fontRegular
+  font-size 14px
+  line-height 1.25
+  color colorWhite
+
+  @media (min-width: 1440px)
+    font-size 16px
+
+//** Footer **//
+footer
+.footer
+  background-color colorGreyTransparent-v1
+  padding 20px 0
+
+  @media (min-width 1440px)
+    padding 50px 0 18px
+    .rtable
+      &+.rtable
+        margin-top 30px
+
+.footer-client
+  background #f6f7fc
+  padding 20px 0
+
+.footer-right
+  margin-bottom 15px
+
+  @media (min-width 1440px)
+    margin-bottom 0
+    text-align right
+
+.footer-text
+  font-family fontRegular
+  font-size 12px
+  line-height 1.5
+  color #bac7d3
+  text-align center
+  &+.footer-text
+    margin-top 15px
+
+  @media (min-width 1440px)
+    display inline-block
+    font-size 14px
+    text-align unset
+    &+.footer-text
+      margin-top 0
+      margin-left 40px
+
+.footer-logo
+  display flex
+  width 124px
+  margin 0 auto 20px
+
+  @media (min-width 1440px)
+    margin 0 0 20px
+
+.footer-contacts
+  display inline-flex
+  flex-direction column
+  width 49%
+  font-family fontRegular
+  font-size 12px
+  line-height 1.5
+  color colorGrey
+  margin-bottom 15px
+  &:nth-of-type(3)
+    width 100%
+
+  @media (min-width 1440px)
+    width 100%
+    font-size 14px
+    margin-bottom 30px
+
+.footer-phone
+  font-family fontBold
+  font-size 14px
+  line-height 1.5
+  color colorGrey
+
+  @media (min-width 1440px)
+    font-size 14px
+
+.social
+  margin-bottom 15px
+
+  @media (min-width 1440px)
+    margin-bottom 0
+
+.link-social
+  &+.link-social
+    margin-left 12px
+  img
+    width 30px
+    height 30px
+
+  @media (min-width 1440px)
+    img
+      width 20px
+      height 20px
+
+.footer-top
+  display flex
+  flex-direction column
+
+.footer-bottom
+  border-top 1px solid rgba(96, 114, 134, 0.12)
+  padding-top 20px
+  .footer-right
+    margin-bottom 0
+  .footer-text
+    text-align left
+    &+.footer-text
+      margin-top 0
+
+  @media (min-width 1440px)
+    margin-top 30px
+
+.footer-title
+  font-size 14px
+  line-height 1.15
+  color colorGrey
+  padding 15px 0
+  border-top 1px solid rgba(96, 114, 134, 0.12)
+
+  @media (min-width 1440px)
+    font-size 16px
+    margin-bottom 20px
+    padding 0
+    border-top 0
+    &:after
+      content none
+
+.footer-list
+  margin-bottom 15px
+  li
+    &+li
+      margin-top 20px
+
+  @media (min-width 1440px)
+    margin-bottom 0
+
+.footer-link
+  font-family fontRegular
+  font-size 12px
+  line-height 1.33
+  color colorGrey
+
+  @media (min-width 1440px)
+    font-size 14px

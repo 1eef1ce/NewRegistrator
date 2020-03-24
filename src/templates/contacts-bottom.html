@@ -1,0 +1,66 @@
+<div class="chart-title"><img class="chart-img" src="assets/images/passage-of-time.svg">Загруженность, ч</div>
+<img class="contacts-chart" src="assets/images/chart.png">
+<a href="#" class="btn btn-filled" type="button" data-toggle="modal" data-target="#visit">Запланировать визит</a>
+<!--Modal-->
+<div class="modal fade" id="visit" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
+        <div class="modal-content custom-modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="modal-title text-left text-xl-center">Запланировать визит</div>
+                        <form>
+                            <div class="form-row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input type="text" id="visitName" class="form-control" placeholder="ФИО">
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control" id="visitOffice">
+                                            <option>Офис</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-6">
+                                    <div class="form-group">
+                                        <input type="text" id="visitDate" class="form-control" placeholder="Желаемая дата">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-6">
+                                    <div class="form-group">
+                                        <select class="form-control" id="visitTime">
+                                            <option>Удобное время</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-6">
+                                    <div class="form-group">
+                                        <input type="text" id="visitEmail" class="form-control" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-6">
+                                    <div class="form-group">
+                                        <input type="text" id="visitPhone" class="form-control" placeholder="Телефон">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input type="email" id="visitPurpose" class="form-control" placeholder="Цель визита">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-filled" type="submit">запланировать визит</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

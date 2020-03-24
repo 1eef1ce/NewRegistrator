@@ -1,0 +1,82 @@
+//= templates/header.html
+<div class="container">
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">Главная</a></li>
+			<li class="breadcrumb-item"><a href="#">Акционерам</a></li>
+			<li class="breadcrumb-item"><a href="#">Информация</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Реестры кредиторов на обслуживании</li>
+		</ol>
+	</nav>
+</div>
+<section>
+	<div class="container">
+		<h3>Реестры кредиторов на обслуживании</h3>
+		<div class="row">
+			<div class="col-12 col-xl-8">
+				<div class="accordion">
+					<div class="accordion-item">
+						<div class="accordion-header" id="meeting1">
+							<div class="accordion-title" data-toggle="collapse" data-target="#collapse-meeting1" aria-expanded="false" aria-controls="collapse-meeting1">
+								<div class="meeting-wrapper">
+									<div class="meeting-title">ООО «Страховая Компания «ОРАНТА»</div>
+									<div class="meeting-date">А40-108217/15 | Нехина Анна Александровна</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion-body collapse" id="collapse-meeting1" aria-labelledby="meeting1">
+							<div class="meeting">
+								<div class="row">
+									<div class="col-12 col-xl-6">
+										<div class="document-text-wrapper">
+											<div class="help-text">Номер дела</div>
+											<div class="meeting-text">А40-108217/15</div>
+										</div>
+										<div class="document-text-wrapper">
+											<div class="help-text">Область деятельности</div>
+											<div class="meeting-text">Страховая компания</div>
+										</div>
+										<div class="document-text-wrapper">
+											<div class="help-text">На каком этапе находится</div>
+											<div class="meeting-text">Сбор требований окончен, идут выплаты кредиторам</div>
+										</div>
+										<div class="document-text-wrapper">
+											<div class="help-text">Место ведения реестра</div>
+											<div class="meeting-text">Головной офис (г.Москва)</div>
+										</div>
+									</div>
+									<div class="col-12 col-xl-6">
+										<div class="document-text-wrapper">
+											<div class="help-text">Арбитражный управляющий</div>
+											<div class="meeting-text">Нехина Анна Александровна</div>
+										</div>
+										<div class="document-text-wrapper">
+											<div class="help-text">Контакты арбитражного управляющего</div>
+											<div class="meeting-text">127051, г. Москва, а/я 63<br>
+												тел.: 8 (495) 749-20-06<br>
+												anna@nekhina.ru</div>
+										</div>
+										<div class="document-text-wrapper">
+											<div class="help-text">СРО Арбитражного управляющего</div>
+											<div class="meeting-text">САУ «Авангард» — Союз арбитражных управляющих «Авангард» (ИНН 7705479434, ОГРН 1027705031320)</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<a href="#" class="btn btn-filled btn-inline">Заказать выписку</a>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="section-title">Популярные вопросы:</div>
+					//= templates/questions.html
+				</div>
+			</div>
+			<div class="col-12 col-xl-4">
+				//= templates/feedback-service.html
+			</div>
+		</div>
+	</div>
+</section>
+
+//= templates/footer.html

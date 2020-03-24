@@ -1,0 +1,108 @@
+//= templates/header.html
+
+<section>
+	<div class="container">
+		<h3>Рабочий стол</h3>
+		<div class="row">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12 col-xl-3">
+						<div class="section-title">Портфель</div>
+					</div>
+					<div class="col-12 col-xl-3 ml-auto">
+						<form>
+							<div class="form-group">
+								<select class="form-control" id="issuer">
+									<option>Собственные счета</option>
+									<option>2</option>
+									<option>3</option>
+								</select>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-xl-8 order-1 order-xl-2">
+				<table class="rtable table-custom desktop-table js-rtableAccordions">
+					<tr>
+						<th>Эмитет</th>
+						<th>Доля</th>
+						<th>Счета</th>
+						<th>Акции</th>
+						<th>Ном. стоимость</th>
+					</tr>
+					<tr class="info">
+						<td class="info-title accordion-btn" role="tab" aria-expanded="false">АО «Агрохимия»</td>
+						<td class="rtable-cell info-wrapper"><div class="info-text">29,2%</div></td>
+						<td class="rtable-cell info-wrapper"><div class="info-text">76</div></td>
+						<td class="rtable-cell info-wrapper"><div class="info-text">4 569 шт.</div></td>
+						<td class="rtable-cell info-wrapper"><div class="info-text">670 800 руб.</div></td>
+					</tr>
+					<tr class="info">
+						<td class="info-title accordion-btn" role="tab" aria-expanded="false">АО «Лидер»</td>
+						<td class="rtable-cell info-wrapper"><div class="info-text">38,815%</div></td>
+						<td class="rtable-cell info-wrapper"><div class="info-text">76</div></td>
+						<td class="rtable-cell info-wrapper"><div class="info-text">4 569 шт.</div></td>
+						<td class="rtable-cell info-wrapper"><div class="info-text">670 800 руб.</div></td>
+					</tr>
+				</table>
+				<button type="submit" class="btn btn-bordered btn-inline">Весь портфель</button>
+			</div>
+			<div class="col-12 col-xl-3 mr-auto order-2 order-xl-1">
+				<div class="diagram">
+					<div class="diagram-number">1 578 905</div>РУБ.
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-xl-6">
+				<div class="section">
+					<div class="section-title">Последние операции</div>
+					<table class="rtable table-custom recent-table js-rtableAccordions">
+						<tr>
+							<th>Тип операции</th>
+							<th>Дата</th>
+							<th>Эмитент</th>
+						</tr>
+						<tr class="info">
+							<td class="info-title accordion-btn" role="tab" aria-expanded="false">Изменение анкетных данных зарегистрированного лица</td>
+							<td class="rtable-cell info-wrapper"><div class="info-text">16.10.2019</div></td>
+							<td class="rtable-cell info-wrapper"><div class="info-text">АО «Лидер»</div></td>
+						</tr>
+						<tr class="info">
+							<td class="info-title accordion-btn" role="tab" aria-expanded="false">Открытие нового лицевого счета</td>
+							<td class="rtable-cell info-wrapper"><div class="info-text">16.10.2019</div></td>
+							<td class="rtable-cell info-wrapper"><div class="info-text">АО «Агрохимия»</div></td>
+						</tr>
+					</table>
+					<button type="submit" class="btn btn-bordered btn-inline">все операции</button>
+				</div>
+			</div>
+			<div class="col-12 col-xl-6">
+				<div class="section">
+					<div class="section-title">Последние новости</div>
+					<table class="rtable table-custom recent-table js-rtableAccordions">
+						<tr>
+							<th>Событие</th>
+							<th>Дата</th>
+							<th>Эмитент</th>
+						</tr>
+						<tr class="info">
+							<td class="info-title accordion-btn" role="tab" aria-expanded="false">26 июля состоится годовое собрание акционеров АО «Лидер»</td>
+							<td class="rtable-cell info-wrapper"><div class="info-text">16.10.2019</div></td>
+							<td class="rtable-cell info-wrapper"><div class="info-text">АО «Лидер»</div></td>
+						</tr>
+						<tr class="info">
+							<td class="info-title accordion-btn" role="tab" aria-expanded="false">Открытие нового лицевого счета</td>
+							<td class="rtable-cell info-wrapper"><div class="info-text">16.10.2019</div></td>
+							<td class="rtable-cell info-wrapper"><div class="info-text">АО «Агрохимия»</div></td>
+						</tr>
+					</table>
+					<button type="submit" class="btn btn-bordered btn-inline">все новости</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+//= templates/footer-client.html

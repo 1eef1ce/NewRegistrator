@@ -1,0 +1,25 @@
+//= templates/header.html
+
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<form class="search-form">
+					<input type="text" class="form-control search-input" placeholder="Введите ваш вопрос">
+					<button type="submit" class="btn-search"></button>
+				</form>
+			</div>
+		</div>
+		<div class="section-title">Популярные вопросы:</div>
+		<div class="row">
+			<div class="col-12 col-xl-8">
+				//= templates/questions.html
+			</div>
+			<div class="col-12 col-xl-4">
+				//= templates/feedback-short.html
+			</div>
+		</div>
+	</div>
+</section>
+
+//= templates/footer.html

@@ -1,0 +1,60 @@
+//= templates/header-issuer-mobile.html
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-xl-4">
+				<div class="tabs-container">
+					<nav class="nav issuer-tabs" role="tablist">
+						<a class="issuer-tab active" id="tab-profile" data-toggle="pill" href="#profile" role="tab" aria-controls="profile" aria-selected="true">
+							<div class="issuer-tab-title">Ваш профиль</div>
+							<div class="issuer-tab-text">Просматривайте и изменяйте ваши данные</div>
+						</a>
+						<a class="issuer-tab" id="tab-companies" data-toggle="pill" href="#companies" role="tab" aria-controls="companies" aria-selected="false">
+							<div class="issuer-tab-title">Ваши компании</div>
+							<div class="issuer-tab-text">Информация о компаниях в вашем аккаунте</div>
+						</a>
+						<a class="issuer-tab" id="tab-notifications" data-toggle="pill" href="#notifications" role="tab" aria-controls="notifications" aria-selected="false">
+							<div class="issuer-tab-title">Уведомления</div>
+							<div class="issuer-tab-text">Новая информация по вашим компаниям будет здесь</div>
+						</a>
+					</nav>
+				</div>
+			</div>
+			<div class="col-12 col-xl-4 offset-xl-1">
+				<div class="tab-content">
+					<div class="tab-pane active" id="profile" role="tabpanel" aria-labelledby="tab-profile">
+						<div class="issuer-wrapper">
+							<img class="issuer-img" src="assets/images/photo.jpg">
+							<div class="issuer-name">Константин Константинопольский</div>
+						</div>
+						<form>
+							<div class="form-group form-group-margin">
+								<label for="email">Электронная почта</label>
+								<div class="form-edit">
+									<input type="email" readonly id="email" class="form-control-plaintext" aria-describedby="email-help" value="email@example.com">
+									<img class="edit-img" src="assets/images/edit.svg">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="password">Изменить пароль</label>
+								<input type="password" id="password" class="form-control" placeholder="Старый пароль">
+								<input type="password" id="password-new" class="form-control" placeholder="Новый пароль">
+								<input type="password" id="password-new-submit" class="form-control" placeholder="Повторите новый пароль">
+							</div>
+							<button type="submit" class="btn btn-bordered">Сохранить изменения</button>
+						</form>
+					</div>
+					<div class="tab-pane" id="companies" role="tabpanel" aria-labelledby="tab-companies">
+
+					</div>
+					<div class="tab-pane" id="notifications" role="tabpanel" aria-labelledby="tab-notifications">
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+//= templates/footer-client.html

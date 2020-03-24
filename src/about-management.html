@@ -1,0 +1,85 @@
+//= templates/header.html
+<div class="container">
+	<nav class="breadcrumb-wrapper" aria-label="breadcrumb">
+		<div class="breadcrumb-opacity"></div>
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">Главная</a></li>
+			<li class="breadcrumb-item"><a href="#">О компании</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Руководство</li>
+		</ol>
+	</nav>
+</div>
+<section>
+	<div class="container">
+		<h3>Руководство</h3>
+		<div class="row row-cols-1 row-cols-xl-4">
+			<div class="col">
+				<a href="#" class="manager" type="button" data-toggle="modal" data-target="#personality">
+					<img class="manager-img" src="assets/images/photo.jpg">
+					<div class="manager-wrapper">
+						<div class="manager-name">Поляков Игорь Анатольевич</div>
+						<div class="manager-position">Председатель совета директоров</div>
+					</div>
+				</a>
+			</div>
+			<div class="col">
+				<a href="#" class="manager">
+					<img class="manager-img" src="assets/images/photo.jpg">
+					<div class="manager-wrapper">
+						<div class="manager-name">Поляков Игорь Анатольевич</div>
+						<div class="manager-position">Председатель совета директоров</div>
+					</div>
+				</a>
+			</div>
+			<div class="col">
+				<a href="#" class="manager">
+					<img class="manager-img" src="assets/images/photo.jpg">
+					<div class="manager-wrapper">
+						<div class="manager-name">Поляков Игорь Анатольевич</div>
+						<div class="manager-position">Председатель совета директоров</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+<!--Modal-->
+<div class="modal fade" id="personality" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered custom-modal-dialog">
+		<div class="modal-content personality-content">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="personality-container">
+							<img class="personality-img" src="assets/images/photo.jpg">
+							<div>
+								<div class="personality-name">Поляков Игорь Анатольевич</div>
+								<div class="text-regular">
+									<p>
+										By creating an Account on our service, you agree to subscribe to newsletters, marketing
+										or promotional materials and other information we may send. However, you may opt out of
+										receiving any, or all, of these communications from us by following the unsubscribe link
+										or instructions provided in any email we send.
+									</p>
+									<p>
+										However, you may opt out of receiving any, or all, of these communications from us by
+										following the unsubscribe link or instructions provided in any email we send.
+									</p>
+									<p>
+										By creating an Account on our service, you agree to subscribe to newsletters, marketing
+										or promotional materials and other information we may send. However, you may opt out of
+										receiving any, or all, of these communications from us by following the unsubscribe link
+										or instructions provided in any email we send.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+//= templates/footer.html

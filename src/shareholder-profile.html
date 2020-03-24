@@ -1,0 +1,117 @@
+//= templates/header-shareholder-mobile.html
+
+<section>
+	<div class="container">
+		<h2>Профиль</h2>
+		<div class="section">
+			<div class="section-title">Основная информация</div>
+			<div class="shareholder-wrapper">
+				<div class="row">
+					<div class="col-12 col-xl-2">
+						<div class="text-regular">ФИО</div>
+					</div>
+					<div class="col-12 col-xl-4">
+						<div class="text-regular shareholder-text">Иванов Иван Иванович</div>
+					</div>
+				</div>
+			</div>
+			<div class="shareholder-wrapper">
+				<div class="row">
+					<div class="col-12 col-xl-2">
+						<div class="text-regular">Документ</div>
+					</div>
+					<div class="col-12 col-xl-4">
+						<div class="text-regular shareholder-text">
+							Паспорт гражданина РФ 1234 123456, выдан каким-то РОВД МЕЖРАЙОННОГО ОТДЕЛА УФМС РОССИИ ПО
+							какой-то республике в каком-то городе, дата выдачи 21.08.2006
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="section-title">Контакты</div>
+			<form>
+				<div class="form-group form-row">
+					<div class="col-12 col-xl-2">
+						<label for="email">Email</label>
+					</div>
+					<div class="col-12 col-xl-4">
+						<input type="email" id="email" class="form-control" aria-describedby="email-help" placeholder="email@domain.com">
+					</div>
+					<div class="col-12 col-xl-5">
+						<div id="email-help" class="form-text">
+							Можно использовать только один адрес
+						</div>
+					</div>
+				</div>
+				<div class="form-group form-row form-group-margin">
+					<div class="col-12 col-xl-2">
+						<label for="phone">Телефон</label>
+					</div>
+					<div class="col-12 col-xl-4">
+						<input type="tel" id="phone" class="form-control" aria-describedby="phone-help" placeholder="+7 (XXX) XXX XX XX">
+					</div>
+					<div class="col-12 col-xl-5">
+						<div id="phone-help" class="form-text">
+							Можно использовать только один номер телефона российского оператора мобильной связи за исключением прямых номеров
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="section">
+			<div class="section-title">Контакты</div>
+			<form>
+				<div class="form-group form-row">
+					<div class="col-12 col-xl-2">
+						<label for="email">Логин</label>
+					</div>
+					<div class="col-12 col-xl-4">
+						<input type="text" id="login" class="form-control" placeholder="mylogin">
+					</div>
+				</div>
+				<div class="form-group form-row form-group-margin">
+					<div class="col-12 col-xl-2">
+						<label for="phone">Пароль</label>
+					</div>
+					<div class="col-12 col-xl-4">
+						<input type="password" id="password" class="form-control" placeholder="**********">
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="col-12 col-xl-6 offset-xl-2">
+						<div class="form-group form-check form-group-margin">
+							<input type="checkbox" class="custom-check" aria-describedby="2FA-help" id="2FA">
+							<label class="custom-check-label" for="2FA">Использовать двухфакторную аутентификацию</label>
+							<div id="2FA-help" class="form-text form-check-text">
+								<p>
+									Если Вы используете двухфакторную аутентификацию, при входе в систему на указаный
+									номер мобильного телефона будет отсылаться одноразовый код для подтверждения входа.
+								</p>
+								<p>
+									При входе через портал госуслуг двухфакторная аутентификация не используется.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="col-12 col-xl-6 offset-xl-2">
+						<div class="form-group form-check form-group-margin">
+							<input type="checkbox" class="custom-check" id="sms">
+							<label class="custom-check-label" for="sms">Отправлять SMS-сообщение о входе в Личный кабинет</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 col-xl-6 offset-xl-2">
+						<button type="submit" class="btn btn-bordered btn-inline">Сохранить изменения</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
+
+//= templates/footer-client.html

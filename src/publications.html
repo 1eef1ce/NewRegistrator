@@ -1,0 +1,86 @@
+//= templates/header.html
+<div class="container">
+	<nav class="breadcrumb-wrapper" aria-label="breadcrumb">
+		<div class="breadcrumb-opacity"></div>
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">Главная</a></li>
+			<li class="breadcrumb-item"><a href="#">Пресс-центр</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Публикации в СМИ</li>
+		</ol>
+	</nav>
+</div>
+<section>
+	<div class="container">
+		<h2>Публикации в СМИ</h2>
+		<div class="row">
+			<div class="col-12 col-xl-3">
+				<a href="#publications-filter" class="btn btn-bordered btn-filter" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="publications-filter">
+					Фильтр публикаций
+				</a>
+				<div id="publications-filter" class="publications-filter">
+					<form>
+						<div class="publications-filter-title">Период публикации</div>
+						<div class="filter-container">
+							<div class="filter-group form-check">
+								<input type="checkbox" class="custom-check" id="year-all">
+								<label class="custom-check-label" for="year-all">За все время</label>
+							</div>
+							<div class="filter-group form-check">
+								<input type="checkbox" class="custom-check" id="year-2019">
+								<label class="custom-check-label" for="year-2019">2019</label>
+							</div>
+							<div class="filter-group form-check">
+								<input type="checkbox" class="custom-check" id="year-2018">
+								<label class="custom-check-label" for="year-2018">2018</label>
+							</div>
+							<div class="filter-group form-check">
+								<input type="checkbox" class="custom-check" id="year-2017">
+								<label class="custom-check-label" for="year-2017">2017</label>
+							</div>
+							<div class="filter-group form-check">
+								<input type="checkbox" class="custom-check" id="year-2016">
+								<label class="custom-check-label" for="year-2016">2016</label>
+							</div>
+						</div>
+						<div class="publications-filter-title">Рубрики</div>
+						<div class="filter-container">
+							<div class="filter-group form-check">
+								<input type="checkbox" class="custom-check" id="category-all">
+								<label class="custom-check-label" for="category-all">Все рубрики</label>
+							</div>
+							<div class="filter-group form-check">
+								<input type="checkbox" class="custom-check" id="category1">
+								<label class="custom-check-label" for="category1">Собрание акционеров</label>
+							</div>
+							<div class="filter-group form-check">
+								<input type="checkbox" class="custom-check" id="category2">
+								<label class="custom-check-label" for="category2">Выкуп по требованию акционеров</label>
+							</div>
+							<div class="filter-group form-check">
+								<input type="checkbox" class="custom-check" id="category3">
+								<label class="custom-check-label" for="category3">Очень длинное название рубрики в 2 строки</label>
+							</div>
+						</div>
+						<button class="btn btn-filled btn-filter-submit" type="submit">применить</button>
+					</form>
+				</div><!-- filter -->
+			</div>
+			<div class="col-12 col-xl-9">
+				<div class="document">
+					<img class="document-img" src="assets/images/doc.svg">
+					<div>
+						<div class="document-name">Использование внебиржевых облигаций для развития ЖКХ: опыт Республики Саха.</div>
+						<div>
+							<div class="document-date">25.04.2019</div>
+							<div class="document-size">290 кб</div>
+							<div class="document-source">РЦБ №4 2017г.</div>
+							<div class="document-author">Александр Богатырев, Данил Саввинов, Ольга Шалина</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+//= templates/footer.html

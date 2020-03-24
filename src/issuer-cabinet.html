@@ -1,0 +1,300 @@
+//= templates/header.html
+
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="nav cabinet-tabs" role="tablist">
+					<a class="cabinet-tab active" id="docs-tab" data-toggle="pill" href="#docs" role="tab" aria-controls="docs" aria-selected="true">Документы</a>
+					<a class="cabinet-tab" id="stocks-tab" data-toggle="pill" href="#stocks" role="tab" aria-controls="stocks" aria-selected="false">Ценные бумаги</a>
+					<a class="cabinet-tab" id="requests-tab" data-toggle="pill" href="#requests" role="tab" aria-controls="requests" aria-selected="false">Запрос документов</a>
+					<a class="cabinet-tab" id="files-tab" data-toggle="pill" href="#files" role="tab" aria-controls="files" aria-selected="false">Файлы</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="tab-content">
+	<div class="tab-pane active" id="docs" role="tabpanel" aria-labelledby="docs-tab">
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-xl-3">
+						<div class="documents-filter">
+							<form>
+								<div class="documents-filter-title">Тип документа</div>
+								<div class="filter-container">
+									<div class="filter-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="docs-all">
+										<label class="custom-radio-label" for="docs-all">Все</label>
+									</div>
+									<div class="filter-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="docs-1">
+										<label class="custom-radio-label" for="docs-1">Договоры</label>
+									</div>
+									<div class="filter-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="docs-2">
+										<label class="custom-radio-label" for="docs-2">Счета, акты, счета-фактуры</label>
+									</div>
+									<div class="filter-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="docs-3">
+										<label class="custom-radio-label" for="docs-3">Уведомления</label>
+									</div>
+								</div>
+							</form>
+						</div><!-- filter -->
+					</div>
+					<div class="col-12 col-xl-9">
+						<div class="tile document-container document-container-row">
+							<div class="document-main">
+								<img class="document-img" src="assets/images/doc.svg">
+								<div>
+									<div class="document-name">Счёт 77БП-027123 от 17.01.2019</div>
+									<div class="d-flex">
+										<div class="document-date">25.04.2019</div>
+										<div class="document-attachments"><img src="assets/images/paperclip.svg">2</div>
+									</div>
+								</div>
+							</div>
+							<div class="document-sub">
+								<div class="document-status-wrapper">
+									<div class="document-price">2 456 руб.</div>
+									<div class="document-status status-red">Не оплачен</div>
+								</div>
+								<div class="document-download-wrapper">
+									<div class="document-divider"></div>
+									<img class="document-download" src="assets/images/download.svg">
+								</div>
+							</div>
+						</div>
+						<div class="tile document-container document-container-row">
+							<div class="document-main">
+								<img class="document-img" src="assets/images/doc.svg">
+								<div>
+									<div class="document-name">Счёт 77БП-027123 от 17.01.2019</div>
+									<div class="d-flex">
+										<div class="document-date">25.04.2019</div>
+										<div class="document-attachments"><img src="assets/images/paperclip.svg">2</div>
+									</div>
+								</div>
+							</div>
+							<div class="document-sub">
+								<div class="document-status-wrapper">
+									<div class="document-price">2 456 руб.</div>
+									<div class="document-status status-green">Оплачен</div>
+								</div>
+								<div class="document-download-wrapper">
+									<div class="document-divider"></div>
+									<img class="document-download" src="assets/images/download.svg">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="tab-pane" id="stocks" role="tabpanel" aria-labelledby="stocks-tab">
+		<section>
+			<div class="container">
+				<div class="row row-cols-1 row-cols-xl-2">
+					<div class="col">
+						<div class="tile document-container">
+							<div class="document-main">
+								<img class="document-img" src="assets/images/doc.svg">
+								<div class="document-name-wrapper">
+									<div class="document-name">Акция привилегированная именная типа А</div>
+									<div class="document-date">25.04.2019</div>
+								</div>
+							</div>
+							<div class="document-info">
+								<div class="document-text-wrapper">
+									<div class="help-text">Номер государственной регистрации</div>
+									<div class="document-text">2-02-32718-D</div>
+								</div>
+								<div class="document-text-wrapper">
+									<div class="help-text">Номинал</div>
+									<div class="document-text">450</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="tile document-container">
+							<div class="document-main">
+								<img class="document-img" src="assets/images/doc.svg">
+								<div class="document-name-wrapper">
+									<div class="document-name">Акция привилегированная именная типа А</div>
+									<div class="document-date">25.04.2019</div>
+								</div>
+							</div>
+							<div class="document-info">
+								<div class="document-text-wrapper">
+									<div class="help-text">Номер государственной регистрации</div>
+									<div class="document-text">2-02-32718-D</div>
+								</div>
+								<div class="document-text-wrapper">
+									<div class="help-text">Номинал</div>
+									<div class="document-text">450</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="tab-pane" id="requests" role="tabpanel" aria-labelledby="requests-tab">
+		<section>
+			<div class="container">
+				<div class="request-text">
+					Направление запроса на получение информации в электронном виде с помощью данного сервиса оплачивается
+					в порядке и на условиях, предусмотренном договором на оказание услуг по ведению реестра и (или) действующим прейскурантом.
+				</div>
+				<a href="#" class="btn btn-bordered btn-request">подать запрос</a>
+                <form>
+					<div class="form-group form-period">
+						<label for="period-start">Период</label>
+						<input type="text" id="period-start" class="form-control period">
+						<div class="dash">&mdash;</div>
+						<input type="text" id="period-end" class="form-control period">
+					</div>
+					<button type="submit" class="btn btn-filled btn-period">показать</button>
+				</form>
+				<div class="row row-cols-1 row-cols-xl-2">
+					<div class="col">
+						<div class="tile document-container">
+							<div class="document-main">
+								<img class="document-img" src="assets/images/doc.svg">
+								<div class="document-name-wrapper">
+									<div class="document-name">Список к собранию — обыкновенные акции</div>
+								</div>
+							</div>
+							<div class="document-info document-info-row">
+								<div class="document-text-wrapper">
+									<div class="help-text">Дата запроса</div>
+									<div class="document-text">13.03.2019</div>
+								</div>
+								<div class="document-text-wrapper">
+									<div class="help-text">Запрос на дату</div>
+									<div class="document-text">13.03.2019</div>
+								</div>
+							</div>
+							<div class="document-status-position">
+								<div class="help-text">Статус</div>
+								<div class="document-text">Обработка</div>
+							</div>
+							<div class="document-manage">
+								<img src="assets/images/download.svg">
+								<img src="assets/images/trash.svg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="tab-pane" id="files" role="tabpanel" aria-labelledby="files-tab">
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-xl-3">
+						<div class="documents-filter">
+							<form>
+								<div class="documents-filter-title">Тип файла</div>
+								<div class="filter-container">
+									<div class="filter-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="file-1">
+										<label class="custom-radio-label" for="file-1">Получение информации из реестра</label>
+									</div>
+									<div class="filter-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="file-2">
+										<label class="custom-radio-label" for="file-2">Сообщение для ЦКИ</label>
+									</div>
+									<div class="filter-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="file-3">
+										<label class="custom-radio-label" for="file-3">Информация для подготовки и проведения ОСА</label>
+									</div>
+									<div class="filter-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="file-4">
+										<label class="custom-radio-label" for="file-4">Данные для раскрытия информации на сайте уполномоченного агентства или ЕФРС</label>
+									</div>
+									<div class="filter-group form-check">
+										<input type="radio" class="custom-radio" name="customRadio" id="file-5">
+										<label class="custom-radio-label" for="file-5">Информация по дивидендам</label>
+									</div>
+								</div>
+							</form>
+						</div><!-- filter -->
+						<div class="form-file">
+							<input type="file" class="custom-file" id="customFile">
+							<label class="custom-file-label btn" for="customFile">загрузить файл</label>
+						</div>
+					</div>
+					<div class="col-12 col-xl-9">
+						<div class="nav files-tabs" role="tablist">
+							<a class="files-tab active" id="files-in-tab" data-toggle="pill" href="#files-in" role="tab" aria-controls="files-in" aria-selected="true">Принятые</a>
+							<a class="files-tab" id="files-out-tab" data-toggle="pill" href="#files-out" role="tab" aria-controls="files-out" aria-selected="false">Отправленные</a>
+						</div>
+						<div class="tab-content">
+							<div class="tab-pane active" id="files-in" role="tabpanel" aria-labelledby="files-in-tab">
+								<div class="tile document-container document-container-row">
+									<div class="document-main">
+										<img class="document-img" src="assets/images/doc.svg">
+										<div>
+											<div class="document-name">Счёт 77БП-027123 от 17.01.2019</div>
+											<div class="document-date">25.04.2019</div>
+										</div>
+									</div>
+									<div class="document-action">
+										<img src="assets/images/download-light.svg">скачать файл
+									</div>
+									<div class="document-download-wrapper">
+										<div class="document-divider"></div>
+										<img class="document-download" src="assets/images/download.svg">
+									</div>
+								</div>
+								<div class="tile document-container document-container-row">
+									<div class="document-main">
+										<img class="document-img" src="assets/images/doc.svg">
+										<div>
+											<div class="document-name">Счёт 77БП-027123 от 17.01.2019</div>
+											<div class="document-date">25.04.2019</div>
+										</div>
+									</div>
+									<div class="document-action">
+										<img src="assets/images/download-light.svg">скачать файл
+									</div>
+									<div class="document-download-wrapper">
+										<div class="document-divider"></div>
+										<img class="document-download" src="assets/images/download.svg">
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="files-out" role="tabpanel" aria-labelledby="files-out-tab">
+								<div class="tile document-container document-container-row">
+									<div class="document-main">
+										<img class="document-img" src="assets/images/doc.svg">
+										<div>
+											<div class="document-name">Счёт 77БП-027123 от 17.01.2019</div>
+											<div class="document-date">25.04.2019</div>
+										</div>
+									</div>
+									<div class="document-action">
+										<img src="assets/images/download-light.svg">скачать файл
+									</div>
+									<div class="document-download-wrapper">
+										<div class="document-divider"></div>
+										<img class="document-download" src="assets/images/download.svg">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+//= templates/footer-client.html
