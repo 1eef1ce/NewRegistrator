@@ -48,7 +48,7 @@ $( document ).ready(function() {
             };
             $(this).each(function(){toggleColumns($(this));});
 
-            if ($(window).width() < 1440) {
+            if ($(window).width() < 960) {
                 $(this).find(".accordion-btn").click( function() {
                     $(this).attr("aria-expanded", $(this).attr("aria-expanded") !== "true" );
                     toggleColumns($(this).parents(".rtable"));
@@ -69,7 +69,7 @@ $( document ).ready(function() {
     $(window).resize(function () {
 
         $('.link-transform').each (function () {
-            if ($(window).width() > 1439) {
+            if ($(window).width() > 959) {
                 $(this).removeClass('btn btn-filled');
                 $(this).addClass('link-more');
                 $(this).siblings('.heading-wrapper').append(this);
@@ -82,7 +82,7 @@ $( document ).ready(function() {
         });
 
         $('.custom-file-label').each (function () {
-            if ($(window).width() > 1439) {
+            if ($(window).width() > 959) {
                 $(this).removeClass('btn-bordered');
                 $(this).addClass('btn-filled');
             }
@@ -92,7 +92,7 @@ $( document ).ready(function() {
             }
         });
 
-        if ($(window).width() > 1439) {
+        if ($(window).width() > 959) {
             $('.social').appendTo('.footer-top');
         }
         else {
@@ -116,19 +116,19 @@ $( document ).ready(function() {
         var tbl3 = jQuery('.recent-table');
         var tbl4 = jQuery('.desktop-table');
 
-        if ($(window).width() > 1439) {
-            jQuery.moveColumn(tbl1, 1, 0);
-            jQuery.moveColumn(tbl1, 2, 4);
-            jQuery.moveColumn(tbl2, 1, 0);
-            jQuery.moveColumn(tbl3, 1, 0);
-            jQuery.moveColumn(tbl4, 1, 0);
+        if ($(window).width() > 959) {
+            $.moveColumn(tbl1, 1, 0);
+            $.moveColumn(tbl1, 2, 4);
+            $.moveColumn(tbl2, 1, 0);
+            $.moveColumn(tbl3, 1, 0);
+            $.moveColumn(tbl4, 1, 0);
         }
         else {
-            jQuery.moveColumn(tbl1, 0, 1);
-            jQuery.moveColumn(tbl1, 4, 2);
-            jQuery.moveColumn(tbl2, 0, 1);
-            jQuery.moveColumn(tbl3, 0, 1);
-            jQuery.moveColumn(tbl4, 0, 1);
+            $.moveColumn(tbl1, 0, 1);
+            $.moveColumn(tbl1, 4, 2);
+            $.moveColumn(tbl2, 0, 1);
+            $.moveColumn(tbl3, 0, 1);
+            $.moveColumn(tbl4, 0, 1);
         }
 
     }).resize();
@@ -148,5 +148,33 @@ $( document ).ready(function() {
     });
 
     $('.nav-mobile' ).sliderMenu();
+
+    $(document).on('click', '.dropdown-tab', function(){
+        $('.dropdown-tab').removeClass('active');
+        $('.dropdown-tab').parents('.dropdown-tabs').toggleClass('expanded');
+        $(this).addClass('active');
+    });
+
+    $('.dropdown-toggle').click(function () {
+        $(this).toggleAttrVal('aria-expanded', 'true', 'false');
+    });
+    $.fn.toggleAttrVal = function(attr, val1, val2) {
+        var test = $(this).attr(attr);
+        if ( test === val1) {
+            $(this).attr(attr, val2);
+            return this;
+        }
+        if ( test === val2) {
+            $(this).attr(attr, val1);
+            return this;
+        }
+        // default to val1 if neither
+        $(this).attr(attr, val1);
+        return this;
+    };
+
+    $('.documents-filter-title').click(function(){
+        $(this).parents('.documents-filter').toggleClass('expanded');
+    });
 
 });

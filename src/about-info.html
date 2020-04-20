@@ -59,5 +59,27 @@
 		</div>
 	</div>
 </section>
-
+//= templates/footer-nav.html
 //= templates/footer.html
+<script>
+    var swiperAchievements = new Swiper('.swiper-achievements', {
+        slidesPerView: 1,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+    });
+
+    var swiperOrganisations = new Swiper('.swiper-organisations', {
+        slidesPerView: 1,
+        breakpoints: {
+            960: {
+                slidesPerView: 4
+            },
+        }
+    });
+</script>

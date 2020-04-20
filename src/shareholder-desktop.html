@@ -1,18 +1,17 @@
 //= templates/header.html
-
-<section>
+<section class="section-client">
 	<div class="container">
 		<h3>Рабочий стол</h3>
 		<div class="row">
 			<div class="col-12">
 				<div class="row">
-					<div class="col-12 col-xl-3">
+					<div class="col-12 col-lg-3">
 						<div class="section-title">Портфель</div>
 					</div>
-					<div class="col-12 col-xl-3 ml-auto">
+					<div class="col-12 col-lg-3 ml-auto">
 						<form>
 							<div class="form-group">
-								<select class="form-control" id="issuer">
+								<select class="custom-select" id="issuer">
 									<option>Собственные счета</option>
 									<option>2</option>
 									<option>3</option>
@@ -22,40 +21,42 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-12 col-xl-8 order-1 order-xl-2">
-				<table class="rtable table-custom desktop-table js-rtableAccordions">
-					<tr>
-						<th>Эмитет</th>
-						<th>Доля</th>
-						<th>Счета</th>
-						<th>Акции</th>
-						<th>Ном. стоимость</th>
-					</tr>
-					<tr class="info">
-						<td class="info-title accordion-btn" role="tab" aria-expanded="false">АО «Агрохимия»</td>
-						<td class="rtable-cell info-wrapper"><div class="info-text">29,2%</div></td>
-						<td class="rtable-cell info-wrapper"><div class="info-text">76</div></td>
-						<td class="rtable-cell info-wrapper"><div class="info-text">4 569 шт.</div></td>
-						<td class="rtable-cell info-wrapper"><div class="info-text">670 800 руб.</div></td>
-					</tr>
-					<tr class="info">
-						<td class="info-title accordion-btn" role="tab" aria-expanded="false">АО «Лидер»</td>
-						<td class="rtable-cell info-wrapper"><div class="info-text">38,815%</div></td>
-						<td class="rtable-cell info-wrapper"><div class="info-text">76</div></td>
-						<td class="rtable-cell info-wrapper"><div class="info-text">4 569 шт.</div></td>
-						<td class="rtable-cell info-wrapper"><div class="info-text">670 800 руб.</div></td>
-					</tr>
-				</table>
-				<button type="submit" class="btn btn-bordered btn-inline">Весь портфель</button>
+			<div class="col-12 col-lg-8 order-1 order-lg-2">
+				<div class="section">
+					<table class="rtable table-custom desktop-table js-rtableAccordions">
+						<tr>
+							<th>Эмитет</th>
+							<th>Доля</th>
+							<th>Счета</th>
+							<th>Акции</th>
+							<th>Ном. стоимость</th>
+						</tr>
+						<tr class="info">
+							<td class="info-title accordion-btn" role="tab" aria-expanded="false">АО «Агрохимия»</td>
+							<td class="rtable-cell info-wrapper"><div class="info-text">29,2%</div></td>
+							<td class="rtable-cell info-wrapper"><div class="info-text">76</div></td>
+							<td class="rtable-cell info-wrapper"><div class="info-text">4 569 шт.</div></td>
+							<td class="rtable-cell info-wrapper"><div class="info-text">670 800 руб.</div></td>
+						</tr>
+						<tr class="info">
+							<td class="info-title accordion-btn" role="tab" aria-expanded="false">АО «Лидер»</td>
+							<td class="rtable-cell info-wrapper"><div class="info-text">38,815%</div></td>
+							<td class="rtable-cell info-wrapper"><div class="info-text">76</div></td>
+							<td class="rtable-cell info-wrapper"><div class="info-text">4 569 шт.</div></td>
+							<td class="rtable-cell info-wrapper"><div class="info-text">670 800 руб.</div></td>
+						</tr>
+					</table>
+					<button type="submit" class="btn btn-bordered btn-inline">Весь портфель</button>
+				</div>
 			</div>
-			<div class="col-12 col-xl-3 mr-auto order-2 order-xl-1">
-				<div class="diagram">
+			<div class="col-12 col-lg-3 mr-auto order-2 order-lg-1">
+				<div class="section diagram">
 					<div class="diagram-number">1 578 905</div>РУБ.
 				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-12 col-xl-6">
+			<div class="col-12 col-lg-6">
 				<div class="section">
 					<div class="section-title">Последние операции</div>
 					<table class="rtable table-custom recent-table js-rtableAccordions">
@@ -78,7 +79,7 @@
 					<button type="submit" class="btn btn-bordered btn-inline">все операции</button>
 				</div>
 			</div>
-			<div class="col-12 col-xl-6">
+			<div class="col-12 col-lg-6">
 				<div class="section">
 					<div class="section-title">Последние новости</div>
 					<table class="rtable table-custom recent-table js-rtableAccordions">
@@ -104,5 +105,5 @@
 		</div>
 	</div>
 </section>
-
 //= templates/footer-client.html
+//= templates/footer.html

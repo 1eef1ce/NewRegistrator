@@ -1,0 +1,68 @@
+//= templates/header.html
+<div class="container">
+	<nav class="breadcrumb-wrapper" aria-label="breadcrumb">
+		<div class="breadcrumb-opacity"></div>
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">Главная</a></li>
+			<li class="breadcrumb-item"><a href="#">О компании</a></li>
+			<li class="breadcrumb-item"><a href="#">Раскрытие информации</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Финансовая отчетность</li>
+		</ol>
+	</nav>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-12 col-lg-3">
+			<nav class="nav dropdown-tabs info-tabs">
+				<a class="dropdown-tab nav-info active" id="info1-tab" data-toggle="pill" href="#info1" role="tab" aria-controls="info1" aria-selected="true">Финансовая отчетность</a>
+				<a class="dropdown-tab nav-info" id="info2-tab" data-toggle="pill" href="#info2" role="tab" aria-controls="info2" aria-selected="false">Расчет собственных средств</a>
+				<a class="dropdown-tab nav-info" id="info3-tab" data-toggle="pill" href="#info3" role="tab" aria-controls="info3" aria-selected="false">Устав</a>
+			</nav>
+		</div>
+		<div class="col-12 col-lg-9">
+			<div class="tab-content">
+				<div class="tab-pane active" id="info1" role="tabpanel" aria-labelledby="info1-tab">
+					<h3>Финансовая отчетность</h3>
+					<div>
+						//= templates/documents.html
+					</div>
+				</div>
+				<div class="tab-pane" id="info2" role="tabpanel" aria-labelledby="info2-tab">
+					<h3>Расчет собственных средств</h3>
+					<div>
+						//= templates/documents.html
+					</div>
+				</div>
+				<div class="tab-pane" id="info3" role="tabpanel" aria-labelledby="info3-tab">
+					<h3>Устав</h3>
+					<div class="row row-cols-1 row-cols-lg-2">
+						<div class="col">
+							<div class="document">
+								<img class="document-img" src="assets/images/pdf.svg">
+								<div>
+									<div class="document-name">Устав АО «Новый регистратор»</div>
+									<div>
+										<div class="document-date">25.04.2019</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="document">
+								<img class="document-img" src="assets/images/pdf.svg">
+								<div>
+									<div class="document-name">Устав АО «Новый регистратор»</div>
+									<div>
+										<div class="document-date">25.04.2019</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+//= templates/footer-nav.html
+//= templates/footer.html

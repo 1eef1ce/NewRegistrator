@@ -13,7 +13,7 @@
 	<div class="container">
 		<h3>Ведение реестра акционеров</h3>
 		<div class="row">
-			<div class="col-12 col-xl-8">
+			<div class="col-12 col-lg-8">
 				<div class="section">
 					<div class="section-title">
 						Правильная подготовка и проведение собрания акционеров – одно из сложных мероприятий в деятельности акционерного общества.
@@ -32,11 +32,11 @@
 							всех правовых норм и с использованием специального программного продукта.
 						</p>
 					</div>
-					<a href="#" class="btn btn-bordered btn-inline" type="button" data-toggle="modal" data-target="#request"><span class="d-none d-xl-block">Запросить&nbsp;</span>коммерческое предложение</a>
+					<a href="#" class="btn btn-bordered btn-inline" type="button" data-toggle="modal" data-target="#request"><span class="d-none d-lg-block">Запросить&nbsp;</span>коммерческое предложение</a>
 				</div>
 				<div class="section">
 					<div class="section-title">В рамках услуги «Название услуги» мы:</div>
-					<div class="row row-cols-1 row-cols-xl-2">
+					<div class="row row-cols-1 row-cols-lg-2">
 						//= templates/services.html
 					</div>
 				</div>
@@ -46,19 +46,19 @@
 				</div>
 				<div class="section">
 					<div class="section-title">Необходимые документы</div>
-					<div class="text-regular">Узнайте, какие документы нужны для передачи реестра</div>
+					<p class="text-regular">Узнайте, какие документы нужны для передачи реестра</p>
 					<form>
 						<div class="form-row">
-							<div class="col-12 col-xl-4">
+							<div class="col-12 col-lg-4">
 								<div class="form-group">
 									<label for="creationDate">Дата создания</label>
 									<input type="text" id="creationDate" class="form-control" placeholder="дд/мм/гггг">
 								</div>
 							</div>
-							<div class="col-12 col-xl-4">
+							<div class="col-12 col-lg-4">
 								<div class="form-group">
 									<label for="creationPath">Путь создания</label>
-									<select class="form-control" id="creationPath">
+									<select class="custom-select" id="creationPath">
 										<option>Учреждение</option>
 										<option>2</option>
 										<option>3</option>
@@ -97,13 +97,13 @@
 					<div class="heading-wrapper">
 						<div class="section-title">Другие услуги для эмитентов</div>
 					</div>
-					<div class="row row-cols-1 row-cols-xl-2">
+					<div class="row row-cols-1 row-cols-lg-2">
 						//= templates/services-other.html
 					</div>
 					<a href="#" class="btn btn-filled link-transform">все услуги</a>
 				</div>
 			</div>
-			<div class="col-12 col-xl-4">
+			<div class="col-12 col-lg-4">
 				//= templates/feedback-service.html
 			</div>
 		</div>
@@ -132,14 +132,14 @@
 										<input type="text" id="INN" class="form-control" placeholder="ИНН">
 									</div>
 									<div class="form-group">
-										<select class="form-control" id="status">
+										<select class="custom-select" id="status">
 											<option>Статус ведения реестра</option>
 											<option>2</option>
 											<option>3</option>
 										</select>
 									</div>
 								</div>
-								<div class="col-12 col-xl-6">
+								<div class="col-12 col-lg-6">
 									<div class="form-group">
 										<input type="text" id="shareholders" class="form-control" placeholder="Количество акционеров">
 									</div>
@@ -147,7 +147,7 @@
 										<input type="text" id="contact" class="form-control" placeholder="Контактное лицо">
 									</div>
 								</div>
-								<div class="col-12 col-xl-6">
+								<div class="col-12 col-lg-6">
 									<div class="form-group">
 										<input type="email" id="contactEmail" class="form-control" placeholder="Email">
 									</div>
@@ -166,5 +166,5 @@
 		</div>
 	</div>
 </div>
-
+//= templates/footer-nav.html
 //= templates/footer.html

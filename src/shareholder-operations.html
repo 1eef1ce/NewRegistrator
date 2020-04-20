@@ -1,51 +1,48 @@
 //= templates/header.html
-
-<section>
+<section class="section-client">
 	<div class="container">
 		<h3>Журнал операций</h3>
 		<div class="row">
 			<div class="col">
-				<div class="section">
-					<form class="operations-form">
-						<div class="form-row">
-							<div class="col-6 col-xl-2">
-								<div class="form-group">
-									<label for="dateStart">Выберите период:</label>
-									<input type="text" id="dateStart" class="form-control" placeholder="Начало">
-								</div>
-							</div>
-							<div class="col-6 col-xl-2">
-								<div class="form-group">
-									<label class="invisible" for="dateEnd">Выберите период:</label>
-									<input type="text" id="dateEnd" class="form-control" placeholder="Конец">
-								</div>
-							</div>
-							<div class="col-12 col-xl-3">
-								<div class="form-group">
-									<label for="issuer">Название эмитента</label>
-									<select class="form-control" id="issuer">
-										<option>Все эмитенты</option>
-										<option>2</option>
-										<option>3</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-12 col-xl-3">
-								<div class="form-group">
-									<label for="operation">Тип операций</label>
-									<select class="form-control" id="operation">
-										<option>Все операции</option>
-										<option>2</option>
-										<option>3</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-12 col-xl-2">
-								<button type="submit" class="btn btn-bordered">отобразить</button>
+				<form class="operations-form">
+					<div class="form-row">
+						<div class="col-6 col-lg-2">
+							<div class="form-group">
+								<label for="dateStart">Выберите период:</label>
+								<input type="text" id="dateStart" class="form-control" placeholder="Начало">
 							</div>
 						</div>
-					</form>
-				</div>
+						<div class="col-6 col-lg-2">
+							<div class="form-group">
+								<label class="invisible" for="dateEnd">Выберите период:</label>
+								<input type="text" id="dateEnd" class="form-control" placeholder="Конец">
+							</div>
+						</div>
+						<div class="col-12 col-lg-3">
+							<div class="form-group">
+								<label for="issuer">Название эмитента</label>
+								<select class="custom-select" id="issuer">
+									<option>Все эмитенты</option>
+									<option>2</option>
+									<option>3</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-12 col-lg-3">
+							<div class="form-group">
+								<label for="operation">Тип операций</label>
+								<select class="custom-select" id="operation">
+									<option>Все операции</option>
+									<option>2</option>
+									<option>3</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-12 col-lg-2">
+							<button type="submit" class="btn btn-bordered">отобразить</button>
+						</div>
+					</div>
+				</form>
 				<div class="section">
 					<div class="section-title">Основные реквизиты</div>
 					<table class="rtable table-custom operations-table js-rtableAccordions">
@@ -73,5 +70,5 @@
 		</div>
 	</div>
 </section>
-
 //= templates/footer-client.html
+//= templates/footer.html

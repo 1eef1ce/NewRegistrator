@@ -113,7 +113,7 @@ img
 .container
   position relative
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     max-width 1140px
 
 section
@@ -121,7 +121,7 @@ section
   position relative
   margin-bottom 80px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     margin-bottom 100px
 
 .text-regular
@@ -130,7 +130,7 @@ section
   line-height 1.7
   color colorGrey
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 16px
     line-height 1.4
 
@@ -140,7 +140,7 @@ section
   line-height 1.7
   color colorGrey
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 18px
     line-height 1.56
 
@@ -167,7 +167,7 @@ section
   padding 20px
   margin-bottom 20px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     shadow-v2()
     padding 30px
     margin-bottom 30px
@@ -179,7 +179,7 @@ section
   line-height 1.62
   color colorDarkBlue
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 18px
     line-height 1.56
 
@@ -195,7 +195,7 @@ section
   line-height 1.5
   color colorDarkBlue
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 22px
     line-height 1.45
 
@@ -205,7 +205,7 @@ section
   line-height 1.36
   color colorDarkBlue
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 24px
     line-height 1.33
 
@@ -216,7 +216,7 @@ section
   color colorDarkBlue
   margin-bottom 10px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 24px
     line-height 1.33
     margin-bottom 20px
@@ -229,7 +229,7 @@ section
   .section-title
     margin-bottom 0
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     justify-content flex-start
     margin-bottom 20px
     .section-title
@@ -245,7 +245,7 @@ section
   .h2
     margin-bottom 0
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     margin-bottom 20px
 
 //** Breadcrumbs **//
@@ -258,16 +258,16 @@ section
   right 0
   width 105px
   height 1em
-  background linear-gradient(268.09deg, #FFFFFF 0.25%, rgba(255, 255, 255, 0) 117.82%)
+  background linear-gradient(268.09deg, #ffffff 0.25%, rgba(255, 255, 255, 0) 117.82%)
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     display none
 
 .breadcrumb
   height 1.25em
   overflow hidden
   padding 0
-  margin-bottom 20px
+  margin 15px 0 20px
   background-color colorWhite
   border-radius 0
   font-family fontRegular
@@ -275,11 +275,11 @@ section
   line-height 1.167
   color colorGrey
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     height auto
     font-size 14px
     line-height 1.7
-    margin-bottom 40px
+    margin 15px 0 40px
 
 .breadcrumb-item
   &.active
@@ -294,7 +294,7 @@ h2
   color colorGreyTransparent
   margin-bottom 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 48px
     margin-bottom 20px
 
@@ -306,7 +306,7 @@ h3
   color colorGreyTransparent
   margin-bottom 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 38px
     margin-bottom 20px
 
@@ -320,7 +320,7 @@ h3
   &:focus
     color colorBlue
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 18px
 
 .link-underline
@@ -352,7 +352,7 @@ h3
 
 .link-more-large
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 18px
     &:before
       width 40px
@@ -373,7 +373,7 @@ h3
   line-height 1.5
   color colorLightGrey
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     display none
 
 .btn
@@ -396,7 +396,7 @@ h3
 
 .btn-inline
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     display inline-flex
     width auto
     min-width 190px
@@ -420,13 +420,13 @@ h3
 .btn-filter
   margin-bottom 30px
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     display none
 
 .btn-filter-submit
   margin-top 30px
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     display none
 
 .btn-search
@@ -439,7 +439,7 @@ h3
   height 44px
   border-radius 0 2px 2px 0
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     background-size 20px
     width 48px
     height 48px
@@ -550,7 +550,7 @@ header
     .main-link
       color colorBlue
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     &+.main-item
       margin-left 40px
 
@@ -562,6 +562,49 @@ header
   &:hover
   &:focus
     color colorBlue
+  &.dropdown-toggle
+    &:hover
+    &:focus
+      &:after
+        background colorBlue
+
+.dropdown-toggle
+  display flex
+  align-items center
+  justify-content space-between
+  &:after
+    content ""
+    display block
+    width 5px
+    height 8px
+    margin-left 10px
+    transition transform .2s, margin-top .2s
+    mask-image url('../assets/images/arrow.svg')
+    mask-size contain
+    background-color #706C71
+    transform rotate(90deg)
+    border 0
+  &[aria-expanded='true']
+    color colorBlue
+    &:after
+      transform rotate(270deg)
+      background-color colorBlue
+
+.dropdown-item
+  &:hover
+  &:focus
+    &:after
+      background-color colorWhite
+  &.dropdown-toggle
+    &[aria-expanded='true']
+      &:after
+        transform rotate(270deg)
+        background-color colorWhite
+
+.sub-link
+  &.dropdown-toggle
+    &:after
+      background-color colorWhite
 
 .sub-item
   &+.sub-item
@@ -621,7 +664,7 @@ header
   background colorWhite
   height 54px
   padding 14px 15px
-  box-shadow 0px 0px 10px rgba(0, 0, 0, 0.1)
+  box-shadow 0 0 10px rgba(0, 0, 0, 0.1)
 
 .header-top-mobile
   display flex
@@ -745,7 +788,7 @@ ul ul ul .mobile-link
   height 22px
   margin-right 19px
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     margin-right 37px
 
 .notification-number
@@ -770,7 +813,7 @@ ul ul ul .mobile-link
   border-radius 100%
   margin 0
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     width 42px
     height 42px
     margin 0 20px 0 0
@@ -800,7 +843,7 @@ ul ul ul .mobile-link
   height 24px
   margin-left 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     width 40px
     height 40px
     background #f7f8f9
@@ -870,14 +913,14 @@ ul ul ul .mobile-link
       color colorWhite
       background colorLightBlue
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     padding 0
 
 .director-wrapper
   display flex
   flex-direction column
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     flex-direction row
     align-items center
 
@@ -885,7 +928,7 @@ ul ul ul .mobile-link
   width 100%
   border-radius 2px 2px 0 0
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     width 121px
     border-radius 2px 0 0 0
 
@@ -897,7 +940,7 @@ ul ul ul .mobile-link
   text-align center
   padding 12px 20px 6px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 22px
     line-height 1.36
     text-align left
@@ -913,7 +956,7 @@ ul ul ul .mobile-link
   background rgba(96, 114, 134, 0.06)
   border-radius 0 0 2px 2px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 16px
     line-height 1.5
 
@@ -923,7 +966,7 @@ ul ul ul .mobile-link
   background colorWhite
   margin-bottom 40px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     flex-direction column
     margin-bottom 50px
 
@@ -932,14 +975,14 @@ ul ul ul .mobile-link
   flex-direction column
   justify-content space-between
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     align-items center
 
 .manager-img
   width 105px
   shadow-v3()
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     width 160px
 
 .manager-name
@@ -949,7 +992,7 @@ ul ul ul .mobile-link
   color colorDarkBlue
   padding 0 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 16px
     line-height 1.4
     text-align center
@@ -962,7 +1005,7 @@ ul ul ul .mobile-link
   color colorGrey
   padding 0 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     text-align center
     padding 6px 10px
     background rgba(0, 101, 242, 0.036)
@@ -978,7 +1021,7 @@ ul ul ul .mobile-link
   justify-content space-between
   margin-bottom 20px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     flex-wrap wrap
     overflow auto
     margin-bottom 30px
@@ -1008,7 +1051,7 @@ ul ul ul .mobile-link
   &:last-of-type
     margin-right 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     padding 5px 20px
     &+.news-tab
       margin-left 0
@@ -1016,14 +1059,14 @@ ul ul ul .mobile-link
 .news
   height 287px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     height 315px
     .main-news &
       height 270px
 
 .news-title
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     .main-news &
       font-size 20px
 
@@ -1038,7 +1081,7 @@ ul ul ul .mobile-link
   background colorBlueTransparent
   border-radius 2px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 16px
 
 .date
@@ -1047,7 +1090,7 @@ ul ul ul .mobile-link
   line-height 1.7
   color colorGreyTransparent-v2
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 16px
 
 .news-featured
@@ -1074,7 +1117,7 @@ ul ul ul .mobile-link
   color colorWhite
   opacity 0.5
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 16px
 
 //** Subscribe **//
@@ -1083,7 +1126,7 @@ ul ul ul .mobile-link
   background colorDarkBlue
   padding 20px 15px 20px 20px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     height 315px
     padding 30px
 
@@ -1105,7 +1148,7 @@ ul ul ul .mobile-link
   color colorWhite
   margin-bottom 25px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     margin-bottom 18px
 
 //** Help - Ref **//
@@ -1114,7 +1157,7 @@ ul ul ul .mobile-link
   &:first-of-type
     padding-top 0
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     padding 60px 0 30px
 
 .section-ref
@@ -1123,7 +1166,7 @@ ul ul ul .mobile-link
 
 .ref
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     height 234px
     padding 30px 45px 20px 30px
 
@@ -1132,28 +1175,29 @@ ul ul ul .mobile-link
   overflow hidden
   margin-bottom 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     margin-bottom 0
 
 //** Services **//
 .example-img
   width 100%
+  margin 30px 0 40px
 
 .tile-hidden
   display none
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     display block
 
 .service-large
   height 295px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     height 430px
 
 .service-horizontal
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     flex-direction row
     height 200px
     .service-img
@@ -1166,7 +1210,7 @@ ul ul ul .mobile-link
   .service-title
     margin-bottom 10px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     .service-img
       margin-bottom 40px
     .service-title
@@ -1182,19 +1226,19 @@ ul ul ul .mobile-link
   margin 0
   align-self flex-start
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     height auto
 
 .service-short
   height 158px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     height 200px
 
 .service
   min-height 130px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     height 151px
 
 .stage
@@ -1205,14 +1249,14 @@ ul ul ul .mobile-link
   box-shadow none
   border-radius 0
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     height 171px
     padding 20px 20px 20px 83px
 
 .stage-title
   max-width 200px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     max-width none
     font-size 18px
     line-height 1.67
@@ -1225,7 +1269,7 @@ ul ul ul .mobile-link
   font-size 40px
   color colorGreyTransparent
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     top 20px
     right auto
     left 20px
@@ -1236,7 +1280,7 @@ ul ul ul .mobile-link
   shadow()
   padding 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     shadow-v2()
     padding 20px 30px
 
@@ -1255,7 +1299,7 @@ ul ul ul .mobile-link
   text-transform uppercase
   color colorWhite
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 18px
     line-height 1.67
 
@@ -1296,7 +1340,7 @@ ul ul ul .mobile-link
 
 .documents-title
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 18px
     line-height 1.56
 
@@ -1304,7 +1348,7 @@ ul ul ul .mobile-link
   color colorDarkBlue
   padding-right 40px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 18px
 
 .event-title
@@ -1319,7 +1363,7 @@ ul ul ul .mobile-link
     &:before
       border 6px solid colorBlue
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 18px
     line-height 1.56
     &:before
@@ -1327,16 +1371,13 @@ ul ul ul .mobile-link
       height 20px
       margin-right 16px
 
-.meeting
-  padding-bottom 20px
-
 .meeting-wrapper
   flex-direction column
 
 .meeting-title
   margin-bottom 10px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 18px
     margin-bottom 4px
 
@@ -1349,7 +1390,7 @@ ul ul ul .mobile-link
   background colorDarkBlue
   border-radius 2px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 11px
 
 .meeting-text
@@ -1364,9 +1405,15 @@ ul ul ul .mobile-link
     &:first-of-type
       margin-right 36px
 
-    @media (min-width 1440px)
+    @media (min-width 960px)
       &:first-of-type
         margin-right 68px
+
+.meeting-body
+  padding-bottom 20px
+
+  @media (min-width 960px)
+    padding-bottom 30px
 
 .document
   display flex
@@ -1376,7 +1423,7 @@ ul ul ul .mobile-link
 .document-img
   margin 0 12px 0 0
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     margin 0 15px 0 0
 
 .document-name
@@ -1386,7 +1433,7 @@ ul ul ul .mobile-link
   color colorDarkBlue
   margin-bottom 10px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 18px
 
 .document-date
@@ -1398,14 +1445,14 @@ ul ul ul .mobile-link
   color colorGrey
   margin-right 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 14px
     margin-right 20px
 
 .question
   padding 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     padding 20px 30px
     margin-bottom 10px
 
@@ -1420,7 +1467,7 @@ ul ul ul .mobile-link
   .btn-search-alt
     margin-bottom 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     align-items center
     margin-bottom 50px
     .search-form
@@ -1430,8 +1477,9 @@ ul ul ul .mobile-link
 .client
   height 165px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     height 220px
+    box-shadow 0 10px 10px rgba(175, 196, 208, 0.5)
 
 .client-title
   margin-bottom 10px
@@ -1442,7 +1490,7 @@ ul ul ul .mobile-link
   justify-content space-between
   margin-top 30px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     margin-top 60px
 
 .status
@@ -1451,7 +1499,7 @@ ul ul ul .mobile-link
   text-transform uppercase
   color colorBlue
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 13px
 
 //** Licences **//
@@ -1459,7 +1507,7 @@ ul ul ul .mobile-link
   height 568px
   padding 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     flex-direction row
     height 330px
     padding 30px
@@ -1468,14 +1516,14 @@ ul ul ul .mobile-link
   width 100%
   margin 0 0 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     width 195px
     margin 0 30px 0 0
 
 .licence-title
   margin-bottom 10px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 22px
     line-height 1.45
 
@@ -1484,7 +1532,7 @@ ul ul ul .mobile-link
   overflow hidden
   margin-bottom 10px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     max-height none
     margin-bottom 0
 
@@ -1505,14 +1553,14 @@ ul ul ul .mobile-link
 //** About **//
 .about
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     background rgba(0, 101, 242, 0.036)
     padding 30px 130px 40px 30px
     margin-bottom 100px
 
 .branches-container
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     position absolute
     top 50px
     right 0
@@ -1521,7 +1569,7 @@ ul ul ul .mobile-link
   background colorBlue
   padding 20px 30px 20px 20px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     padding 40px
 
 .branch
@@ -1538,7 +1586,7 @@ ul ul ul .mobile-link
   font-size 45px
   color colorWhite
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 50px
 
 .branch-text
@@ -1548,7 +1596,7 @@ ul ul ul .mobile-link
   text-transform uppercase
   color colorWhite
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 18px
     line-height 1.22
 
@@ -1558,21 +1606,22 @@ ul ul ul .mobile-link
   opacity 0.3
   margin 0 13px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     height 36px
     margin 0 20px
 
 .achievement
+  position relative
   padding 15px 0 20px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     padding 20px 0 50px
 
 .achievement-nav
   padding 0 15px 15px
   border-bottom 1px solid rgba(0, 101, 242, 0.12)
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     padding 0 30px 15px
 
 .achievement-year
@@ -1582,7 +1631,7 @@ ul ul ul .mobile-link
   span
     font-size 22px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 32px
     span
       font-size 24px
@@ -1590,13 +1639,13 @@ ul ul ul .mobile-link
 .achievement-text
   padding 15px 15px 0
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     padding 20px 30px 0
 
 .years
   display none
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     position relative
     display flex
     flex-direction column
@@ -1604,7 +1653,7 @@ ul ul ul .mobile-link
 
 .years-line
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     position absolute
     width 2px
     height 95%
@@ -1616,7 +1665,7 @@ ul ul ul .mobile-link
 
 .year
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     position relative
     z-index 100
     display flex
@@ -1650,7 +1699,7 @@ ul ul ul .mobile-link
     .principle-text
       color colorWhite
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     flex-direction row
     align-items center
     height 150px
@@ -1661,29 +1710,53 @@ ul ul ul .mobile-link
   margin 0
   align-self flex-start
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     height 80px
     margin-right 30px
 
 .principle-title
   margin-bottom 10px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 20px
     line-height 1.5
 
 .principle-text
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 14px
     line-height 1.7
+
+.organisations-wrapper
+  margin 0 -15px
+
+.organisation
+  padding 15px
+
+  @media (min-width 960px)
+    height 250px
+    padding 30px 15px 20px
+    cursor pointer
+    &:hover
+      shadow-v2()
+      border-radius 2px
+      border-bottom 7px solid colorBlue
+      .organisation-img
+        filter grayscale(0)
+        opacity 1
+
+.organisation-img
+  align-self flex-start
+  margin 0 0 40px
+  filter grayscale(1)
+  opacity 0.5
 
 //** Feedback **//
 .feedback
   background colorDarkBlue
   padding 20px 15px 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     padding 30px
 
 .feedback-container
@@ -1692,7 +1765,7 @@ ul ul ul .mobile-link
   border-top 1px solid #96B1CC
   border-bottom 1px solid #96B1CC
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     margin 15px 0 25px
     padding 20px 0 15px
 
@@ -1733,7 +1806,7 @@ ul ul ul .mobile-link
 .feedback-title
   color colorWhite
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 22px
     line-height 1.45
 
@@ -1747,7 +1820,7 @@ ul ul ul .mobile-link
     line-height 1.7
     margin-bottom 20px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 16px
 
 .feedback-link
@@ -1759,7 +1832,7 @@ ul ul ul .mobile-link
   &:focus
     color colorWhite
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 24px
 
 .feedback-map-link
@@ -1775,10 +1848,16 @@ ul ul ul .mobile-link
   img
     margin -4px 8px 0 0
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 18px
 
 //** Issuer - Profile **//
+.section-client
+  margin-top 20px
+
+  @media (min-width 960px)
+    margin-top 60px
+
 .issuer-tabs
   display flex
   flex-wrap nowrap
@@ -1788,7 +1867,7 @@ ul ul ul .mobile-link
   box-shadow inset 0 0 20px rgba(75, 75, 75, 0.1)
   margin-bottom 40px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     flex-wrap wrap
     overflow auto
     padding 0
@@ -1813,7 +1892,7 @@ ul ul ul .mobile-link
     .issuer-tab-text
       color colorWhite
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     width calc(100% - 30px)
     padding 30px 18px 30px 30px
     border 0
@@ -1828,7 +1907,7 @@ ul ul ul .mobile-link
   color colorDarkBlue
   margin-bottom 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 20px
     margin-bottom 20px
 
@@ -1838,7 +1917,7 @@ ul ul ul .mobile-link
   line-height 1.57
   color colorDarkBlue
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 16px
     color colorGrey
 
@@ -1853,7 +1932,7 @@ ul ul ul .mobile-link
   border-radius 100%
   margin-right 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     width 80px
     height 80px
     margin-right 30px
@@ -1864,15 +1943,48 @@ ul ul ul .mobile-link
   line-height 1.62
   color colorDarkBlue
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 18px
+
+//** Dropdown tabs **//
+.dropdown-tabs
+  &.expanded
+    .dropdown-tab
+      &:after
+        content url("../assets/images/arrow-up-white.svg")
+      &:not(.active)
+        position relative
+        top auto
+
+.dropdown-tab
+  position relative
+  order 1
+  &.active
+    order 0
+    &:after
+      content url("../assets/images/arrow-down-white.svg")
+      position absolute
+      top auto
+      right 15px
+      z-index 9999
+  &:not(.active)
+    position absolute
+    top -999em
+
+  @media (min-width 960px)
+    &:after
+      content none!important
+    &:not(.active)
+      order 0
+      position relative
+      top auto
 
 //** Issuer - Cabinet **//
 .cabinet-tabs
-  margin-bottom 20px
+  margin 20px 0
 
-  @media (min-width 1440px)
-    margin-bottom 30px
+  @media (min-width 960px)
+    margin 40px 0 30px
 
 .cabinet-tab
   position relative
@@ -1892,7 +2004,7 @@ ul ul ul .mobile-link
     border-radius 2px
     shadow()
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     width 25%
     justify-content center
     font-size 16px
@@ -1917,7 +2029,8 @@ ul ul ul .mobile-link
 .files-tabs
   margin-bottom 20px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
+    justify-content flex-start
     margin-bottom 30px
 
 .files-tab
@@ -1939,7 +2052,7 @@ ul ul ul .mobile-link
     color colorWhite
     background colorBlue
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     width 138px
 
 .document-container
@@ -1947,12 +2060,12 @@ ul ul ul .mobile-link
   display flex
   padding 0
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     padding 20px
 
 .document-container-row
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     flex-direction row
     justify-content space-between
     padding 15px 25px 15px 20px
@@ -1962,7 +2075,7 @@ ul ul ul .mobile-link
   display flex
   padding 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     padding 0
 
 .document-sub
@@ -1973,14 +2086,14 @@ ul ul ul .mobile-link
   padding 10px 15px
   border-top 1px solid rgba(96, 114, 134, 0.15)
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     border-top 0
     padding 0
 
 .document-status-wrapper
   display flex
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     flex-direction column
 
 .document-attachments
@@ -1991,7 +2104,7 @@ ul ul ul .mobile-link
   img
     margin-right 4px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 14px
 
 .document-price
@@ -2001,7 +2114,7 @@ ul ul ul .mobile-link
   color colorDarkBlue
   margin-right 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 18px
     margin-right 0
     margin-bottom 6px
@@ -2030,14 +2143,14 @@ ul ul ul .mobile-link
   #files &
     display none
 
-    @media (min-width 1440px)
+    @media (min-width 960px)
       display flex
       height auto
 
 .document-divider
   display none
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     display block
     width 1px
     height 100%
@@ -2051,7 +2164,7 @@ ul ul ul .mobile-link
   margin 0
   width 24px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     position unset
     width 30px
 
@@ -2069,7 +2182,7 @@ ul ul ul .mobile-link
   img
     margin 0 8px 0 0
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     #files &
       display none
 
@@ -2077,7 +2190,7 @@ ul ul ul .mobile-link
   display flex
   flex-direction column
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     flex-direction row
     justify-content space-between
     flex-grow 1
@@ -2096,7 +2209,7 @@ ul ul ul .mobile-link
   padding 15px
   border-top 1px solid rgba(96, 114, 134, 0.15)
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     flex-direction row
     padding 20px 0 0
     margin-top 15px
@@ -2109,18 +2222,16 @@ ul ul ul .mobile-link
     &:last-of-type
       margin-right 0
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     padding-bottom 0
     .document-text-wrapper
       margin-right 48px
 
 .document-text-wrapper
   margin-bottom 15px
-  &:last-of-type
-    margin-bottom 0
 
-  @media (min-width 1440px)
-    margin-bottom 0
+  @media (min-width 960px)
+    margin-bottom 20px
     margin-right 68px
     &:last-of-type
       margin-right 0
@@ -2132,7 +2243,7 @@ ul ul ul .mobile-link
   color colorLightGrey
   margin-bottom 5px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 14px
 
 .document-text
@@ -2141,7 +2252,7 @@ ul ul ul .mobile-link
   line-height 1.4
   color colorGrey
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 16px
 
 .document-status-position
@@ -2149,7 +2260,7 @@ ul ul ul .mobile-link
   bottom 15px
   left 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     bottom auto
     top 25px
     left auto
@@ -2165,7 +2276,7 @@ ul ul ul .mobile-link
     &+img
       margin-left 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     bottom 20px
     right 20px
 
@@ -2178,7 +2289,7 @@ ul ul ul .mobile-link
   opacity 0.5
   margin-right 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 14px
     margin-right 20px
 
@@ -2186,7 +2297,7 @@ ul ul ul .mobile-link
   line-height 1.5
   margin-top 4px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     margin-top 0
 
 .request-text
@@ -2197,7 +2308,7 @@ ul ul ul .mobile-link
   opacity 0.5
   margin-bottom 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 14px
     margin-bottom 20px
 
@@ -2211,7 +2322,7 @@ ul ul ul .mobile-link
     height 12px
     margin-right 10px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     height 80px
     border-width 2px
     font-size 16px
@@ -2229,8 +2340,10 @@ ul ul ul .mobile-link
   color colorDarkGrey
 
 .operations-form
+  margin-bottom 40px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
+    margin-bottom 30px
     .form-row
       align-items flex-end
       .form-group
@@ -2245,7 +2358,7 @@ ul ul ul .mobile-link
     display inline-block
     width 49%
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     .info
       display table-row
     .info-wrapper
@@ -2258,7 +2371,7 @@ ul ul ul .mobile-link
 .operations-table tr th
 .operations-table tr td
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     &:nth-of-type(1)
       width 10%
     &:nth-of-type(2)
@@ -2269,10 +2382,14 @@ ul ul ul .mobile-link
         font-family fontBold
         color colorBlue
 
+.desktop-table
+.recent-table
+  margin-bottom 20px
+
 .accounts-table tr td
 .desktop-table tr td
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     &:nth-of-type(1)
       .info-text
         font-family fontBold
@@ -2285,7 +2402,7 @@ ul ul ul .mobile-link
   &+.account-action
     margin-left 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     img
       width 24px
       height 24px
@@ -2294,7 +2411,7 @@ ul ul ul .mobile-link
 
 .recent-table tr td
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     &:nth-of-type(3)
       width 30%
 
@@ -2313,7 +2430,7 @@ ul ul ul .mobile-link
   line-height 1.2
   color colorDarkBlue
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     height 255px
     font-size 18px
 
@@ -2321,17 +2438,18 @@ ul ul ul .mobile-link
   font-family fontBold
   font-size 32px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 30px
 
 //** Slider **//
 .slider
   position relative
+  width 100%
   max-width 1440px
   height 360px
   margin 0 auto
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     height 600px
 
 .slider-img
@@ -2343,7 +2461,7 @@ ul ul ul .mobile-link
   background-position center
   background-size cover
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     background-position right
     background-size contain
 
@@ -2355,17 +2473,21 @@ ul ul ul .mobile-link
   background colorBlue
   opacity 0.7
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     display none
 
 .slider-text-wrapper
+  display flex
+  flex-direction column
+  justify-content space-between
   position relative
   z-index 99
   padding 80px 15px 0
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     top 70px
     width 705px
+    min-height 290px
     padding 30px 80px 30px 165px
     background colorBlue
     border-radius 2px
@@ -2378,7 +2500,7 @@ ul ul ul .mobile-link
   color colorWhite
   margin-bottom 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 40px
 
 .slider-text
@@ -2387,20 +2509,20 @@ ul ul ul .mobile-link
   line-height 1.5
   color colorWhite
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 18px
     margin-bottom 20px
 
 .slider-link
   display none
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     display flex
 
 .scroll-down
   display none
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     position absolute
     bottom 12px
     left 165px
@@ -2414,6 +2536,182 @@ ul ul ul .mobile-link
     img
       margin-right 5px
 
+//** Swiper **//
+.swiper-licences
+  img
+    max-width 246px
+
+    @media (min-width 960px)
+      max-width 100%
+
+.swiper-slide
+  display flex
+  flex-direction column
+  align-self baseline
+  .title-small
+    display none
+  &.swiper-slide-active
+    .title-small
+      display block
+      text-align center
+      margin-top 20px
+
+      @media (min-width 960px)
+        margin-top 30px
+
+.swiper-button-next
+.swiper-button-prev
+  width auto
+  height auto
+  margin 0
+  top 34%
+
+  @media (min-width 960px)
+    top 27%
+
+.swiper-button-prev
+  left 15px
+
+  @media (min-width 960px)
+    left -27px
+
+.swiper-button-next
+  right 15px
+
+  @media (min-width 960px)
+    right -27px
+
+.swiper-button-next:after
+.swiper-button-prev:after
+  font-size 20px
+  color #e5eef3
+
+  @media (min-width 960px)
+    font-size 23px
+
+.swiper-button-next
+.swiper-button-prev
+  &:hover
+  &:focus
+    outline none
+    &:after
+      color colorBlue
+
+.swiper-achievements-nav
+  position absolute
+  top 20px
+  right 15px
+  .swiper-button-prev
+    left auto
+    right 55px
+  .swiper-button-next
+    right 0
+
+  @media (min-width 960px)
+    top 25px
+    right 30px
+
+.swiper-button-next.swiper-button-disabled
+.swiper-button-prev.swiper-button-disabled
+  opacity 1
+
+.pagination-wrapper
+  position absolute
+  bottom 25px
+  left 0
+  right 0
+  margin auto
+  z-index 10
+  width 100%
+  max-width 1440px
+
+  @media (min-width 960px)
+    bottom 30%
+
+.swiper-index-pagination
+  position absolute
+  display flex
+  justify-content center
+  align-items baseline
+  width 100%
+
+  @media (min-width 960px)
+    left 157.5px
+    justify-content flex-start
+
+.swiper-container-horizontal
+  &>.swiper-pagination-bullets
+    bottom 0
+    .swiper-pagination-bullet
+      margin 0 5px
+
+      @media (min-width 960px)
+        margin 0 7.5px
+
+.swiper-pagination-bullet
+  width 22px
+  height 3px
+  border-radius 0
+  background rgba(255, 255, 255, 0.5)
+  opacity 1
+  margin 0 5px
+
+  @media (min-width: 960px)
+    width 30px
+    height 4px
+    background rgba(0, 85, 140, 0.1)
+    margin 0 7.5px
+
+.swiper-pagination-bullet-active
+  height 8px
+  background colorWhite
+
+  @media (min-width: 960px)
+    height 15px
+    background colorBlue
+
+.swiper-clients
+  padding 15px
+  margin -15px
+
+.swiper-clients-navigation
+  .swiper-button-prev
+    left 0
+  .swiper-button-next
+    right 0
+  .swiper-button-next
+  .swiper-button-prev
+    top 40%
+    &:after
+      color colorLightGrey
+
+  @media (min-width: 960px)
+    .swiper-button-prev
+      left -27px
+    .swiper-button-next
+      right -27px
+    .swiper-button-next
+    .swiper-button-prev
+      top 50%
+      &:after
+        color #e5eef3
+
+.swiper-clients-pagination
+  position relative
+  margin 0 0 20px
+  .swiper-pagination-bullet
+    background rgba(0, 85, 140, 0.1)
+  .swiper-pagination-bullet-active
+    background colorBlue
+
+  @media (min-width: 960px)
+    margin 0
+
+.swiper-pagination
+  width 100%
+  left 0
+  right 0
+
 //** About - Info **//
 table
   width 100%
@@ -2424,7 +2722,7 @@ table
     &:first-of-type
       display table-cell
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     th
       display table-cell
     tr
@@ -2442,7 +2740,7 @@ table
       &:nth-of-type(odd)
         background-color unset
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     tbody
       tr
         &:nth-of-type(odd)
@@ -2454,7 +2752,7 @@ table
   display flex
   flex-direction column
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     display table-cell
 
 .rtable th
@@ -2465,25 +2763,25 @@ table
   background colorBlue
   padding 12px 15px
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     padding 20px
 
 .rtable .help-text
   display flex
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     display none
 
 .hiddenSmall
   display none!important
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     display table-cell!important
 
 .info-table tr th
 .info-table tr td
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     &:nth-of-type(1),
     &:nth-of-type(2)
       width 33.334%
@@ -2493,9 +2791,9 @@ table
   flex-direction column
   transition 0.5s
   &.expanded
-    box-shadow 0px 0px 5px rgba(0, 0, 0, 0.1)
+    box-shadow 0 0 5px rgba(0, 0, 0, 0.1)
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     display table-row
 
 .info-body
@@ -2524,7 +2822,7 @@ table
     &:after
       content url("../assets/images/arrow-up-light.svg")
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     line-height 1.7
     background none
     padding 20px
@@ -2539,14 +2837,14 @@ table
   line-height 1.4
   color colorGrey
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     line-height 1.7
 
 .info-img
   height 65px
   margin 0 10px 0 0
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     height 92px
     margin 0 14px 0 0
 
@@ -2561,9 +2859,12 @@ table
     color colorBlue
     text-decoration underline
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     font-size 14px
     line-height 1.7
+
+.info-tabs
+  margin-bottom 20px
 
 .nav-info
   display flex
@@ -2585,7 +2886,7 @@ table
     color colorWhite
     background colorBlue
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     &+.nav-info
       border-color colorWhite
     &.active
@@ -2602,7 +2903,7 @@ table
     background-size 14px
     margin 0.25em 6px 0 0
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     &:before
       width 25px
       height 33px
@@ -2619,7 +2920,7 @@ table
 .contacts-map
   margin-bottom 40px
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     margin-bottom 30px
 
 .chart-title
@@ -2630,7 +2931,7 @@ table
   color colorDarkBlue
   margin-bottom 20px
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     margin-bottom 30px
 
 .chart-img
@@ -2639,7 +2940,7 @@ table
 .contacts-chart
   margin-bottom 20px
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     margin-bottom 30px
 
 .schedule
@@ -2647,7 +2948,7 @@ table
   shadow-v2()
   margin-bottom 40px
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     padding 20px 30px
     margin-bottom 30px
 
@@ -2674,7 +2975,7 @@ table
   padding 15px 0
   margin-bottom 15px
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     padding 20px 0
 
 .schedule-wrapper
@@ -2726,7 +3027,7 @@ table
     padding 0 15px 15px
     border-bottom 2px solid colorWhite
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     border 1px solid colorWhite
     &:nth-of-type(odd)
       width 35%
@@ -2758,7 +3059,7 @@ table
     margin-right 8px
     margin-top 2px
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     &:before
       margin-top 0
 
@@ -2788,12 +3089,12 @@ table
 
 .cities-cols-3
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     columns 3
 
 .cities-cols-4
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     columns 4
 
 .cities-letter
@@ -2809,7 +3110,7 @@ table
   color colorWhite
   margin-bottom 20px
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     font-size 24px
     margin-bottom 40px
 
@@ -2840,14 +3141,27 @@ table
   padding 20px 20px 30px
   background rgba(0, 101, 242, 0.024)
 
+  @media (min-width: 960px)
+    display block!important
+
 .documents-filter
-  padding 15px
+  height 44px
+  overflow hidden
+  padding 12px 15px
   background #f6f7fc
   border-radius 2px
+  margin-bottom 20px
+  &.expanded
+    height auto
+    .documents-filter-title
+      &:after
+        background-image url("../assets/images/arrow-up.svg")
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
+    height auto
     padding 20px
     background rgba(0, 101, 242, 0.024)
+    margin-bottom 0
 
 .publications-filter-title
   font-family fontBold
@@ -2862,6 +3176,21 @@ table
   line-height 1.4
   color colorDarkBlue
   margin-bottom 15px
+  &:after
+    content ''
+    background-image url("../assets/images/arrow-down.svg")
+    background-repeat no-repeat
+    background-position center
+    background-size 12px
+    width 12px
+    height 1em
+    position absolute
+    top 1em
+    right 30px
+
+  @media (min-width: 960px)
+    &:after
+      content none
 
 .filter-container
   margin-bottom 40px
@@ -2923,7 +3252,7 @@ table
     left 0
     margin 0
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     padding-left 35px
     &:before
     &:after
@@ -2959,7 +3288,7 @@ table
       &:after
         border 5px solid colorBlue
 
-        @media (min-width: 1440px)
+        @media (min-width: 960px)
           border 6px solid colorBlue
 
 .custom-radio:not(:disabled):active~.custom-radio-label::before
@@ -2972,7 +3301,7 @@ table
   position relative
   margin 20px 0 40px
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     margin 0
 
 .custom-file
@@ -2991,7 +3320,7 @@ table
     background url("../assets/images/paperclip-blue.svg")
     margin-right 8px
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     &:before
       background url("../assets/images/paperclip-white.svg")
 
@@ -3019,7 +3348,7 @@ label
   color colorGrey
   margin-bottom 10px
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     font-size 16px
 
 .form-text
@@ -3030,13 +3359,13 @@ label
   opacity 0.5
   margin-top 10px
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     margin-top 0
 
 .form-check-text
   opacity 1
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     font-size 14px
     margin-top 8px
 
@@ -3065,14 +3394,40 @@ label
     background rgba(96, 114, 134, 0.05)
   &+.form-control
     margin-top 15px
-  &.form-control-mobile
-    width 240px
-    height 40px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 16px
     height 48px
     padding 12px 20px
+
+.custom-select
+  appearance none
+  background rgba(96, 114, 134, 0.05) url("data:image/svg+xml,%3Csvg width='22' height='14' viewBox='0 0 22 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 2L11 11.3913L2 2' stroke='%23706C71' stroke-width='3'/%3E%3C/svg%3E") no-repeat right 15px center/14px 8px
+  font-family fontRegular
+  font-size 14px
+  color colorGrey
+  height 44px
+  padding 10px 15px
+  border none
+  border-radius 2px
+  &::placeholder
+    color rgba(0, 0, 0, 0.4)
+  &:focus
+    color colorGrey
+    box-shadow none!important
+  &.select-mobile
+    width 240px
+    height 40px
+
+  @media (min-width 960px)
+    font-size 16px
+    height 48px
+    padding 12px 20px
+    &.select-mobile
+      font-size 14px
+      width 285px
+      margin 0 10px
+      padding 10px 20px
 
 .form-period
   display inline-flex
@@ -3082,7 +3437,7 @@ label
   label
     margin 0 20px 0 0
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     justify-content flex-start
     margin 0 30px 30px 0
 
@@ -3091,19 +3446,19 @@ label
   width 93px
   height 36px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     width 130px
     height 40px
 
 .dash
   margin 0 10px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     margin 0 15px
 
 .btn-period
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     display inline-flex
     width 190px
     color colorBlue
@@ -3116,7 +3471,7 @@ label
   position relative
   margin-bottom 20px
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     margin-bottom 25px
 
 .search-input
@@ -3126,24 +3481,24 @@ label
   &:focus
     background #f7f8f9
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     padding-right 68px
 
 .search-input-alt
   padding-right 15px
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     padding-right 68px
 
 .city-search-form
   margin-bottom 30px
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     margin-bottom 40px
 
 .city-search-input
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     background transparent
     padding 15px 40px 15px 0
     border-bottom 2px solid colorWhite
@@ -3157,7 +3512,7 @@ label
 
 .city-btn-search
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     background url("../assets/images/search.svg") no-repeat center
     background-size 24px
     width 24px
@@ -3169,7 +3524,7 @@ label
   color colorWhite
   margin-bottom 10px
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     display none
 
 .subscribe-input
@@ -3178,7 +3533,7 @@ label
   &:focus
     background colorWhite
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     margin-bottom 20px
 
 .form-edit
@@ -3192,7 +3547,7 @@ label
   flex-direction column
   align-items flex-start
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     flex-direction row
     align-items center
     justify-content space-between
@@ -3213,7 +3568,7 @@ label
   height 15px
   opacity 1
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     top 30px
     right 30px
     background url("../assets/images/close-blue.svg")
@@ -3227,7 +3582,7 @@ label
   background url("../assets/images/close-white.svg")
   background-size 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     background-size 20px
 
 .close:not(:disabled):not(.disabled):focus
@@ -3239,20 +3594,21 @@ label
 
   @media (min-width 576px)
     margin auto
+    max-width 100%
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     max-width 730px
 
 .custom-modal-content
   padding 40px 0 20px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     padding 60px 95px
 
 .personality-content
   padding 50px 0 30px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     padding 30px 66px 72px 30px
 
 .modal-title
@@ -3262,21 +3618,21 @@ label
   color colorDarkBlue
   margin-bottom 20px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 24px
 
 .personality-container
   display flex
   flex-direction column
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     flex-direction row
 
 .personality-img
   shadow-v3()
   margin-bottom 20px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     shadow-v4()
     height 180px
     margin 0 30px 0 0
@@ -3288,7 +3644,7 @@ label
   color colorDarkBlue
   margin-bottom 10px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     margin-bottom 15px
 
 .form-modal-dialog
@@ -3297,7 +3653,7 @@ label
   @media (min-width 576px)
     margin auto
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     max-width 100%
 
 .modal-form
@@ -3305,26 +3661,26 @@ label
   min-height 100vh
   background colorDarkBlue
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     justify-content center
 
 .modal-form-header
 .modal-form-body
   padding 15px 0
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     padding 35px 0
 
 .search-header
   padding 15px 0 10px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     padding 60px 0 0
 
 .search-body
   padding 0 0 20px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     margin-top -10px
 
 .filial-group
@@ -3352,7 +3708,7 @@ label
     left 0
     margin 0
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     font-size 16px
     padding-left 35px
     &:before
@@ -3375,7 +3731,7 @@ label
         left 4px
         border 0
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     &:checked
       &~.filial-label
         &:after
@@ -3396,7 +3752,7 @@ label
   justify-content space-between
   margin-bottom 30px
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     margin-bottom 58px
 
 .filials-title
@@ -3405,7 +3761,7 @@ label
   line-height 1.25
   color colorWhite
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     font-size 24px
 
 .filial-number
@@ -3417,7 +3773,7 @@ label
   line-height 1.25
   color colorWhite
 
-  @media (min-width: 1440px)
+  @media (min-width: 960px)
     font-size 16px
 
 //** Footer **//
@@ -3426,7 +3782,7 @@ footer
   background-color colorGreyTransparent-v1
   padding 20px 0
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     padding 50px 0 18px
     .rtable
       &+.rtable
@@ -3439,7 +3795,7 @@ footer
 .footer-right
   margin-bottom 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     margin-bottom 0
     text-align right
 
@@ -3452,7 +3808,7 @@ footer
   &+.footer-text
     margin-top 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     display inline-block
     font-size 14px
     text-align unset
@@ -3465,7 +3821,7 @@ footer
   width 124px
   margin 0 auto 20px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     margin 0 0 20px
 
 .footer-contacts
@@ -3480,7 +3836,7 @@ footer
   &:nth-of-type(3)
     width 100%
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     width 100%
     font-size 14px
     margin-bottom 30px
@@ -3491,13 +3847,13 @@ footer
   line-height 1.5
   color colorGrey
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 14px
 
 .social
   margin-bottom 15px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     margin-bottom 0
 
 .link-social
@@ -3507,7 +3863,7 @@ footer
     width 30px
     height 30px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     img
       width 20px
       height 20px
@@ -3526,7 +3882,7 @@ footer
     &+.footer-text
       margin-top 0
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     margin-top 30px
 
 .footer-title
@@ -3536,7 +3892,7 @@ footer
   padding 15px 0
   border-top 1px solid rgba(96, 114, 134, 0.12)
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 16px
     margin-bottom 20px
     padding 0
@@ -3550,7 +3906,7 @@ footer
     &+li
       margin-top 20px
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     margin-bottom 0
 
 .footer-link
@@ -3559,5 +3915,5 @@ footer
   line-height 1.33
   color colorGrey
 
-  @media (min-width 1440px)
+  @media (min-width 960px)
     font-size 14px

@@ -1,25 +1,23 @@
 //= templates/header.html
 
-<section>
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="nav cabinet-tabs" role="tablist">
-					<a class="cabinet-tab active" id="docs-tab" data-toggle="pill" href="#docs" role="tab" aria-controls="docs" aria-selected="true">Документы</a>
-					<a class="cabinet-tab" id="stocks-tab" data-toggle="pill" href="#stocks" role="tab" aria-controls="stocks" aria-selected="false">Ценные бумаги</a>
-					<a class="cabinet-tab" id="requests-tab" data-toggle="pill" href="#requests" role="tab" aria-controls="requests" aria-selected="false">Запрос документов</a>
-					<a class="cabinet-tab" id="files-tab" data-toggle="pill" href="#files" role="tab" aria-controls="files" aria-selected="false">Файлы</a>
-				</div>
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<div class="nav dropdown-tabs cabinet-tabs" role="tablist">
+				<a class="dropdown-tab cabinet-tab active" id="docs-tab" data-toggle="pill" href="#docs" role="tab" aria-controls="docs" aria-selected="true">Документы</a>
+				<a class="dropdown-tab cabinet-tab" id="stocks-tab" data-toggle="pill" href="#stocks" role="tab" aria-controls="stocks" aria-selected="false">Ценные бумаги</a>
+				<a class="dropdown-tab cabinet-tab" id="requests-tab" data-toggle="pill" href="#requests" role="tab" aria-controls="requests" aria-selected="false">Запрос документов</a>
+				<a class="dropdown-tab cabinet-tab" id="files-tab" data-toggle="pill" href="#files" role="tab" aria-controls="files" aria-selected="false">Файлы</a>
 			</div>
 		</div>
 	</div>
-</section>
+</div>
 <div class="tab-content">
 	<div class="tab-pane active" id="docs" role="tabpanel" aria-labelledby="docs-tab">
 		<section>
 			<div class="container">
 				<div class="row">
-					<div class="col-12 col-xl-3">
+					<div class="col-12 col-lg-3">
 						<div class="documents-filter">
 							<form>
 								<div class="documents-filter-title">Тип документа</div>
@@ -44,7 +42,7 @@
 							</form>
 						</div><!-- filter -->
 					</div>
-					<div class="col-12 col-xl-9">
+					<div class="col-12 col-lg-9">
 						<div class="tile document-container document-container-row">
 							<div class="document-main">
 								<img class="document-img" src="assets/images/doc.svg">
@@ -97,7 +95,7 @@
 	<div class="tab-pane" id="stocks" role="tabpanel" aria-labelledby="stocks-tab">
 		<section>
 			<div class="container">
-				<div class="row row-cols-1 row-cols-xl-2">
+				<div class="row row-cols-1 row-cols-lg-2">
 					<div class="col">
 						<div class="tile document-container">
 							<div class="document-main">
@@ -161,7 +159,7 @@
 					</div>
 					<button type="submit" class="btn btn-filled btn-period">показать</button>
 				</form>
-				<div class="row row-cols-1 row-cols-xl-2">
+				<div class="row row-cols-1 row-cols-lg-2">
 					<div class="col">
 						<div class="tile document-container">
 							<div class="document-main">
@@ -198,7 +196,7 @@
 		<section>
 			<div class="container">
 				<div class="row">
-					<div class="col-12 col-xl-3">
+					<div class="col-12 col-lg-3">
 						<div class="documents-filter">
 							<form>
 								<div class="documents-filter-title">Тип файла</div>
@@ -231,7 +229,7 @@
 							<label class="custom-file-label btn" for="customFile">загрузить файл</label>
 						</div>
 					</div>
-					<div class="col-12 col-xl-9">
+					<div class="col-12 col-lg-9">
 						<div class="nav files-tabs" role="tablist">
 							<a class="files-tab active" id="files-in-tab" data-toggle="pill" href="#files-in" role="tab" aria-controls="files-in" aria-selected="true">Принятые</a>
 							<a class="files-tab" id="files-out-tab" data-toggle="pill" href="#files-out" role="tab" aria-controls="files-out" aria-selected="false">Отправленные</a>
@@ -296,5 +294,5 @@
 		</section>
 	</div>
 </div>
-
 //= templates/footer-client.html
+//= templates/footer.html
