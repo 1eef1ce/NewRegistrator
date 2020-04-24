@@ -81,17 +81,6 @@ $( document ).ready(function() {
             }
         });
 
-        $('.custom-file-label').each (function () {
-            if ($(window).width() > 959) {
-                $(this).removeClass('btn-bordered');
-                $(this).addClass('btn-filled');
-            }
-            else {
-                $(this).removeClass('btn-filled');
-                $(this).addClass('btn-bordered');
-            }
-        });
-
         if ($(window).width() > 959) {
             $('.social').appendTo('.footer-top');
         }

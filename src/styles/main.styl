@@ -249,23 +249,10 @@ section
     margin-bottom 20px
 
 //** Breadcrumbs **//
-.breadcrumb-wrapper
-  position relative
-
-.breadcrumb-opacity
-  position absolute
-  top 0
-  right 0
-  width 105px
-  height 1em
-  background linear-gradient(268.09deg, #ffffff 0.25%, rgba(255, 255, 255, 0) 117.82%)
-
-  @media (min-width 960px)
-    display none
-
 .breadcrumb
+  flex-wrap nowrap
   height 1.25em
-  overflow hidden
+  overflow scroll
   padding 0
   margin 15px 0 20px
   background-color colorWhite
@@ -276,12 +263,15 @@ section
   color colorGrey
 
   @media (min-width 960px)
+    overflow hidden
     height auto
     font-size 14px
     line-height 1.7
     margin 15px 0 40px
 
 .breadcrumb-item
+  display flex
+  flex-shrink 0
   &.active
     color #bebebe
 
@@ -404,6 +394,11 @@ h3
 .btn-filled
   background colorBlue
   shadow-v2()
+  &:hover
+  &:focus
+    color colorBlue
+    background colorBlueTransparent
+    border 1px solid colorLighterBlue
 
 .btn-bordered
   color colorBlue
@@ -411,7 +406,9 @@ h3
   border 1px solid colorLighterBlue
   &:hover
   &:focus
-    color colorBlue
+    color colorWhite
+    background colorBlue
+    border-color colorBlue
 
 .btn-feedback
   width 100%
@@ -471,7 +468,21 @@ h3
 //** Header **//
 header
 .header
+  position fixed
+  top 0
+  left 0
+  z-index 9999
+  width 100%
   background colorWhite
+  &+section
+  &+div
+    margin-top 54px
+
+  @media (min-width: 960px)
+    position relative
+    top auto
+    &+section
+      margin-top 0
 
 .header-hint
   display flex
@@ -497,6 +508,13 @@ header
   &:after
     content url("../assets/images/quote-single-right-white.svg")
     margin 2px 0 0 5px
+  &:hover
+  &:focus
+    color colorBlue
+    background colorWhite
+    border-color colorWhite
+    &:after
+      content url("../assets/images/quote-single-right.svg")
 
 .navbar
   padding 0
@@ -625,6 +643,10 @@ header
   border 1px solid rgba(255, 255, 255, 0.5)
   padding 5px 15px
   margin-left 15px
+  &:hover
+  &:focus
+    color colorDarkBlue
+    background colorWhite
 
 .nav-filial
   margin-right 30px
@@ -1853,7 +1875,7 @@ ul ul ul .mobile-link
 
 //** Issuer - Profile **//
 .section-client
-  margin-top 20px
+  margin-top 74px
 
   @media (min-width 960px)
     margin-top 60px
@@ -1970,6 +1992,7 @@ ul ul ul .mobile-link
   &:not(.active)
     position absolute
     top -999em
+    left 0
 
   @media (min-width 960px)
     &:after
@@ -2321,6 +2344,10 @@ ul ul ul .mobile-link
     width 12px
     height 12px
     margin-right 10px
+  &:hover
+  &:focus
+    &:before
+      background url("../assets/images/plus-white.svg")
 
   @media (min-width 960px)
     height 80px
@@ -3317,12 +3344,12 @@ table
     content ""
     width 12px
     height 17px
-    background url("../assets/images/paperclip-blue.svg")
+    background url("../assets/images/paperclip-white.svg")
     margin-right 8px
-
-  @media (min-width: 960px)
+  &:hover
+  &:focus
     &:before
-      background url("../assets/images/paperclip-white.svg")
+      background url("../assets/images/paperclip-blue.svg")
 
 //** Forms **//
 .form-row
@@ -3457,6 +3484,11 @@ label
     margin 0 15px
 
 .btn-period
+  &:hover
+  &:focus
+    color colorWhite
+    background colorBlue
+    border-color colorBlue
 
   @media (min-width 960px)
     display inline-flex
