@@ -10,6 +10,7 @@ $( document ).ready(function() {
             $(this).css('margin-bottom','0');
     });
 
+
     $(function () {
         $("table").each(function () {
             var trAcc = $(this).find("tr").not("tr:first-child, tr:first-child th"),
@@ -63,23 +64,26 @@ $( document ).ready(function() {
         };
     }(jQuery));
 
-
     $(".js-rtableAccordions").responsiveTable();
 
-    $(window).resize(function () {
 
-        $('.link-transform').each (function () {
+    $(window).resize(function () {
+        $('section').each (function () {
+            var outer = $(this).find('.heading-wrapper');
+            var inner = $(this).find('.link-transform');
             if ($(window).width() > 959) {
-                $(this).removeClass('btn btn-filled');
-                $(this).addClass('link-more');
-                $(this).siblings('.heading-wrapper').append(this);
+                inner.removeClass('btn btn-filled');
+                inner.clone().addClass('link-more link-more-large').appendTo(outer);
+                inner.hide();
             }
             else {
-                $(this).removeClass('link-more');
-                $(this).addClass('btn btn-filled');
-                $(this).parent('.heading-wrapper').parent().append(this);
+                inner.parent('.heading-wrapper').hide();
+                inner.removeClass('link-more link-more-large');
+                inner.addClass('btn btn-filled');
+                inner.show();
             }
         });
+
 
         if ($(window).width() > 959) {
             $('.social').appendTo('.footer-top');

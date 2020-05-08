@@ -9,7 +9,7 @@ colorBlack = #000000
 colorGrey = #706c71
 colorLightGrey = #bdbdbd
 colorDarkGrey = #333333
-colorWhiteTransparent = rgba(255, 255, 255, 0.12)
+colorWhiteTransparent = rgba(255, 255, 255, 0.1)
 colorGreyTransparent = rgba(96, 114, 134, 0.3)
 colorGreyTransparent-v1 = rgba(168, 176, 221, 0.1)
 colorGreyTransparent-v2 = rgba(96, 114, 134, 0.5)
@@ -35,6 +35,15 @@ shadow-v3()
 
 shadow-v4()
   box-shadow 0 4px 4px rgba(0, 0, 0, 0.25)
+
+shadow-blue()
+  box-shadow 0 10px 34px rgba(0, 144, 210, 0.3)
+
+tile-hover()
+  cursor pointer
+  &:hover
+  &:focus
+    shadow-blue()
 
 @font-face
   font-family Roboto
@@ -274,6 +283,9 @@ section
   flex-shrink 0
   &.active
     color #bebebe
+  a
+    &:hover
+      color #23589e
 
 //** Headings **//
 h2
@@ -309,12 +321,12 @@ h3
   &:hover
   &:focus
     color colorBlue
+    text-decoration underline
 
   @media (min-width 960px)
     font-size 18px
 
 .link-underline
-  text-decoration underline
   &:hover
   &:focus
     text-decoration underline
@@ -324,7 +336,7 @@ h3
   align-items center
   font-family fontBold-v2
   font-size 14px
-  line-height 1.5
+  line-height 1
   color colorBlue
   text-transform uppercase
   &:before
@@ -334,7 +346,10 @@ h3
     background colorBlue
     margin-right 10px
   &:after
-    content url("../assets/images/quote-single-right.svg")
+    content ''
+    background url("../assets/images/quote-single-right.svg") no-repeat center
+    width 7px
+    height 10px
     margin-left 10px
   &:hover
   &:focus
@@ -346,13 +361,18 @@ h3
     font-size 18px
     &:before
       width 40px
+      height 2px
 
 .link-more-white
   color colorWhite
   &:before
     background colorWhite
   &:after
-    content url("../assets/images/quote-single-right-white.svg")
+    content ''
+    background url("../assets/images/quote-single-right-white.svg") no-repeat center
+    width 7px
+    height 10px
+    margin-left 10px
   &:hover
   &:focus
     color colorWhite
@@ -413,6 +433,10 @@ h3
 .btn-feedback
   width 100%
   border 1px solid rgba(255, 255, 255, 0.5)
+  &:hover
+  &:focus
+    color colorWhite
+    background colorWhiteTransparent
 
 .btn-filter
   margin-bottom 30px
@@ -476,13 +500,14 @@ header
   background colorWhite
   &+section
   &+div
-    margin-top 54px
+    margin-top 69px
 
   @media (min-width: 960px)
     position relative
     top auto
     &+section
-      margin-top 0
+    &+div
+      margin-top 15px
 
 .header-hint
   display flex
@@ -510,11 +535,8 @@ header
     margin 2px 0 0 5px
   &:hover
   &:focus
-    color colorBlue
-    background colorWhite
-    border-color colorWhite
-    &:after
-      content url("../assets/images/quote-single-right.svg")
+    color colorWhite
+    background colorWhiteTransparent
 
 .navbar
   padding 0
@@ -539,20 +561,17 @@ header
   align-items center
   justify-content space-between
 
-.nav-left
-  padding-left 30px
-
 .nav-right
   display flex
   align-items center
   text-align right
+  padding-right 30px
 
 .header-main
   padding 12px 30px
   background colorWhite
 
 .header-sub
-  padding 16px 30px
   background colorDarkBlue
 
 .header-logo
@@ -624,19 +643,17 @@ header
     &:after
       background-color colorWhite
 
-.sub-item
-  &+.sub-item
-    margin-left 40px
-
 .sub-link
   font-family fontBold
   font-size 16px
   line-height 1.5
   color colorWhite
   text-transform uppercase
+  padding 24px 30px
   &:hover
   &:focus
     color colorWhite
+    background colorWhiteTransparent
 
 .btn-sub
   width auto
@@ -645,17 +662,23 @@ header
   margin-left 15px
   &:hover
   &:focus
-    color colorDarkBlue
-    background colorWhite
+    color colorWhite
+    background colorWhiteTransparent
 
 .nav-filial
   margin-right 30px
 
 .filial-office
+  justify-content flex-end
   font-family fontRegular
   font-size 14px
   line-height 1.7
   color colorGrey
+  &:hover
+  &:focus
+    color colorBlue
+    &:after
+      background colorBlue
 
 .filial-address
   font-family fontRegular
@@ -855,6 +878,8 @@ ul ul ul .mobile-link
   font-size 16px
   line-height 1.25
   color colorGrey
+  &:hover
+  &:focus
   &.active
     color colorDarkBlue
 
@@ -888,7 +913,6 @@ ul ul ul .mobile-link
 //** Dropdowns **//
 .dropdown-menu
   position absolute
-  top 49px
   left 0
   width 300px
   padding 0
@@ -899,6 +923,14 @@ ul ul ul .mobile-link
   border 0
   border-radius 0
   box-shadow 0 0 30px rgba(0, 0, 0, 0.2)
+  .main-link+&
+    top 49px
+  .sub-link+&
+    top 72px
+  &.filial-dropdown
+    top 60px
+    left auto
+    right 0
 
 .dropdown-item
   padding 18px 20px
@@ -933,7 +965,7 @@ ul ul ul .mobile-link
   &:focus
     .director-position
       color colorWhite
-      background colorLightBlue
+      background colorBlue
 
   @media (min-width 960px)
     padding 0
@@ -1062,7 +1094,8 @@ ul ul ul .mobile-link
   padding 5px 15px
   &:hover
   &:focus
-    color rgba(0, 144, 210, 0.5)
+    color colorWhite
+    background colorBlue
   &.active
     color colorWhite
     background colorBlue
@@ -1080,6 +1113,17 @@ ul ul ul .mobile-link
 
 .news
   height 287px
+  &:hover
+  &:focus
+    background colorBlue
+    .tag
+      color colorWhite
+      border-color colorWhite
+    .news-title
+      color colorWhite
+    .date
+      color colorWhite
+      opacity 0.5
 
   @media (min-width 960px)
     height 315px
@@ -1154,11 +1198,12 @@ ul ul ul .mobile-link
 
 .subscribe-wrapper
   display flex
+  align-items center
   margin-bottom 20px
 
 .subscribe-img
   width 58px
-  margin-right 20px
+  margin 0 20px 0 0
 
 .subscribe-title
   color colorWhite
@@ -1176,6 +1221,7 @@ ul ul ul .mobile-link
 //** Help - Ref **//
 .section-ref
   padding 40px 0 20px
+  margin-bottom 0
   &:first-of-type
     padding-top 0
 
@@ -1213,6 +1259,7 @@ ul ul ul .mobile-link
 
 .service-large
   height 295px
+  tile-hover()
 
   @media (min-width 960px)
     height 430px
@@ -1253,6 +1300,7 @@ ul ul ul .mobile-link
 
 .service-short
   height 158px
+  tile-hover()
 
   @media (min-width 960px)
     height 200px
@@ -1335,6 +1383,15 @@ ul ul ul .mobile-link
   color colorBlue
 
 //** Accordions **//
+.accordion-header
+  cursor pointer
+
+.accordion
+  .tile
+    tile-hover()
+    &>div:first-child
+      cursor pointer
+
 .accordion-item
   border-bottom 2px solid rgba(96, 114, 134, 0.12)
   &:first-of-type
@@ -1438,9 +1495,15 @@ ul ul ul .mobile-link
     padding-bottom 30px
 
 .document
-  display flex
+  display inline-flex
   align-items flex-start
   margin-bottom 30px
+  &:after
+    clear both
+  &:hover
+  &:focus
+    .document-name
+      text-decoration underline
 
 .document-img
   margin 0 12px 0 0
@@ -1484,6 +1547,7 @@ ul ul ul .mobile-link
 
 //** Clients **//
 .clients-search
+  margin-bottom 5px
   .search-form
     margin-bottom 15px
   .btn-search-alt
@@ -1491,6 +1555,7 @@ ul ul ul .mobile-link
 
   @media (min-width 960px)
     align-items center
+    margin-top 30px
     margin-bottom 50px
     .search-form
     .form-group
@@ -1498,6 +1563,11 @@ ul ul ul .mobile-link
 
 .client
   height 165px
+  tile-hover()
+  &:hover
+  &:focus
+    .link
+      text-decoration underline
 
   @media (min-width 960px)
     height 220px
@@ -1573,6 +1643,12 @@ ul ul ul .mobile-link
     margin-right 30px
 
 //** About **//
+.section-video
+  margin-bottom 40px
+
+  @media (min-width 960px)
+    margin-bottom 80px
+
 .about
 
   @media (min-width 960px)
@@ -1671,6 +1747,7 @@ ul ul ul .mobile-link
     position relative
     display flex
     flex-direction column
+    height 100%
     margin-left 58px
 
 .years-line
@@ -1678,7 +1755,7 @@ ul ul ul .mobile-link
   @media (min-width 960px)
     position absolute
     width 2px
-    height 95%
+    height 88%
     margin-top 4%
     background colorGreyTransparent
     top 0
@@ -1695,6 +1772,7 @@ ul ul ul .mobile-link
     font-family fontBold
     font-size 28px
     color colorGreyTransparent
+    cursor pointer
     &+.year
       margin-top 47px
     &:before
@@ -1710,7 +1788,8 @@ ul ul ul .mobile-link
       color colorBlue
       &:before
         border-color colorBlue
-
+    &:focus
+      outline none
 
 .principle
   height 227px
@@ -1754,24 +1833,26 @@ ul ul ul .mobile-link
 
 .organisation
   padding 15px
+  &:hover
+  &:focus
+    box-shadow 0 10px 10px rgba(175, 196, 208, 0.5)
+    border-radius 2px
+    border-bottom 7px solid colorBlue
 
   @media (min-width 960px)
     height 250px
     padding 30px 15px 20px
-    cursor pointer
-    &:hover
-      shadow-v2()
-      border-radius 2px
-      border-bottom 7px solid colorBlue
-      .organisation-img
-        filter grayscale(0)
-        opacity 1
+    .organisation-img
+      filter grayscale(0)
+      opacity 1
 
 .organisation-img
   align-self flex-start
   margin 0 0 40px
-  filter grayscale(1)
-  opacity 0.5
+
+  @media (min-width 960px)
+    filter grayscale(1)
+    opacity 0.5
 
 //** Feedback **//
 .feedback
@@ -1908,6 +1989,7 @@ ul ul ul .mobile-link
     margin-left 15px
   &:last-of-type
     margin-right 15px
+  &:hover
   &.active
     background colorBlue
     .issuer-tab-title
@@ -1952,12 +2034,12 @@ ul ul ul .mobile-link
   width 60px
   height 60px
   border-radius 100%
-  margin-right 15px
+  margin 0 15px 0 0
 
   @media (min-width 960px)
     width 80px
     height 80px
-    margin-right 30px
+    margin 0 30px 0 0
 
 .issuer-name
   font-family fontBold
@@ -1972,8 +2054,9 @@ ul ul ul .mobile-link
 .dropdown-tabs
   &.expanded
     .dropdown-tab
-      &:after
-        content url("../assets/images/arrow-up-white.svg")
+      &.active
+        &:after
+          content url("../assets/images/arrow-up-white.svg")
       &:not(.active)
         position relative
         top auto
@@ -1988,7 +2071,7 @@ ul ul ul .mobile-link
       position absolute
       top auto
       right 15px
-      z-index 9999
+      z-index 999
   &:not(.active)
     position absolute
     top -999em
@@ -2097,6 +2180,10 @@ ul ul ul .mobile-link
 .document-main
   display flex
   padding 15px
+  &:hover
+  &:focus
+    .document-name
+      text-decoration underline
 
   @media (min-width 960px)
     padding 0
@@ -2184,12 +2271,17 @@ ul ul ul .mobile-link
   position absolute
   bottom 10px
   right 15px
+  background url("../assets/images/download.svg") no-repeat center
+  background-size contain
   margin 0
-  width 24px
+  width 20px
+  height 20px
 
   @media (min-width 960px)
     position unset
-    width 30px
+    align-self center
+    width 25px
+    height 25px
 
 .document-action
   display flex
@@ -2263,7 +2355,7 @@ ul ul ul .mobile-link
   font-family fontRegular
   font-size 12px
   line-height 1.4
-  color colorLightGrey
+  color colorGrey
   margin-bottom 5px
 
   @media (min-width 960px)
@@ -2560,6 +2652,9 @@ ul ul ul .mobile-link
     font-size 9px
     text-transform uppercase
     color #96B1CC
+    &:hover
+    &:focus
+      color #96B1CC
     img
       margin-right 5px
 
@@ -2698,6 +2793,7 @@ ul ul ul .mobile-link
     background colorBlue
 
 .swiper-clients
+.swiper-organisations
   padding 15px
   margin -15px
 
@@ -2879,12 +2975,10 @@ table
   font-family fontRegular
   font-size 12px
   line-height 1.5
-  text-decoration underline
   color colorBlue
   &:hover
   &:focus
     color colorBlue
-    text-decoration underline
 
   @media (min-width: 960px)
     font-size 14px
@@ -2908,6 +3002,7 @@ table
     border-radius 0 0 2px 2px
   &+.nav-info
     border-top 1px solid colorGreyTransparent
+  &:hover
   &.active
     font-family fontBold
     color colorWhite
@@ -3585,6 +3680,10 @@ label
     justify-content space-between
 
 //** Modals **//
+.modal
+  z-index 10000
+  padding 0!important
+
 .modal-content
   min-height 100vh
   border 0
@@ -3683,10 +3782,8 @@ label
   margin 0
 
   @media (min-width 576px)
-    margin auto
-
-  @media (min-width 960px)
     max-width 100%
+    margin auto
 
 .modal-form
   display flex
@@ -3889,11 +3986,15 @@ footer
     margin-bottom 0
 
 .link-social
+  opacity 0.8
   &+.link-social
     margin-left 12px
   img
     width 30px
     height 30px
+  &:hover
+  &:focus
+    opacity 1
 
   @media (min-width 960px)
     img
@@ -3946,6 +4047,16 @@ footer
   font-size 12px
   line-height 1.33
   color colorGrey
+  &:hover
+  &:focus
+    color colorDarkBlue
 
   @media (min-width 960px)
     font-size 14px
+
+//** Others **//
+.questions
+  margin-bottom 40px
+
+  @media (min-width 960px)
+    margin-bottom 0

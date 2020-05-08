@@ -1,5 +1,5 @@
 //= templates/header.html
-//= templates/header-nav-mobile.html
+//= templates/header-nav.html
 <section>
 	<div class="slider">
 		<div class="swiper-container swiper-index">
@@ -62,13 +62,13 @@
 			</div>
 			<div class="pagination-wrapper"><div class="swiper-index-pagination"></div></div>
 		</div>
-		<div class="scroll-down">
+		<a href="#section-next" class="scroll-down">
 			<img src="assets/images/down.svg">
 			ЛИСТАЙТЕ ВНИЗ
-		</div>
+		</a>
 	</div>
 </section>
-<section>
+<section id="section-next">
 	<div class="container">
 		<div class="heading-wrapper">
 			<h2>Эмитентам</h2>
@@ -249,13 +249,15 @@
 		</div>
 		<div class="row">
 			<div class="col-12 col-lg-8">
-				//= templates/questions.html
+				<div class="questions">
+					//= templates/questions.html
+					<a href="#" class="btn btn-filled link-transform">все вопросы</a>
+				</div>
 			</div>
 			<div class="col-12 col-lg-4">
 				//= templates/feedback-contact.html
 			</div>
 		</div>
-		<a href="#" class="btn btn-filled link-transform">все вопросы</a>
 	</div>
 </section>
 //= templates/footer-nav.html
@@ -278,17 +280,17 @@
     var swiperClients = new Swiper('.swiper-clients', {
         slidesPerView: 1,
         spaceBetween: 30,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
         breakpoints: {
             960: {
-                slidesPerView: 3
+                slidesPerView: 3,
             },
         }
     });

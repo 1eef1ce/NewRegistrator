@@ -1,4 +1,5 @@
 //= templates/header.html
+//= templates/header-nav-mobile.html
 <div class="container">
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
@@ -8,7 +9,7 @@
 		</ol>
 	</nav>
 </div>
-<section>
+<section class="section-video">
 	<div class="container">
 		<div class="row">
 			<div class="col">
@@ -23,13 +24,13 @@
 			<div class="col-12 col-lg-9">
 				<div class="about">
 					<h3>О компании</h3>
-					<div class="text-regular">
+					<p class="text-regular">
 						Акционерное общество «Новый регистратор» является крупнейшей независимой компанией, осуществляющей
 						деятельность по ведению реестров акционерных обществ с 2003 года. Профессиональная деятельность ведётся
 						на основании бессрочной лицензии на осуществление деятельности по ведению реестра, выданной Федеральной
 						службой по финансовым рынкам № 045-13951-000001 от 30.03.2006. Заключен Договор комплексного страхования
 						профессионального участника рынка ценных бумаг с ОСАО «Ингосстрах» на сумму 100 млн рублей.
-					</div>
+					</p>
 				</div>
 			</div>
 			<div class="col-12 col-lg-4 branches-container">
@@ -137,6 +138,72 @@
 									</div>
 								</div>
 							</div>
+							<div class="swiper-slide">
+								<div class="achievement-nav">
+									<div class="achievement-year">2014 <span>г</span></div>
+								</div>
+								<div class="achievement-text">
+									<div class="text-regular">
+										<ul class="list">
+											<li>
+												Участие в реорганизации РАО ЕЭС, участие в создании ОАО «ИНТЕР РАО ЕЭС»;
+											</li>
+											<li>
+												Организация и проведение собраний акционеров ОАО «ИНТЕР РАО ЕЭС» (количество акционеров
+												более 330 тысяч) с использованием автоматизированной системы обработки результатов
+												голосования (в т.ч. избрание Совета директоров);
+											</li>
+											<li>
+												Расширение сети филиалов АО «Новый регистратор» на базе ОРР «Веста»;
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="achievement-nav">
+									<div class="achievement-year">2016 <span>г</span></div>
+								</div>
+								<div class="achievement-text">
+									<div class="text-regular">
+										<ul class="list">
+											<li>
+												Организация и проведение собраний акционеров ОАО «ИНТЕР РАО ЕЭС» (количество акционеров
+												более 330 тысяч) с использованием автоматизированной системы обработки результатов
+												голосования (в т.ч. избрание Совета директоров);
+											</li>
+											<li>
+												Расширение сети филиалов АО «Новый регистратор» на базе ОРР «Веста»;
+											</li>
+											<li>
+												Участие в реорганизации РАО ЕЭС, участие в создании ОАО «ИНТЕР РАО ЕЭС»;
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="achievement-nav">
+									<div class="achievement-year">2018 <span>г</span></div>
+								</div>
+								<div class="achievement-text">
+									<div class="text-regular">
+										<ul class="list">
+											<li>
+												Расширение сети филиалов АО «Новый регистратор» на базе ОРР «Веста»;
+											</li>
+											<li>
+												Организация и проведение собраний акционеров ОАО «ИНТЕР РАО ЕЭС» (количество акционеров
+												более 330 тысяч) с использованием автоматизированной системы обработки результатов
+												голосования (в т.ч. избрание Совета директоров);
+											</li>
+											<li>
+												Участие в реорганизации РАО ЕЭС, участие в создании ОАО «ИНТЕР РАО ЕЭС»;
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="swiper-achievements-nav">
@@ -148,12 +215,14 @@
 			<div class="col-12 col-lg-3">
 				<div class="years">
 					<div class="years-line"></div>
-					<div class="year active">2008</div>
-					<div class="year">2010</div>
-					<div class="year">2012</div>
-					<div class="year">2014</div>
-					<div class="year">2016</div>
-					<div class="year">2018</div>
+					<div class="swiper-pagination">
+						<div class="year">2008</div>
+						<div class="year">2010</div>
+						<div class="year">2012</div>
+						<div class="year">2014</div>
+						<div class="year">2016</div>
+						<div class="year">2018</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -163,7 +232,7 @@
 	<div class="container">
 		<h3>Наши принципы</h3>
 		<div class="row row-cols-1 row-cols-lg-2">
-			<div class="col">
+			<div class="col order-lg-1">
 				<div class="tile principle">
 					<img class="principle-img" src="assets/images/icon6.svg">
 					<div>
@@ -172,7 +241,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col">
+			<div class="col order-lg-3">
 				<div class="tile principle">
 					<img class="principle-img" src="assets/images/icon7.svg">
 					<div>
@@ -181,7 +250,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col">
+			<div class="col order-lg-2">
 				<div class="tile principle">
 					<img class="principle-img" src="assets/images/icon8.svg">
 					<div>
@@ -190,7 +259,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col">
+			<div class="col order-lg-4">
 				<div class="tile principle">
 					<img class="principle-img" src="assets/images/icon9.svg">
 					<div>
@@ -209,34 +278,34 @@
 			<div class="swiper-container swiper-organisations">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
-						<div class="organisation">
+						<a href="#" class="organisation">
 							<img class="organisation-img" src="assets/images/logo-org.svg">
 							<div class="text-regular">Профессиональная Ассоциация Регистраторов, Трансфер-Агентов и Депозитариев (ПАРТАД)</div>
-						</div>
+						</a>
 					</div>
 					<div class="swiper-slide">
-						<div class="organisation">
+						<a href="#" class="organisation">
 							<img class="organisation-img" src="assets/images/logo-org.svg">
 							<div class="text-regular">Система трансфер-агентов и регистраторов (СТАР)</div>
-						</div>
+						</a>
 					</div>
 					<div class="swiper-slide">
-						<div class="organisation">
+						<a href="#" class="organisation">
 							<img class="organisation-img" src="assets/images/logo-org.svg">
 							<div class="text-regular">Профессиональная Ассоциация Регистраторов</div>
-						</div>
+						</a>
 					</div>
 					<div class="swiper-slide">
-						<div class="organisation">
+						<a href="#" class="organisation">
 							<img class="organisation-img" src="assets/images/logo-org.svg">
 							<div class="text-regular">Торгово-промышленная Палата Российской Федерации</div>
-						</div>
+						</a>
 					</div>
 					<div class="swiper-slide">
-						<div class="organisation">
+						<a href="#" class="organisation">
 							<img class="organisation-img" src="assets/images/logo-org.svg">
 							<div class="text-regular">Торгово-промышленная Палата Российской Федерации</div>
-						</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -245,3 +314,35 @@
 </section>
 //= templates/footer-nav.html
 //= templates/footer.html
+<script>
+    var menu = ['2008', '2010', '2012','2014', '2016', '2018'];
+    var swiperAchievements = new Swiper('.swiper-achievements', {
+        slidesPerView: 1,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            bulletClass: 'year',
+			bulletActiveClass: 'active',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (menu[index]) + '</span>';
+            },
+        }
+    });
+
+    var swiperOrganisations = new Swiper('.swiper-organisations', {
+        slidesPerView: 1,
+        breakpoints: {
+            960: {
+                slidesPerView: 4
+            },
+        }
+    });
+</script>
