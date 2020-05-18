@@ -133,6 +133,12 @@ section
   @media (min-width 960px)
     margin-bottom 100px
 
+.section-main
+  margin-top 56px
+
+  @media (min-width 960px)
+    margin-top 0
+
 .text-regular
   font-family fontRegular
   font-size 14px
@@ -500,7 +506,7 @@ header
   background colorWhite
   &+section
   &+div
-    margin-top 69px
+    margin-top 71px
 
   @media (min-width: 960px)
     position relative
@@ -564,18 +570,18 @@ header
 .nav-right
   display flex
   align-items center
-  text-align right
-  padding-right 30px
 
 .header-main
-  padding 12px 30px
+  height 72px
+  padding 10px 30px
   background colorWhite
 
 .header-sub
   background colorDarkBlue
+  padding-right 30px
 
 .header-logo
-  width 140px
+  width 134px
 
 .logo-left
   position absolute
@@ -700,6 +706,7 @@ header
   font-size 14px
   line-height 1.7
   color colorDarkBlue
+  text-align right
 
 //** Header - Mobile **//
 .header-container-mobile
@@ -707,7 +714,7 @@ header
   align-items center
   justify-content space-between
   background colorWhite
-  height 54px
+  height 56px
   padding 14px 15px
   box-shadow 0 0 10px rgba(0, 0, 0, 0.1)
 
@@ -819,12 +826,21 @@ ul ul ul .mobile-link
 .header-client
   box-shadow 0 5px 10px rgba(0, 0, 0, 0.05)
   padding 15px 0
-  .form-control
+  .select
+    margin 0 10px
+  .select-custom
+    font-size 14px
     width 285px
     height 40px
-    padding 8px 20px
-    margin 0 10px
-    font-size 14px
+    padding 10px 20px
+
+.client-select-mobile
+  .select-options
+    li
+      padding 12px 15px
+  .select-custom
+    width 240px
+    height 40px
 
 .notification
   position relative
@@ -851,6 +867,10 @@ ul ul ul .mobile-link
   font-family fontRegular
   font-size 8px
   color colorWhite
+
+.shareholder-profile
+  display flex
+  align-items center
 
 .shareholder-img
   width 24px
@@ -1383,22 +1403,42 @@ ul ul ul .mobile-link
   color colorBlue
 
 //** Accordions **//
-.accordion-header
-  cursor pointer
-
 .accordion
   .tile
     tile-hover()
-    &>div:first-child
-      cursor pointer
 
 .accordion-item
+  padding 15px 0
   border-bottom 2px solid rgba(96, 114, 134, 0.12)
   &:first-of-type
     border-top 2px solid rgba(96, 114, 134, 0.12)
 
+  @media (min-width 960px)
+    padding 20px 0
+
 .accordion-header
-  padding 20px 0
+  display flex
+  align-items center
+  justify-content space-between
+  cursor pointer
+  &:hover
+    .accordion-icon
+      svg
+        path
+          stroke colorDarkBlue
+  &[aria-expanded="true"]
+    .accordion-icon
+      transform rotate(180deg)
+      svg
+        path
+          stroke colorDarkBlue
+
+.accordion-icon
+  display flex
+  align-items center
+  justify-content center
+  flex-shrink 0
+  transition 0.5s ease
 
 .accordion-title
   position relative
@@ -1409,19 +1449,25 @@ ul ul ul .mobile-link
   line-height 1.37
   color colorDarkGrey
   padding-right 18px
-  &:after
-    position absolute
-    right 0
-    content url("../assets/images/arrow-down-light.svg")
-  &[aria-expanded="true"]
-    &:after
-      content url("../assets/images/arrow-up-light.svg")
+
+.accordion-body
+  margin-top 20px
 
 .documents-title
 
   @media (min-width 960px)
     font-size 18px
     line-height 1.56
+
+.question
+  padding 15px
+  border-bottom 0
+  margin-bottom 10px
+  &:first-of-type
+    border-top 0
+
+  @media (min-width 960px)
+    padding 20px 30px
 
 .question-title
   color colorDarkBlue
@@ -1505,6 +1551,11 @@ ul ul ul .mobile-link
     .document-name
       text-decoration underline
 
+.col
+  &:last-of-type
+    .document
+      margin-bottom 0
+
 .document-img
   margin 0 12px 0 0
 
@@ -1533,17 +1584,6 @@ ul ul ul .mobile-link
   @media (min-width 960px)
     font-size 14px
     margin-right 20px
-
-.question
-  padding 15px
-
-  @media (min-width 960px)
-    padding 20px 30px
-    margin-bottom 10px
-
-.question-body
-  .text-regular
-    margin-top 10px
 
 //** Clients **//
 .clients-search
@@ -2395,7 +2435,7 @@ ul ul ul .mobile-link
     bottom 20px
     right 20px
 
-.document-source,
+.document-source
 .document-author
   display inline-block
   font-family fontRegular
@@ -3522,35 +3562,6 @@ label
     height 48px
     padding 12px 20px
 
-.custom-select
-  appearance none
-  background rgba(96, 114, 134, 0.05) url("data:image/svg+xml,%3Csvg width='22' height='14' viewBox='0 0 22 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 2L11 11.3913L2 2' stroke='%23706C71' stroke-width='3'/%3E%3C/svg%3E") no-repeat right 15px center/14px 8px
-  font-family fontRegular
-  font-size 14px
-  color colorGrey
-  height 44px
-  padding 10px 15px
-  border none
-  border-radius 2px
-  &::placeholder
-    color rgba(0, 0, 0, 0.4)
-  &:focus
-    color colorGrey
-    box-shadow none!important
-  &.select-mobile
-    width 240px
-    height 40px
-
-  @media (min-width 960px)
-    font-size 16px
-    height 48px
-    padding 12px 20px
-    &.select-mobile
-      font-size 14px
-      width 285px
-      margin 0 10px
-      padding 10px 20px
-
 .form-period
   display inline-flex
   align-items center
@@ -3678,6 +3689,72 @@ label
     flex-direction row
     align-items center
     justify-content space-between
+
+/** Custom select **/
+.select-hidden
+  display none
+  visibility hidden
+
+.select
+  position relative
+  display flex
+  align-items center
+  cursor pointer
+
+.select-custom
+  display flex
+  align-items center
+  width 100%
+  font-family fontRegular
+  font-size 14px
+  color colorGrey
+  height 44px
+  padding 10px 15px
+  border-radius 2px
+  background rgba(96, 114, 134, 0.05)
+  &:hover
+    &~.select-icon
+      svg
+        path
+          stroke colorDarkBlue
+  &:active
+  &.active
+    &~.select-icon
+      transform rotate(180deg)
+      svg
+        path
+          stroke colorDarkBlue
+
+  @media (min-width 960px)
+    font-size 16px
+    height 48px
+    padding 12px 20px
+
+.select-icon
+  position absolute
+  right 20px
+  transition 0.5s
+  svg
+    width 12px
+    height 7px
+
+.select-options
+  display none
+  position absolute
+  top 100%
+  right 0
+  left 0
+  z-index 100
+  background colorWhite
+  box-shadow 0 0 30px rgba(0, 0, 0, 0.2)
+  li
+    padding 12px 20px
+    &:hover
+    &:focus
+      color colorWhite
+      background colorBlue
+    &[rel="hide"]
+      display none
 
 //** Modals **//
 .modal

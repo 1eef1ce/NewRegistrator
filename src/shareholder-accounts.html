@@ -1,4 +1,5 @@
 //= templates/header.html
+//= templates/header-shareholder.html
 <section class="section-client">
 	<div class="container">
 		<h3>Счета</h3>
@@ -14,7 +15,7 @@
 					<div class="col-12 col-lg-3">
 						<form>
 							<div class="form-group">
-								<select class="custom-select" id="accounts">
+								<select id="accounts">
 									<option>Собственные счета (3)</option>
 									<option>2</option>
 									<option>3</option>
@@ -26,10 +27,11 @@
 				<div class="section">
 					<div class="accordion">
 						<div class="accordion-item">
-							<div class="accordion-header" id="account1">
-								<div class="accordion-title" data-toggle="collapse" data-target="#collapse-account1" aria-expanded="false" aria-controls="collapse-account1">
+							<div class="accordion-header" id="account1" data-toggle="collapse" data-target="#collapse-account1" aria-expanded="false" aria-controls="collapse-account1">
+								<div class="accordion-title">
 									АО «ЛИДЕР»
 								</div>
+								<div class="accordion-icon"></div>
 							</div>
 							<div class="accordion-body collapse" id="collapse-account1" aria-labelledby="account1">
 								<table class="rtable table-custom accounts-table js-rtableAccordions">
@@ -70,10 +72,11 @@
 							</div>
 						</div>
 						<div class="accordion-item">
-							<div class="accordion-header" id="account2">
-								<div class="accordion-title" data-toggle="collapse" data-target="#collapse-account2" aria-expanded="false" aria-controls="collapse-account2">
+							<div class="accordion-header" id="account2" data-toggle="collapse" data-target="#collapse-account2" aria-expanded="false" aria-controls="collapse-account2">
+								<div class="accordion-title">
 									АО «Агрохимия»
 								</div>
+								<div class="accordion-icon"></div>
 							</div>
 							<div class="accordion-body collapse" id="collapse-account2" aria-labelledby="account2">
 								<table class="rtable table-custom accounts-table js-rtableAccordions">
