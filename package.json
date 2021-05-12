@@ -22,7 +22,7 @@
     "multipipe": "^4.0.0",
     "node-sass": "^4.13.1",
     "rimraf": "^3.0.2",
-    "swiper": "^5.3.6"
+    "swiper": "^6.5.1"
   },
   "browserslist": [
     "last 2 version",
